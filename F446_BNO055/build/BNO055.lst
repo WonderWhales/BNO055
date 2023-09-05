@@ -1,0 +1,943 @@
+ARM GAS  C:\Users\baske\AppData\Local\Temp\cchAX9kO.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 1
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"BNO055.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.BNO055_Write,"ax",%progbits
+  20              		.align	1
+  21              		.syntax unified
+  22              		.thumb
+  23              		.thumb_func
+  25              	BNO055_Write:
+  26              	.LVL0:
+  27              	.LFB131:
+  28              		.file 1 "Core/Src/BNO055.c"
+   1:Core/Src/BNO055.c **** /*
+   2:Core/Src/BNO055.c ****  * BNO055.c
+   3:Core/Src/BNO055.c ****  *
+   4:Core/Src/BNO055.c ****  *  Created on: Sep 4, 2023
+   5:Core/Src/BNO055.c ****  *      Author: baske
+   6:Core/Src/BNO055.c ****  */
+   7:Core/Src/BNO055.c **** 
+   8:Core/Src/BNO055.c **** 
+   9:Core/Src/BNO055.c **** #include "BNO055.h"
+  10:Core/Src/BNO055.c **** #include "BNO055_Regs.h"
+  11:Core/Src/BNO055.c **** 
+  12:Core/Src/BNO055.c **** I2C_HandleTypeDef* BNO055_I2C;
+  13:Core/Src/BNO055.c **** 
+  14:Core/Src/BNO055.c **** #ifdef BNO055_HARDWARE_RESET
+  15:Core/Src/BNO055.c **** 
+  16:Core/Src/BNO055.c **** uint32_t Reset_Port = 0;
+  17:Core/Src/BNO055.c **** uint16_t Reset_Pin = 0;
+  18:Core/Src/BNO055.c **** 
+  19:Core/Src/BNO055.c **** #endif
+  20:Core/Src/BNO055.c **** 
+  21:Core/Src/BNO055.c **** /*
+  22:Core/Src/BNO055.c ****  * Local Read Function to BNO055
+  23:Core/Src/BNO055.c ****  */
+  24:Core/Src/BNO055.c **** static HAL_StatusTypeDef BNO055_Read(uint8_t reg, uint8_t* buf, uint8_t len){
+  25:Core/Src/BNO055.c **** 
+  26:Core/Src/BNO055.c **** 	HAL_StatusTypeDef error;
+  27:Core/Src/BNO055.c **** 
+  28:Core/Src/BNO055.c **** 	error = HAL_I2C_Master_Transmit(BNO055_I2C, BNO055_I2C_ADDR<<1, &reg, 1, BNO055_WRITE_TIMEOUT);
+  29:Core/Src/BNO055.c **** 	error |= HAL_I2C_Master_Receive(BNO055_I2C, BNO055_I2C_ADDR<<1, buf, len, BNO055_READ_TIMEOUT);
+  30:Core/Src/BNO055.c **** 
+ARM GAS  C:\Users\baske\AppData\Local\Temp\cchAX9kO.s 			page 2
+
+
+  31:Core/Src/BNO055.c **** 	return error;
+  32:Core/Src/BNO055.c **** 
+  33:Core/Src/BNO055.c **** }
+  34:Core/Src/BNO055.c **** 
+  35:Core/Src/BNO055.c **** /*
+  36:Core/Src/BNO055.c ****  * Local Write Function to BNO055
+  37:Core/Src/BNO055.c ****  */
+  38:Core/Src/BNO055.c **** static HAL_StatusTypeDef BNO055_Write(uint8_t reg, uint8_t data){
+  29              		.loc 1 38 65 view -0
+  30              		.cfi_startproc
+  31              		@ args = 0, pretend = 0, frame = 8
+  32              		@ frame_needed = 0, uses_anonymous_args = 0
+  33              		.loc 1 38 65 is_stmt 0 view .LVU1
+  34 0000 00B5     		push	{lr}
+  35              		.cfi_def_cfa_offset 4
+  36              		.cfi_offset 14, -4
+  37 0002 85B0     		sub	sp, sp, #20
+  38              		.cfi_def_cfa_offset 24
+  39:Core/Src/BNO055.c **** 
+  40:Core/Src/BNO055.c **** 	HAL_StatusTypeDef error;
+  39              		.loc 1 40 2 is_stmt 1 view .LVU2
+  41:Core/Src/BNO055.c **** 	uint8_t transmitBuf[2] = {reg, data};
+  40              		.loc 1 41 2 view .LVU3
+  41              		.loc 1 41 10 is_stmt 0 view .LVU4
+  42 0004 8DF80C00 		strb	r0, [sp, #12]
+  43 0008 8DF80D10 		strb	r1, [sp, #13]
+  42:Core/Src/BNO055.c **** 
+  43:Core/Src/BNO055.c **** 	error = HAL_I2C_Master_Transmit(BNO055_I2C, BNO055_I2C_ADDR<<1, transmitBuf, sizeof(transmitBuf), 
+  44              		.loc 1 43 2 is_stmt 1 view .LVU5
+  45              		.loc 1 43 10 is_stmt 0 view .LVU6
+  46 000c 6423     		movs	r3, #100
+  47 000e 0093     		str	r3, [sp]
+  48 0010 0223     		movs	r3, #2
+  49 0012 03AA     		add	r2, sp, #12
+  50 0014 5021     		movs	r1, #80
+  51              	.LVL1:
+  52              		.loc 1 43 10 view .LVU7
+  53 0016 0348     		ldr	r0, .L3
+  54              	.LVL2:
+  55              		.loc 1 43 10 view .LVU8
+  56 0018 0068     		ldr	r0, [r0]
+  57 001a FFF7FEFF 		bl	HAL_I2C_Master_Transmit
+  58              	.LVL3:
+  44:Core/Src/BNO055.c **** 
+  45:Core/Src/BNO055.c **** 	return error;
+  59              		.loc 1 45 2 is_stmt 1 view .LVU9
+  46:Core/Src/BNO055.c **** 
+  47:Core/Src/BNO055.c **** }
+  60              		.loc 1 47 1 is_stmt 0 view .LVU10
+  61 001e 05B0     		add	sp, sp, #20
+  62              		.cfi_def_cfa_offset 4
+  63              		@ sp needed
+  64 0020 5DF804FB 		ldr	pc, [sp], #4
+  65              	.L4:
+  66              		.align	2
+  67              	.L3:
+  68 0024 00000000 		.word	.LANCHOR0
+ARM GAS  C:\Users\baske\AppData\Local\Temp\cchAX9kO.s 			page 3
+
+
+  69              		.cfi_endproc
+  70              	.LFE131:
+  72              		.section	.text.BNO055_Read,"ax",%progbits
+  73              		.align	1
+  74              		.syntax unified
+  75              		.thumb
+  76              		.thumb_func
+  78              	BNO055_Read:
+  79              	.LVL4:
+  80              	.LFB130:
+  24:Core/Src/BNO055.c **** 
+  81              		.loc 1 24 77 is_stmt 1 view -0
+  82              		.cfi_startproc
+  83              		@ args = 0, pretend = 0, frame = 8
+  84              		@ frame_needed = 0, uses_anonymous_args = 0
+  24:Core/Src/BNO055.c **** 
+  85              		.loc 1 24 77 is_stmt 0 view .LVU12
+  86 0000 2DE9F041 		push	{r4, r5, r6, r7, r8, lr}
+  87              		.cfi_def_cfa_offset 24
+  88              		.cfi_offset 4, -24
+  89              		.cfi_offset 5, -20
+  90              		.cfi_offset 6, -16
+  91              		.cfi_offset 7, -12
+  92              		.cfi_offset 8, -8
+  93              		.cfi_offset 14, -4
+  94 0004 84B0     		sub	sp, sp, #16
+  95              		.cfi_def_cfa_offset 40
+  96 0006 0D46     		mov	r5, r1
+  97 0008 1646     		mov	r6, r2
+  98 000a 8DF80F00 		strb	r0, [sp, #15]
+  26:Core/Src/BNO055.c **** 
+  99              		.loc 1 26 2 is_stmt 1 view .LVU13
+  28:Core/Src/BNO055.c **** 	error |= HAL_I2C_Master_Receive(BNO055_I2C, BNO055_I2C_ADDR<<1, buf, len, BNO055_READ_TIMEOUT);
+ 100              		.loc 1 28 2 view .LVU14
+  28:Core/Src/BNO055.c **** 	error |= HAL_I2C_Master_Receive(BNO055_I2C, BNO055_I2C_ADDR<<1, buf, len, BNO055_READ_TIMEOUT);
+ 101              		.loc 1 28 10 is_stmt 0 view .LVU15
+ 102 000e 0D4F     		ldr	r7, .L7
+ 103 0010 4FF06408 		mov	r8, #100
+ 104 0014 CDF80080 		str	r8, [sp]
+ 105 0018 0123     		movs	r3, #1
+ 106 001a 0DF10F02 		add	r2, sp, #15
+ 107              	.LVL5:
+  28:Core/Src/BNO055.c **** 	error |= HAL_I2C_Master_Receive(BNO055_I2C, BNO055_I2C_ADDR<<1, buf, len, BNO055_READ_TIMEOUT);
+ 108              		.loc 1 28 10 view .LVU16
+ 109 001e 5021     		movs	r1, #80
+ 110              	.LVL6:
+  28:Core/Src/BNO055.c **** 	error |= HAL_I2C_Master_Receive(BNO055_I2C, BNO055_I2C_ADDR<<1, buf, len, BNO055_READ_TIMEOUT);
+ 111              		.loc 1 28 10 view .LVU17
+ 112 0020 3868     		ldr	r0, [r7]
+ 113              	.LVL7:
+  28:Core/Src/BNO055.c **** 	error |= HAL_I2C_Master_Receive(BNO055_I2C, BNO055_I2C_ADDR<<1, buf, len, BNO055_READ_TIMEOUT);
+ 114              		.loc 1 28 10 view .LVU18
+ 115 0022 FFF7FEFF 		bl	HAL_I2C_Master_Transmit
+ 116              	.LVL8:
+  28:Core/Src/BNO055.c **** 	error |= HAL_I2C_Master_Receive(BNO055_I2C, BNO055_I2C_ADDR<<1, buf, len, BNO055_READ_TIMEOUT);
+ 117              		.loc 1 28 10 view .LVU19
+ 118 0026 0446     		mov	r4, r0
+ARM GAS  C:\Users\baske\AppData\Local\Temp\cchAX9kO.s 			page 4
+
+
+ 119              	.LVL9:
+  29:Core/Src/BNO055.c **** 
+ 120              		.loc 1 29 2 is_stmt 1 view .LVU20
+  29:Core/Src/BNO055.c **** 
+ 121              		.loc 1 29 11 is_stmt 0 view .LVU21
+ 122 0028 CDF80080 		str	r8, [sp]
+ 123 002c 3346     		mov	r3, r6
+ 124 002e 2A46     		mov	r2, r5
+ 125 0030 5021     		movs	r1, #80
+ 126 0032 3868     		ldr	r0, [r7]
+ 127 0034 FFF7FEFF 		bl	HAL_I2C_Master_Receive
+ 128              	.LVL10:
+  29:Core/Src/BNO055.c **** 
+ 129              		.loc 1 29 8 view .LVU22
+ 130 0038 2043     		orrs	r0, r0, r4
+ 131              	.LVL11:
+  31:Core/Src/BNO055.c **** 
+ 132              		.loc 1 31 2 is_stmt 1 view .LVU23
+  33:Core/Src/BNO055.c **** 
+ 133              		.loc 1 33 1 is_stmt 0 view .LVU24
+ 134 003a C0B2     		uxtb	r0, r0
+  33:Core/Src/BNO055.c **** 
+ 135              		.loc 1 33 1 view .LVU25
+ 136 003c 04B0     		add	sp, sp, #16
+ 137              		.cfi_def_cfa_offset 24
+ 138              		@ sp needed
+ 139 003e BDE8F081 		pop	{r4, r5, r6, r7, r8, pc}
+ 140              	.LVL12:
+ 141              	.L8:
+  33:Core/Src/BNO055.c **** 
+ 142              		.loc 1 33 1 view .LVU26
+ 143 0042 00BF     		.align	2
+ 144              	.L7:
+ 145 0044 00000000 		.word	.LANCHOR0
+ 146              		.cfi_endproc
+ 147              	.LFE130:
+ 149              		.section	.text.BNO055_ERROR_HANDLE,"ax",%progbits
+ 150              		.align	1
+ 151              		.syntax unified
+ 152              		.thumb
+ 153              		.thumb_func
+ 155              	BNO055_ERROR_HANDLE:
+ 156              	.LVL13:
+ 157              	.LFB132:
+  48:Core/Src/BNO055.c **** 
+  49:Core/Src/BNO055.c **** /*
+  50:Core/Src/BNO055.c ****  * Simple Error Check Function
+  51:Core/Src/BNO055.c ****  */
+  52:Core/Src/BNO055.c **** static void BNO055_ERROR_HANDLE(HAL_StatusTypeDef error){
+ 158              		.loc 1 52 57 is_stmt 1 view -0
+ 159              		.cfi_startproc
+ 160              		@ args = 0, pretend = 0, frame = 0
+ 161              		@ frame_needed = 0, uses_anonymous_args = 0
+  53:Core/Src/BNO055.c **** 	if(error != HAL_OK){
+ 162              		.loc 1 53 2 view .LVU28
+ 163              		.loc 1 53 4 is_stmt 0 view .LVU29
+ 164 0000 00B9     		cbnz	r0, .L15
+ARM GAS  C:\Users\baske\AppData\Local\Temp\cchAX9kO.s 			page 5
+
+
+ 165 0002 7047     		bx	lr
+ 166              	.L15:
+  52:Core/Src/BNO055.c **** 	if(error != HAL_OK){
+ 167              		.loc 1 52 57 view .LVU30
+ 168 0004 08B5     		push	{r3, lr}
+ 169              		.cfi_def_cfa_offset 8
+ 170              		.cfi_offset 3, -8
+ 171              		.cfi_offset 14, -4
+  54:Core/Src/BNO055.c **** 		HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, GPIO_PIN_SET);
+ 172              		.loc 1 54 3 is_stmt 1 view .LVU31
+ 173 0006 0122     		movs	r2, #1
+ 174 0008 2021     		movs	r1, #32
+ 175 000a 0248     		ldr	r0, .L16
+ 176              	.LVL14:
+ 177              		.loc 1 54 3 is_stmt 0 view .LVU32
+ 178 000c FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 179              	.LVL15:
+ 180              	.L11:
+  55:Core/Src/BNO055.c **** 		while(1);
+ 181              		.loc 1 55 3 is_stmt 1 discriminator 1 view .LVU33
+ 182              		.loc 1 55 8 discriminator 1 view .LVU34
+ 183 0010 FEE7     		b	.L11
+ 184              	.L17:
+ 185 0012 00BF     		.align	2
+ 186              	.L16:
+ 187 0014 00000240 		.word	1073872896
+ 188              		.cfi_endproc
+ 189              	.LFE132:
+ 191              		.section	.text.BNO055_I2C_Mount,"ax",%progbits
+ 192              		.align	1
+ 193              		.global	BNO055_I2C_Mount
+ 194              		.syntax unified
+ 195              		.thumb
+ 196              		.thumb_func
+ 198              	BNO055_I2C_Mount:
+ 199              	.LVL16:
+ 200              	.LFB133:
+  56:Core/Src/BNO055.c **** 	}
+  57:Core/Src/BNO055.c **** }
+  58:Core/Src/BNO055.c **** 
+  59:Core/Src/BNO055.c **** /*
+  60:Core/Src/BNO055.c ****  * Allow User to Mount I2C Handle
+  61:Core/Src/BNO055.c ****  */
+  62:Core/Src/BNO055.c **** void BNO055_I2C_Mount(I2C_HandleTypeDef* i2c){
+ 201              		.loc 1 62 46 view -0
+ 202              		.cfi_startproc
+ 203              		@ args = 0, pretend = 0, frame = 0
+ 204              		@ frame_needed = 0, uses_anonymous_args = 0
+ 205              		@ link register save eliminated.
+  63:Core/Src/BNO055.c **** 	BNO055_I2C = i2c;
+ 206              		.loc 1 63 2 view .LVU36
+ 207              		.loc 1 63 13 is_stmt 0 view .LVU37
+ 208 0000 014B     		ldr	r3, .L19
+ 209 0002 1860     		str	r0, [r3]
+  64:Core/Src/BNO055.c **** }
+ 210              		.loc 1 64 1 view .LVU38
+ 211 0004 7047     		bx	lr
+ARM GAS  C:\Users\baske\AppData\Local\Temp\cchAX9kO.s 			page 6
+
+
+ 212              	.L20:
+ 213 0006 00BF     		.align	2
+ 214              	.L19:
+ 215 0008 00000000 		.word	.LANCHOR0
+ 216              		.cfi_endproc
+ 217              	.LFE133:
+ 219              		.section	.text.BNO055_Init,"ax",%progbits
+ 220              		.align	1
+ 221              		.global	BNO055_Init
+ 222              		.syntax unified
+ 223              		.thumb
+ 224              		.thumb_func
+ 226              	BNO055_Init:
+ 227              	.LFB134:
+  65:Core/Src/BNO055.c **** 
+  66:Core/Src/BNO055.c **** #ifdef BNO055_HARDWARE_RESET
+  67:Core/Src/BNO055.c **** 
+  68:Core/Src/BNO055.c **** void BNO055_HW_Reset_Mount(uint32_t GPIO_Port, uint16_t GPIO_Pin){
+  69:Core/Src/BNO055.c **** 	Reset_Port = GPIO_Port;
+  70:Core/Src/BNO055.c **** 	Reset_Pin = GPIO_Pin;
+  71:Core/Src/BNO055.c **** }
+  72:Core/Src/BNO055.c **** 
+  73:Core/Src/BNO055.c **** #endif
+  74:Core/Src/BNO055.c **** 
+  75:Core/Src/BNO055.c **** BNO055_ERROR BNO055_Init(void){
+ 228              		.loc 1 75 31 is_stmt 1 view -0
+ 229              		.cfi_startproc
+ 230              		@ args = 0, pretend = 0, frame = 8
+ 231              		@ frame_needed = 0, uses_anonymous_args = 0
+ 232 0000 00B5     		push	{lr}
+ 233              		.cfi_def_cfa_offset 4
+ 234              		.cfi_offset 14, -4
+ 235 0002 83B0     		sub	sp, sp, #12
+ 236              		.cfi_def_cfa_offset 16
+  76:Core/Src/BNO055.c **** 
+  77:Core/Src/BNO055.c **** 	HAL_StatusTypeDef error;
+ 237              		.loc 1 77 2 view .LVU40
+  78:Core/Src/BNO055.c **** 	uint8_t ID_Check = 0;
+ 238              		.loc 1 78 2 view .LVU41
+ 239              		.loc 1 78 10 is_stmt 0 view .LVU42
+ 240 0004 0020     		movs	r0, #0
+ 241 0006 8DF80700 		strb	r0, [sp, #7]
+  79:Core/Src/BNO055.c **** 
+  80:Core/Src/BNO055.c **** 	/* Software Reset Module */
+  81:Core/Src/BNO055.c **** //	error = BNO055_Write(BNO055_SYS_TRIGGER, BNO055_SYS_RESET);
+  82:Core/Src/BNO055.c **** //	BNO055_ERROR_HANDLE(error);
+  83:Core/Src/BNO055.c **** 
+  84:Core/Src/BNO055.c **** 	/* Hardware Reset Module */
+  85:Core/Src/BNO055.c **** 	#ifdef BNO055_HARDWARE_RESET
+  86:Core/Src/BNO055.c **** 		HAL_GPIO_WritePin(Reset_Port, Reset_Pin, GPIO_PIN_RESET);
+  87:Core/Src/BNO055.c **** 		HAL_Delay(20);
+  88:Core/Src/BNO055.c **** 		HAL_GPIO_WritePin(Reset_Port, Reset_Pin, GPIO_PIN_SET);
+  89:Core/Src/BNO055.c **** 	#endif
+  90:Core/Src/BNO055.c **** 
+  91:Core/Src/BNO055.c **** 	/* Read Chip ID Register to see if BNO055 is detected*/
+  92:Core/Src/BNO055.c **** 	error = BNO055_Read(BNO055_CHIP_ID, &ID_Check, 1);
+ 242              		.loc 1 92 2 is_stmt 1 view .LVU43
+ARM GAS  C:\Users\baske\AppData\Local\Temp\cchAX9kO.s 			page 7
+
+
+ 243              		.loc 1 92 10 is_stmt 0 view .LVU44
+ 244 000a 0122     		movs	r2, #1
+ 245 000c 0DF10701 		add	r1, sp, #7
+ 246 0010 FFF7FEFF 		bl	BNO055_Read
+ 247              	.LVL17:
+  93:Core/Src/BNO055.c **** 	BNO055_ERROR_HANDLE(error);
+ 248              		.loc 1 93 2 is_stmt 1 view .LVU45
+ 249 0014 FFF7FEFF 		bl	BNO055_ERROR_HANDLE
+ 250              	.LVL18:
+  94:Core/Src/BNO055.c **** 	if(ID_Check != BNO055_EXPECTED_ID)
+ 251              		.loc 1 94 2 view .LVU46
+ 252              		.loc 1 94 14 is_stmt 0 view .LVU47
+ 253 0018 9DF80730 		ldrb	r3, [sp, #7]	@ zero_extendqisi2
+ 254              		.loc 1 94 4 view .LVU48
+ 255 001c A02B     		cmp	r3, #160
+ 256 001e 03D0     		beq	.L25
+  95:Core/Src/BNO055.c **** 		return BNO055_NOT_DETECTED;
+ 257              		.loc 1 95 10 view .LVU49
+ 258 0020 0120     		movs	r0, #1
+ 259              	.L22:
+  96:Core/Src/BNO055.c **** 
+  97:Core/Src/BNO055.c **** 	/* Set Register Page to 0 and Clear System Trigger*/
+  98:Core/Src/BNO055.c **** 	error = BNO055_Write(BNO055_PAGE_ID, BNO055_PAGE_0);
+  99:Core/Src/BNO055.c **** 	BNO055_ERROR_HANDLE(error);
+ 100:Core/Src/BNO055.c **** 	HAL_Delay(20);
+ 101:Core/Src/BNO055.c **** 
+ 102:Core/Src/BNO055.c **** 	/* Set BNO055 Operation Mode to CONFIG MODE*/
+ 103:Core/Src/BNO055.c **** 	error = BNO055_Write(BNO055_OPR_MODE, OPR_MODE_CONFIG);
+ 104:Core/Src/BNO055.c **** 	BNO055_ERROR_HANDLE(error);
+ 105:Core/Src/BNO055.c **** 
+ 106:Core/Src/BNO055.c **** 	/* Necessary Delay to Set Operation Mode */
+ 107:Core/Src/BNO055.c **** 	HAL_Delay(10);
+ 108:Core/Src/BNO055.c **** 
+ 109:Core/Src/BNO055.c **** 	return BNO055_SUCCESS;
+ 110:Core/Src/BNO055.c **** 
+ 111:Core/Src/BNO055.c **** }
+ 260              		.loc 1 111 1 view .LVU50
+ 261 0022 03B0     		add	sp, sp, #12
+ 262              		.cfi_remember_state
+ 263              		.cfi_def_cfa_offset 4
+ 264              		@ sp needed
+ 265 0024 5DF804FB 		ldr	pc, [sp], #4
+ 266              	.L25:
+ 267              		.cfi_restore_state
+  98:Core/Src/BNO055.c **** 	BNO055_ERROR_HANDLE(error);
+ 268              		.loc 1 98 2 is_stmt 1 view .LVU51
+  98:Core/Src/BNO055.c **** 	BNO055_ERROR_HANDLE(error);
+ 269              		.loc 1 98 10 is_stmt 0 view .LVU52
+ 270 0028 0021     		movs	r1, #0
+ 271 002a 0720     		movs	r0, #7
+ 272 002c FFF7FEFF 		bl	BNO055_Write
+ 273              	.LVL19:
+  99:Core/Src/BNO055.c **** 	HAL_Delay(20);
+ 274              		.loc 1 99 2 is_stmt 1 view .LVU53
+ 275 0030 FFF7FEFF 		bl	BNO055_ERROR_HANDLE
+ 276              	.LVL20:
+ 100:Core/Src/BNO055.c **** 
+ARM GAS  C:\Users\baske\AppData\Local\Temp\cchAX9kO.s 			page 8
+
+
+ 277              		.loc 1 100 2 view .LVU54
+ 278 0034 1420     		movs	r0, #20
+ 279 0036 FFF7FEFF 		bl	HAL_Delay
+ 280              	.LVL21:
+ 103:Core/Src/BNO055.c **** 	BNO055_ERROR_HANDLE(error);
+ 281              		.loc 1 103 2 view .LVU55
+ 103:Core/Src/BNO055.c **** 	BNO055_ERROR_HANDLE(error);
+ 282              		.loc 1 103 10 is_stmt 0 view .LVU56
+ 283 003a 0021     		movs	r1, #0
+ 284 003c 3D20     		movs	r0, #61
+ 285 003e FFF7FEFF 		bl	BNO055_Write
+ 286              	.LVL22:
+ 104:Core/Src/BNO055.c **** 
+ 287              		.loc 1 104 2 is_stmt 1 view .LVU57
+ 288 0042 FFF7FEFF 		bl	BNO055_ERROR_HANDLE
+ 289              	.LVL23:
+ 107:Core/Src/BNO055.c **** 
+ 290              		.loc 1 107 2 view .LVU58
+ 291 0046 0A20     		movs	r0, #10
+ 292 0048 FFF7FEFF 		bl	HAL_Delay
+ 293              	.LVL24:
+ 109:Core/Src/BNO055.c **** 
+ 294              		.loc 1 109 2 view .LVU59
+ 109:Core/Src/BNO055.c **** 
+ 295              		.loc 1 109 9 is_stmt 0 view .LVU60
+ 296 004c 0020     		movs	r0, #0
+ 297 004e E8E7     		b	.L22
+ 298              		.cfi_endproc
+ 299              	.LFE134:
+ 301              		.section	.text.BNO055_Set_Unit,"ax",%progbits
+ 302              		.align	1
+ 303              		.global	BNO055_Set_Unit
+ 304              		.syntax unified
+ 305              		.thumb
+ 306              		.thumb_func
+ 308              	BNO055_Set_Unit:
+ 309              	.LVL25:
+ 310              	.LFB135:
+ 112:Core/Src/BNO055.c **** 
+ 113:Core/Src/BNO055.c **** BNO055_ERROR BNO055_Set_Unit(BNO055_ACCEL_GRAV_UNIT accUnit, BNO055_ANGULAR_RATE_UNIT angRateUnit, 
+ 311              		.loc 1 113 155 is_stmt 1 view -0
+ 312              		.cfi_startproc
+ 313              		@ args = 0, pretend = 0, frame = 0
+ 314              		@ frame_needed = 0, uses_anonymous_args = 0
+ 315              		@ link register save eliminated.
+ 114:Core/Src/BNO055.c **** 
+ 115:Core/Src/BNO055.c **** 	return BNO055_SUCCESS;
+ 316              		.loc 1 115 2 view .LVU62
+ 116:Core/Src/BNO055.c **** 
+ 117:Core/Src/BNO055.c **** }
+ 317              		.loc 1 117 1 is_stmt 0 view .LVU63
+ 318 0000 0020     		movs	r0, #0
+ 319              	.LVL26:
+ 320              		.loc 1 117 1 view .LVU64
+ 321 0002 7047     		bx	lr
+ 322              		.cfi_endproc
+ 323              	.LFE135:
+ARM GAS  C:\Users\baske\AppData\Local\Temp\cchAX9kO.s 			page 9
+
+
+ 325              		.section	.text.BNO055_Set_OP_Mode,"ax",%progbits
+ 326              		.align	1
+ 327              		.global	BNO055_Set_OP_Mode
+ 328              		.syntax unified
+ 329              		.thumb
+ 330              		.thumb_func
+ 332              	BNO055_Set_OP_Mode:
+ 333              	.LVL27:
+ 334              	.LFB136:
+ 118:Core/Src/BNO055.c **** 
+ 119:Core/Src/BNO055.c **** BNO055_ERROR BNO055_Set_OP_Mode(BNO055_OPERATION_MODE op){
+ 335              		.loc 1 119 58 is_stmt 1 view -0
+ 336              		.cfi_startproc
+ 337              		@ args = 0, pretend = 0, frame = 0
+ 338              		@ frame_needed = 0, uses_anonymous_args = 0
+ 339              		.loc 1 119 58 is_stmt 0 view .LVU66
+ 340 0000 08B5     		push	{r3, lr}
+ 341              		.cfi_def_cfa_offset 8
+ 342              		.cfi_offset 3, -8
+ 343              		.cfi_offset 14, -4
+ 120:Core/Src/BNO055.c **** 
+ 121:Core/Src/BNO055.c **** 	HAL_StatusTypeDef error;
+ 344              		.loc 1 121 2 is_stmt 1 view .LVU67
+ 122:Core/Src/BNO055.c **** 
+ 123:Core/Src/BNO055.c **** 	switch(op){
+ 345              		.loc 1 123 2 view .LVU68
+ 346 0002 0138     		subs	r0, r0, #1
+ 347              	.LVL28:
+ 348              		.loc 1 123 2 is_stmt 0 view .LVU69
+ 349 0004 0B28     		cmp	r0, #11
+ 350 0006 44D8     		bhi	.L28
+ 351 0008 DFE800F0 		tbb	[pc, r0]
+ 352              	.L30:
+ 353 000c 06       		.byte	(.L40-.L30)/2
+ 354 000d 11       		.byte	(.L39-.L30)/2
+ 355 000e 16       		.byte	(.L38-.L30)/2
+ 356 000f 1B       		.byte	(.L37-.L30)/2
+ 357 0010 20       		.byte	(.L36-.L30)/2
+ 358 0011 25       		.byte	(.L35-.L30)/2
+ 359 0012 43       		.byte	(.L28-.L30)/2
+ 360 0013 2A       		.byte	(.L34-.L30)/2
+ 361 0014 2F       		.byte	(.L33-.L30)/2
+ 362 0015 34       		.byte	(.L32-.L30)/2
+ 363 0016 39       		.byte	(.L31-.L30)/2
+ 364 0017 3E       		.byte	(.L29-.L30)/2
+ 365              		.p2align 1
+ 366              	.L40:
+ 124:Core/Src/BNO055.c **** 		case ACC_ONLY:
+ 125:Core/Src/BNO055.c **** 			error = BNO055_Write(BNO055_OPR_MODE, OPR_MODE_ACCONLY);
+ 367              		.loc 1 125 4 is_stmt 1 view .LVU70
+ 368              		.loc 1 125 12 is_stmt 0 view .LVU71
+ 369 0018 0121     		movs	r1, #1
+ 370 001a 3D20     		movs	r0, #61
+ 371 001c FFF7FEFF 		bl	BNO055_Write
+ 372              	.LVL29:
+ 126:Core/Src/BNO055.c **** 			break;
+ 373              		.loc 1 126 4 is_stmt 1 view .LVU72
+ARM GAS  C:\Users\baske\AppData\Local\Temp\cchAX9kO.s 			page 10
+
+
+ 374              	.L41:
+ 127:Core/Src/BNO055.c **** 
+ 128:Core/Src/BNO055.c **** 		case MAG_ONLY:
+ 129:Core/Src/BNO055.c **** 			error = BNO055_Write(BNO055_OPR_MODE, OPR_MODE_MAGONLY);
+ 130:Core/Src/BNO055.c **** 			break;
+ 131:Core/Src/BNO055.c **** 
+ 132:Core/Src/BNO055.c **** 		case GYRO_ONLY:
+ 133:Core/Src/BNO055.c **** 			error = BNO055_Write(BNO055_OPR_MODE, OPR_MODE_GRYOONLY);
+ 134:Core/Src/BNO055.c **** 			break;
+ 135:Core/Src/BNO055.c **** 
+ 136:Core/Src/BNO055.c **** 		case ACC_MAG:
+ 137:Core/Src/BNO055.c **** 			error = BNO055_Write(BNO055_OPR_MODE, OPR_MODE_ACCMAG);
+ 138:Core/Src/BNO055.c **** 			break;
+ 139:Core/Src/BNO055.c **** 
+ 140:Core/Src/BNO055.c **** 		case ACC_GYRO:
+ 141:Core/Src/BNO055.c **** 			error = BNO055_Write(BNO055_OPR_MODE, OPR_MODE_ACCGYRO);
+ 142:Core/Src/BNO055.c **** 			break;
+ 143:Core/Src/BNO055.c **** 
+ 144:Core/Src/BNO055.c **** 		case MAG_GYRO:
+ 145:Core/Src/BNO055.c **** 			error = BNO055_Write(BNO055_OPR_MODE, OPR_MODE_MAGGRYO);
+ 146:Core/Src/BNO055.c **** 			break;
+ 147:Core/Src/BNO055.c **** 
+ 148:Core/Src/BNO055.c **** 		case IMU:
+ 149:Core/Src/BNO055.c **** 			error = BNO055_Write(BNO055_OPR_MODE, OPR_MODE_IMU);
+ 150:Core/Src/BNO055.c **** 			break;
+ 151:Core/Src/BNO055.c **** 
+ 152:Core/Src/BNO055.c **** 		case COMPASS:
+ 153:Core/Src/BNO055.c **** 			error = BNO055_Write(BNO055_OPR_MODE, OPR_MODE_COMPASS);
+ 154:Core/Src/BNO055.c **** 			break;
+ 155:Core/Src/BNO055.c **** 
+ 156:Core/Src/BNO055.c **** 		case M4G:
+ 157:Core/Src/BNO055.c **** 			error = BNO055_Write(BNO055_OPR_MODE, OPR_MODE_M4G);
+ 158:Core/Src/BNO055.c **** 			break;
+ 159:Core/Src/BNO055.c **** 
+ 160:Core/Src/BNO055.c **** 		case NDOF_FMC_OFF:
+ 161:Core/Src/BNO055.c **** 			error = BNO055_Write(BNO055_OPR_MODE, OPR_MODE_NDOF_FMC);
+ 162:Core/Src/BNO055.c **** 			break;
+ 163:Core/Src/BNO055.c **** 
+ 164:Core/Src/BNO055.c **** 		case NDOF:
+ 165:Core/Src/BNO055.c **** 			error = BNO055_Write(BNO055_OPR_MODE, OPR_MODE_NDOF);
+ 166:Core/Src/BNO055.c **** 			break;
+ 167:Core/Src/BNO055.c **** 
+ 168:Core/Src/BNO055.c **** 		default:
+ 169:Core/Src/BNO055.c **** 			error = BNO055_Write(BNO055_OPR_MODE, OPR_MODE_CONFIG);
+ 170:Core/Src/BNO055.c **** 			break;
+ 171:Core/Src/BNO055.c **** 	}
+ 172:Core/Src/BNO055.c **** 
+ 173:Core/Src/BNO055.c **** 	BNO055_ERROR_HANDLE(error);
+ 375              		.loc 1 173 2 view .LVU73
+ 376 0020 FFF7FEFF 		bl	BNO055_ERROR_HANDLE
+ 377              	.LVL30:
+ 174:Core/Src/BNO055.c **** 	HAL_Delay(10);
+ 378              		.loc 1 174 2 view .LVU74
+ 379 0024 0A20     		movs	r0, #10
+ 380 0026 FFF7FEFF 		bl	HAL_Delay
+ 381              	.LVL31:
+ 175:Core/Src/BNO055.c **** 	return BNO055_SUCCESS;
+ARM GAS  C:\Users\baske\AppData\Local\Temp\cchAX9kO.s 			page 11
+
+
+ 382              		.loc 1 175 2 view .LVU75
+ 176:Core/Src/BNO055.c **** }
+ 383              		.loc 1 176 1 is_stmt 0 view .LVU76
+ 384 002a 0020     		movs	r0, #0
+ 385 002c 08BD     		pop	{r3, pc}
+ 386              	.L39:
+ 129:Core/Src/BNO055.c **** 			break;
+ 387              		.loc 1 129 4 is_stmt 1 view .LVU77
+ 129:Core/Src/BNO055.c **** 			break;
+ 388              		.loc 1 129 12 is_stmt 0 view .LVU78
+ 389 002e 0221     		movs	r1, #2
+ 390 0030 3D20     		movs	r0, #61
+ 391 0032 FFF7FEFF 		bl	BNO055_Write
+ 392              	.LVL32:
+ 130:Core/Src/BNO055.c **** 
+ 393              		.loc 1 130 4 is_stmt 1 view .LVU79
+ 394 0036 F3E7     		b	.L41
+ 395              	.LVL33:
+ 396              	.L38:
+ 133:Core/Src/BNO055.c **** 			break;
+ 397              		.loc 1 133 4 view .LVU80
+ 133:Core/Src/BNO055.c **** 			break;
+ 398              		.loc 1 133 12 is_stmt 0 view .LVU81
+ 399 0038 0321     		movs	r1, #3
+ 400 003a 3D20     		movs	r0, #61
+ 401 003c FFF7FEFF 		bl	BNO055_Write
+ 402              	.LVL34:
+ 134:Core/Src/BNO055.c **** 
+ 403              		.loc 1 134 4 is_stmt 1 view .LVU82
+ 404 0040 EEE7     		b	.L41
+ 405              	.LVL35:
+ 406              	.L37:
+ 137:Core/Src/BNO055.c **** 			break;
+ 407              		.loc 1 137 4 view .LVU83
+ 137:Core/Src/BNO055.c **** 			break;
+ 408              		.loc 1 137 12 is_stmt 0 view .LVU84
+ 409 0042 0421     		movs	r1, #4
+ 410 0044 3D20     		movs	r0, #61
+ 411 0046 FFF7FEFF 		bl	BNO055_Write
+ 412              	.LVL36:
+ 138:Core/Src/BNO055.c **** 
+ 413              		.loc 1 138 4 is_stmt 1 view .LVU85
+ 414 004a E9E7     		b	.L41
+ 415              	.LVL37:
+ 416              	.L36:
+ 141:Core/Src/BNO055.c **** 			break;
+ 417              		.loc 1 141 4 view .LVU86
+ 141:Core/Src/BNO055.c **** 			break;
+ 418              		.loc 1 141 12 is_stmt 0 view .LVU87
+ 419 004c 0521     		movs	r1, #5
+ 420 004e 3D20     		movs	r0, #61
+ 421 0050 FFF7FEFF 		bl	BNO055_Write
+ 422              	.LVL38:
+ 142:Core/Src/BNO055.c **** 
+ 423              		.loc 1 142 4 is_stmt 1 view .LVU88
+ 424 0054 E4E7     		b	.L41
+ 425              	.LVL39:
+ARM GAS  C:\Users\baske\AppData\Local\Temp\cchAX9kO.s 			page 12
+
+
+ 426              	.L35:
+ 145:Core/Src/BNO055.c **** 			break;
+ 427              		.loc 1 145 4 view .LVU89
+ 145:Core/Src/BNO055.c **** 			break;
+ 428              		.loc 1 145 12 is_stmt 0 view .LVU90
+ 429 0056 0621     		movs	r1, #6
+ 430 0058 3D20     		movs	r0, #61
+ 431 005a FFF7FEFF 		bl	BNO055_Write
+ 432              	.LVL40:
+ 146:Core/Src/BNO055.c **** 
+ 433              		.loc 1 146 4 is_stmt 1 view .LVU91
+ 434 005e DFE7     		b	.L41
+ 435              	.LVL41:
+ 436              	.L34:
+ 149:Core/Src/BNO055.c **** 			break;
+ 437              		.loc 1 149 4 view .LVU92
+ 149:Core/Src/BNO055.c **** 			break;
+ 438              		.loc 1 149 12 is_stmt 0 view .LVU93
+ 439 0060 0821     		movs	r1, #8
+ 440 0062 3D20     		movs	r0, #61
+ 441 0064 FFF7FEFF 		bl	BNO055_Write
+ 442              	.LVL42:
+ 150:Core/Src/BNO055.c **** 
+ 443              		.loc 1 150 4 is_stmt 1 view .LVU94
+ 444 0068 DAE7     		b	.L41
+ 445              	.LVL43:
+ 446              	.L33:
+ 153:Core/Src/BNO055.c **** 			break;
+ 447              		.loc 1 153 4 view .LVU95
+ 153:Core/Src/BNO055.c **** 			break;
+ 448              		.loc 1 153 12 is_stmt 0 view .LVU96
+ 449 006a 0921     		movs	r1, #9
+ 450 006c 3D20     		movs	r0, #61
+ 451 006e FFF7FEFF 		bl	BNO055_Write
+ 452              	.LVL44:
+ 154:Core/Src/BNO055.c **** 
+ 453              		.loc 1 154 4 is_stmt 1 view .LVU97
+ 454 0072 D5E7     		b	.L41
+ 455              	.LVL45:
+ 456              	.L32:
+ 157:Core/Src/BNO055.c **** 			break;
+ 457              		.loc 1 157 4 view .LVU98
+ 157:Core/Src/BNO055.c **** 			break;
+ 458              		.loc 1 157 12 is_stmt 0 view .LVU99
+ 459 0074 0A21     		movs	r1, #10
+ 460 0076 3D20     		movs	r0, #61
+ 461 0078 FFF7FEFF 		bl	BNO055_Write
+ 462              	.LVL46:
+ 158:Core/Src/BNO055.c **** 
+ 463              		.loc 1 158 4 is_stmt 1 view .LVU100
+ 464 007c D0E7     		b	.L41
+ 465              	.LVL47:
+ 466              	.L31:
+ 161:Core/Src/BNO055.c **** 			break;
+ 467              		.loc 1 161 4 view .LVU101
+ 161:Core/Src/BNO055.c **** 			break;
+ 468              		.loc 1 161 12 is_stmt 0 view .LVU102
+ARM GAS  C:\Users\baske\AppData\Local\Temp\cchAX9kO.s 			page 13
+
+
+ 469 007e 0B21     		movs	r1, #11
+ 470 0080 3D20     		movs	r0, #61
+ 471 0082 FFF7FEFF 		bl	BNO055_Write
+ 472              	.LVL48:
+ 162:Core/Src/BNO055.c **** 
+ 473              		.loc 1 162 4 is_stmt 1 view .LVU103
+ 474 0086 CBE7     		b	.L41
+ 475              	.LVL49:
+ 476              	.L29:
+ 165:Core/Src/BNO055.c **** 			break;
+ 477              		.loc 1 165 4 view .LVU104
+ 165:Core/Src/BNO055.c **** 			break;
+ 478              		.loc 1 165 12 is_stmt 0 view .LVU105
+ 479 0088 0C21     		movs	r1, #12
+ 480 008a 3D20     		movs	r0, #61
+ 481 008c FFF7FEFF 		bl	BNO055_Write
+ 482              	.LVL50:
+ 166:Core/Src/BNO055.c **** 
+ 483              		.loc 1 166 4 is_stmt 1 view .LVU106
+ 484 0090 C6E7     		b	.L41
+ 485              	.LVL51:
+ 486              	.L28:
+ 169:Core/Src/BNO055.c **** 			break;
+ 487              		.loc 1 169 4 view .LVU107
+ 169:Core/Src/BNO055.c **** 			break;
+ 488              		.loc 1 169 12 is_stmt 0 view .LVU108
+ 489 0092 0021     		movs	r1, #0
+ 490 0094 3D20     		movs	r0, #61
+ 491 0096 FFF7FEFF 		bl	BNO055_Write
+ 492              	.LVL52:
+ 170:Core/Src/BNO055.c **** 	}
+ 493              		.loc 1 170 4 is_stmt 1 view .LVU109
+ 494 009a C1E7     		b	.L41
+ 495              		.cfi_endproc
+ 496              	.LFE136:
+ 498              		.section	.text.BNO055_Get_Euler_Vec,"ax",%progbits
+ 499              		.align	1
+ 500              		.global	BNO055_Get_Euler_Vec
+ 501              		.syntax unified
+ 502              		.thumb
+ 503              		.thumb_func
+ 505              	BNO055_Get_Euler_Vec:
+ 506              	.LVL53:
+ 507              	.LFB137:
+ 177:Core/Src/BNO055.c **** 
+ 178:Core/Src/BNO055.c **** BNO055_ERROR BNO055_Get_Euler_Vec(BNO055_Euler_Vec_t* vec){
+ 508              		.loc 1 178 59 view -0
+ 509              		.cfi_startproc
+ 510              		@ args = 0, pretend = 0, frame = 8
+ 511              		@ frame_needed = 0, uses_anonymous_args = 0
+ 512              		.loc 1 178 59 is_stmt 0 view .LVU111
+ 513 0000 10B5     		push	{r4, lr}
+ 514              		.cfi_def_cfa_offset 8
+ 515              		.cfi_offset 4, -8
+ 516              		.cfi_offset 14, -4
+ 517 0002 82B0     		sub	sp, sp, #8
+ 518              		.cfi_def_cfa_offset 16
+ARM GAS  C:\Users\baske\AppData\Local\Temp\cchAX9kO.s 			page 14
+
+
+ 519 0004 0446     		mov	r4, r0
+ 179:Core/Src/BNO055.c **** 
+ 180:Core/Src/BNO055.c **** 	HAL_StatusTypeDef error;
+ 520              		.loc 1 180 2 is_stmt 1 view .LVU112
+ 181:Core/Src/BNO055.c **** 	uint8_t tempBuf[6];
+ 521              		.loc 1 181 2 view .LVU113
+ 182:Core/Src/BNO055.c **** 
+ 183:Core/Src/BNO055.c **** 	/* Make sure page is set to 0 */
+ 184:Core/Src/BNO055.c **** 	error = BNO055_Write(BNO055_PAGE_ID, BNO055_PAGE_0);
+ 522              		.loc 1 184 2 view .LVU114
+ 523              		.loc 1 184 10 is_stmt 0 view .LVU115
+ 524 0006 0021     		movs	r1, #0
+ 525 0008 0720     		movs	r0, #7
+ 526              	.LVL54:
+ 527              		.loc 1 184 10 view .LVU116
+ 528 000a FFF7FEFF 		bl	BNO055_Write
+ 529              	.LVL55:
+ 185:Core/Src/BNO055.c **** 	BNO055_ERROR_HANDLE(error);
+ 530              		.loc 1 185 2 is_stmt 1 view .LVU117
+ 531 000e FFF7FEFF 		bl	BNO055_ERROR_HANDLE
+ 532              	.LVL56:
+ 186:Core/Src/BNO055.c **** 
+ 187:Core/Src/BNO055.c **** 	/* Grab Euler Vector Data */
+ 188:Core/Src/BNO055.c **** 	error = BNO055_Read(BNO055_EUL_HEADING_LSB, tempBuf, sizeof(tempBuf));
+ 533              		.loc 1 188 2 view .LVU118
+ 534              		.loc 1 188 10 is_stmt 0 view .LVU119
+ 535 0012 0622     		movs	r2, #6
+ 536 0014 6946     		mov	r1, sp
+ 537 0016 1A20     		movs	r0, #26
+ 538 0018 FFF7FEFF 		bl	BNO055_Read
+ 539              	.LVL57:
+ 189:Core/Src/BNO055.c **** 	BNO055_ERROR_HANDLE(error);
+ 540              		.loc 1 189 2 is_stmt 1 view .LVU120
+ 541 001c FFF7FEFF 		bl	BNO055_ERROR_HANDLE
+ 542              	.LVL58:
+ 190:Core/Src/BNO055.c **** 
+ 191:Core/Src/BNO055.c **** 	/* Parse Data Into Struct */
+ 192:Core/Src/BNO055.c **** 	vec->x = (int16_t)((tempBuf[1]<<8) | tempBuf[0]) / BNO055_EULER_DEGREE_SCALE;
+ 543              		.loc 1 192 2 view .LVU121
+ 544              		.loc 1 192 29 is_stmt 0 view .LVU122
+ 545 0020 9DF80120 		ldrb	r2, [sp, #1]	@ zero_extendqisi2
+ 546              		.loc 1 192 46 view .LVU123
+ 547 0024 9DF80030 		ldrb	r3, [sp]	@ zero_extendqisi2
+ 548              		.loc 1 192 11 view .LVU124
+ 549 0028 43EA0223 		orr	r3, r3, r2, lsl #8
+ 550 002c 1BB2     		sxth	r3, r3
+ 551 002e 07EE903A 		vmov	s15, r3	@ int
+ 552              		.loc 1 192 51 view .LVU125
+ 553 0032 F8EEE77A 		vcvt.f32.s32	s15, s15
+ 554 0036 9FED137A 		vldr.32	s14, .L45
+ 555 003a 67EE877A 		vmul.f32	s15, s15, s14
+ 556              		.loc 1 192 9 view .LVU126
+ 557 003e C4ED007A 		vstr.32	s15, [r4]
+ 193:Core/Src/BNO055.c **** 	vec->y = (int16_t)((tempBuf[3]<<8) | tempBuf[2]) / BNO055_EULER_DEGREE_SCALE;
+ 558              		.loc 1 193 2 is_stmt 1 view .LVU127
+ 559              		.loc 1 193 29 is_stmt 0 view .LVU128
+ 560 0042 9DF80320 		ldrb	r2, [sp, #3]	@ zero_extendqisi2
+ARM GAS  C:\Users\baske\AppData\Local\Temp\cchAX9kO.s 			page 15
+
+
+ 561              		.loc 1 193 46 view .LVU129
+ 562 0046 9DF80230 		ldrb	r3, [sp, #2]	@ zero_extendqisi2
+ 563              		.loc 1 193 11 view .LVU130
+ 564 004a 43EA0223 		orr	r3, r3, r2, lsl #8
+ 565 004e 1BB2     		sxth	r3, r3
+ 566 0050 07EE903A 		vmov	s15, r3	@ int
+ 567              		.loc 1 193 51 view .LVU131
+ 568 0054 F8EEE77A 		vcvt.f32.s32	s15, s15
+ 569 0058 67EE877A 		vmul.f32	s15, s15, s14
+ 570              		.loc 1 193 9 view .LVU132
+ 571 005c C4ED017A 		vstr.32	s15, [r4, #4]
+ 194:Core/Src/BNO055.c **** 	vec->z = (int16_t)((tempBuf[5]<<8) | tempBuf[4]) / BNO055_EULER_DEGREE_SCALE;
+ 572              		.loc 1 194 2 is_stmt 1 view .LVU133
+ 573              		.loc 1 194 29 is_stmt 0 view .LVU134
+ 574 0060 9DF80520 		ldrb	r2, [sp, #5]	@ zero_extendqisi2
+ 575              		.loc 1 194 46 view .LVU135
+ 576 0064 9DF80430 		ldrb	r3, [sp, #4]	@ zero_extendqisi2
+ 577              		.loc 1 194 11 view .LVU136
+ 578 0068 43EA0223 		orr	r3, r3, r2, lsl #8
+ 579 006c 1BB2     		sxth	r3, r3
+ 580 006e 07EE903A 		vmov	s15, r3	@ int
+ 581              		.loc 1 194 51 view .LVU137
+ 582 0072 F8EEE77A 		vcvt.f32.s32	s15, s15
+ 583 0076 67EE877A 		vmul.f32	s15, s15, s14
+ 584              		.loc 1 194 9 view .LVU138
+ 585 007a C4ED027A 		vstr.32	s15, [r4, #8]
+ 195:Core/Src/BNO055.c **** 
+ 196:Core/Src/BNO055.c **** 	return BNO055_SUCCESS;
+ 586              		.loc 1 196 2 is_stmt 1 view .LVU139
+ 197:Core/Src/BNO055.c **** }
+ 587              		.loc 1 197 1 is_stmt 0 view .LVU140
+ 588 007e 0020     		movs	r0, #0
+ 589 0080 02B0     		add	sp, sp, #8
+ 590              		.cfi_def_cfa_offset 8
+ 591              		@ sp needed
+ 592 0082 10BD     		pop	{r4, pc}
+ 593              	.LVL59:
+ 594              	.L46:
+ 595              		.loc 1 197 1 view .LVU141
+ 596              		.align	2
+ 597              	.L45:
+ 598 0084 0000803D 		.word	1031798784
+ 599              		.cfi_endproc
+ 600              	.LFE137:
+ 602              		.global	BNO055_I2C
+ 603              		.section	.bss.BNO055_I2C,"aw",%nobits
+ 604              		.align	2
+ 605              		.set	.LANCHOR0,. + 0
+ 608              	BNO055_I2C:
+ 609 0000 00000000 		.space	4
+ 610              		.text
+ 611              	.Letext0:
+ 612              		.file 2 "c:\\users\\baske\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@xpa
+ 613              		.file 3 "c:\\users\\baske\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@xpa
+ 614              		.file 4 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f446xx.h"
+ 615              		.file 5 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h"
+ 616              		.file 6 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h"
+ARM GAS  C:\Users\baske\AppData\Local\Temp\cchAX9kO.s 			page 16
+
+
+ 617              		.file 7 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h"
+ 618              		.file 8 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h"
+ 619              		.file 9 "Core/Inc/BNO055.h"
+ 620              		.file 10 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h"
+ARM GAS  C:\Users\baske\AppData\Local\Temp\cchAX9kO.s 			page 17
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 BNO055.c
+C:\Users\baske\AppData\Local\Temp\cchAX9kO.s:20     .text.BNO055_Write:0000000000000000 $t
+C:\Users\baske\AppData\Local\Temp\cchAX9kO.s:25     .text.BNO055_Write:0000000000000000 BNO055_Write
+C:\Users\baske\AppData\Local\Temp\cchAX9kO.s:68     .text.BNO055_Write:0000000000000024 $d
+C:\Users\baske\AppData\Local\Temp\cchAX9kO.s:73     .text.BNO055_Read:0000000000000000 $t
+C:\Users\baske\AppData\Local\Temp\cchAX9kO.s:78     .text.BNO055_Read:0000000000000000 BNO055_Read
+C:\Users\baske\AppData\Local\Temp\cchAX9kO.s:145    .text.BNO055_Read:0000000000000044 $d
+C:\Users\baske\AppData\Local\Temp\cchAX9kO.s:150    .text.BNO055_ERROR_HANDLE:0000000000000000 $t
+C:\Users\baske\AppData\Local\Temp\cchAX9kO.s:155    .text.BNO055_ERROR_HANDLE:0000000000000000 BNO055_ERROR_HANDLE
+C:\Users\baske\AppData\Local\Temp\cchAX9kO.s:187    .text.BNO055_ERROR_HANDLE:0000000000000014 $d
+C:\Users\baske\AppData\Local\Temp\cchAX9kO.s:192    .text.BNO055_I2C_Mount:0000000000000000 $t
+C:\Users\baske\AppData\Local\Temp\cchAX9kO.s:198    .text.BNO055_I2C_Mount:0000000000000000 BNO055_I2C_Mount
+C:\Users\baske\AppData\Local\Temp\cchAX9kO.s:215    .text.BNO055_I2C_Mount:0000000000000008 $d
+C:\Users\baske\AppData\Local\Temp\cchAX9kO.s:220    .text.BNO055_Init:0000000000000000 $t
+C:\Users\baske\AppData\Local\Temp\cchAX9kO.s:226    .text.BNO055_Init:0000000000000000 BNO055_Init
+C:\Users\baske\AppData\Local\Temp\cchAX9kO.s:302    .text.BNO055_Set_Unit:0000000000000000 $t
+C:\Users\baske\AppData\Local\Temp\cchAX9kO.s:308    .text.BNO055_Set_Unit:0000000000000000 BNO055_Set_Unit
+C:\Users\baske\AppData\Local\Temp\cchAX9kO.s:326    .text.BNO055_Set_OP_Mode:0000000000000000 $t
+C:\Users\baske\AppData\Local\Temp\cchAX9kO.s:332    .text.BNO055_Set_OP_Mode:0000000000000000 BNO055_Set_OP_Mode
+C:\Users\baske\AppData\Local\Temp\cchAX9kO.s:353    .text.BNO055_Set_OP_Mode:000000000000000c $d
+C:\Users\baske\AppData\Local\Temp\cchAX9kO.s:365    .text.BNO055_Set_OP_Mode:0000000000000018 $t
+C:\Users\baske\AppData\Local\Temp\cchAX9kO.s:499    .text.BNO055_Get_Euler_Vec:0000000000000000 $t
+C:\Users\baske\AppData\Local\Temp\cchAX9kO.s:505    .text.BNO055_Get_Euler_Vec:0000000000000000 BNO055_Get_Euler_Vec
+C:\Users\baske\AppData\Local\Temp\cchAX9kO.s:598    .text.BNO055_Get_Euler_Vec:0000000000000084 $d
+C:\Users\baske\AppData\Local\Temp\cchAX9kO.s:608    .bss.BNO055_I2C:0000000000000000 BNO055_I2C
+C:\Users\baske\AppData\Local\Temp\cchAX9kO.s:604    .bss.BNO055_I2C:0000000000000000 $d
+
+UNDEFINED SYMBOLS
+HAL_I2C_Master_Transmit
+HAL_I2C_Master_Receive
+HAL_GPIO_WritePin
+HAL_Delay

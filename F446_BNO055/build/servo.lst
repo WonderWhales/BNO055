@@ -1,0 +1,687 @@
+ARM GAS  C:\Users\baske\AppData\Local\Temp\cc1v5OdT.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 1
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"servo.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.DRIVE_SERVO,"ax",%progbits
+  20              		.align	1
+  21              		.global	DRIVE_SERVO
+  22              		.syntax unified
+  23              		.thumb
+  24              		.thumb_func
+  26              	DRIVE_SERVO:
+  27              	.LVL0:
+  28              	.LFB132:
+  29              		.file 1 "Core/Src/servo.c"
+   1:Core/Src/servo.c **** /*
+   2:Core/Src/servo.c ****  * servo.c
+   3:Core/Src/servo.c ****  *
+   4:Core/Src/servo.c ****  *  Created on: Jul 14, 2023
+   5:Core/Src/servo.c ****  *      Author: baske
+   6:Core/Src/servo.c ****  */
+   7:Core/Src/servo.c **** 
+   8:Core/Src/servo.c **** #include "main.h"
+   9:Core/Src/servo.c **** #include "servo.h"
+  10:Core/Src/servo.c **** 
+  11:Core/Src/servo.c **** static uint8_t freqError = 0;
+  12:Core/Src/servo.c **** 
+  13:Core/Src/servo.c **** #define getFreq(System_CLK, Timer_Prescaler, Timer_Period)		(System_CLK / (Timer_Prescaler+1)) / (T
+  14:Core/Src/servo.c **** 
+  15:Core/Src/servo.c **** static inline uint32_t map(int8_t x, int8_t x_min, int8_t x_max, uint32_t out_min, uint32_t out_max
+  16:Core/Src/servo.c **** 
+  17:Core/Src/servo.c **** 	if(x <= x_min)
+  18:Core/Src/servo.c **** 		return x_min;
+  19:Core/Src/servo.c **** 
+  20:Core/Src/servo.c **** 	if(x >= x_max)
+  21:Core/Src/servo.c **** 		return x_max;
+  22:Core/Src/servo.c **** 
+  23:Core/Src/servo.c **** 	return (x - x_min) * (out_max - out_min) / (x_max - x_min) + out_min;
+  24:Core/Src/servo.c **** 
+  25:Core/Src/servo.c **** }
+  26:Core/Src/servo.c **** 
+  27:Core/Src/servo.c **** SERVO_ErrorTypeDef SERVO_INIT(SERVO_Instance_t* Servo_Instance){
+  28:Core/Src/servo.c **** 
+  29:Core/Src/servo.c **** 	uint16_t timFreq;
+ARM GAS  C:\Users\baske\AppData\Local\Temp\cc1v5OdT.s 			page 2
+
+
+  30:Core/Src/servo.c **** 
+  31:Core/Src/servo.c **** 	/* Check if this timer is setup correctly for SERVO Control */
+  32:Core/Src/servo.c **** 	timFreq = getFreq(HAL_RCC_GetSysClockFreq(), Servo_Instance->htim->Init.Prescaler, __HAL_TIM_GET_A
+  33:Core/Src/servo.c **** 
+  34:Core/Src/servo.c **** 	if(timFreq != DESIRE_SERVO_FREQ){
+  35:Core/Src/servo.c **** 		freqError = 1;
+  36:Core/Src/servo.c **** 		return SERVO_FREQ_ERROR;
+  37:Core/Src/servo.c **** 	}
+  38:Core/Src/servo.c **** 
+  39:Core/Src/servo.c **** 	/* Configure Min and Max count based on duty cycle given */
+  40:Core/Src/servo.c **** 	Servo_Instance->minCnt = Servo_Instance->config->minDuty * __HAL_TIM_GET_AUTORELOAD(Servo_Instance
+  41:Core/Src/servo.c **** 	Servo_Instance->maxCnt = Servo_Instance->config->maxDuty * __HAL_TIM_GET_AUTORELOAD(Servo_Instance
+  42:Core/Src/servo.c **** 
+  43:Core/Src/servo.c **** 	/* Zero Out SERVO */
+  44:Core/Src/servo.c **** 	DRIVE_SERVO(Servo_Instance, 0);
+  45:Core/Src/servo.c **** 
+  46:Core/Src/servo.c **** 	return SERVO_OK;
+  47:Core/Src/servo.c **** 
+  48:Core/Src/servo.c **** }
+  49:Core/Src/servo.c **** 
+  50:Core/Src/servo.c **** 
+  51:Core/Src/servo.c **** SERVO_ErrorTypeDef DRIVE_SERVO(const SERVO_Instance_t* servo, int8_t angle){
+  30              		.loc 1 51 76 view -0
+  31              		.cfi_startproc
+  32              		@ args = 0, pretend = 0, frame = 0
+  33              		@ frame_needed = 0, uses_anonymous_args = 0
+  34              		@ link register save eliminated.
+  35              		.loc 1 51 76 is_stmt 0 view .LVU1
+  36 0000 0346     		mov	r3, r0
+  52:Core/Src/servo.c **** 
+  53:Core/Src/servo.c **** 	/* Servo Protection */
+  54:Core/Src/servo.c **** 	if(freqError)
+  37              		.loc 1 54 2 is_stmt 1 view .LVU2
+  38              		.loc 1 54 5 is_stmt 0 view .LVU3
+  39 0002 3C4A     		ldr	r2, .L32
+  40 0004 1078     		ldrb	r0, [r2]	@ zero_extendqisi2
+  41              	.LVL1:
+  42              		.loc 1 54 4 view .LVU4
+  43 0006 0028     		cmp	r0, #0
+  44 0008 6BD1     		bne	.L18
+  55:Core/Src/servo.c **** 		return SERVO_FREQ_ERROR;
+  56:Core/Src/servo.c **** 
+  57:Core/Src/servo.c **** 	/* Asserting Params */
+  58:Core/Src/servo.c **** 	if(servo == NULL)
+  45              		.loc 1 58 2 is_stmt 1 view .LVU5
+  46              		.loc 1 58 4 is_stmt 0 view .LVU6
+  47 000a 002B     		cmp	r3, #0
+  48 000c 6BD0     		beq	.L19
+  59:Core/Src/servo.c **** 		return SERVO_INSTANCE_ERROR;
+  60:Core/Src/servo.c **** 	else if(angle < servo->config->minAngle)
+  49              		.loc 1 60 7 is_stmt 1 view .LVU7
+  50              		.loc 1 60 23 is_stmt 0 view .LVU8
+  51 000e 9A68     		ldr	r2, [r3, #8]
+  52              		.loc 1 60 31 view .LVU9
+  53 0010 92F908C0 		ldrsb	ip, [r2, #8]
+  54              		.loc 1 60 9 view .LVU10
+  55 0014 8C45     		cmp	ip, r1
+ARM GAS  C:\Users\baske\AppData\Local\Temp\cc1v5OdT.s 			page 3
+
+
+  56 0016 68DC     		bgt	.L20
+  61:Core/Src/servo.c **** 		return SERVO_RANGE_ERROR_MIN;
+  62:Core/Src/servo.c **** 	else if(angle > servo->config->maxAngle)
+  57              		.loc 1 62 7 is_stmt 1 view .LVU11
+  58              		.loc 1 62 31 is_stmt 0 view .LVU12
+  59 0018 92F90920 		ldrsb	r2, [r2, #9]
+  60              		.loc 1 62 9 view .LVU13
+  61 001c 8A42     		cmp	r2, r1
+  62 001e 66DB     		blt	.L21
+  51:Core/Src/servo.c **** 
+  63              		.loc 1 51 76 view .LVU14
+  64 0020 70B4     		push	{r4, r5, r6}
+  65              		.cfi_def_cfa_offset 12
+  66              		.cfi_offset 4, -12
+  67              		.cfi_offset 5, -8
+  68              		.cfi_offset 6, -4
+  63:Core/Src/servo.c **** 		return SERVO_RANGE_ERROR_MAX;
+  64:Core/Src/servo.c **** 
+  65:Core/Src/servo.c **** 	/* Set New Compare Value */
+  66:Core/Src/servo.c **** 	__HAL_TIM_SET_COMPARE(servo->htim, servo->channel, map(angle, servo->config->minAngle, servo->conf
+  69              		.loc 1 66 2 is_stmt 1 view .LVU15
+  70 0022 1C79     		ldrb	r4, [r3, #4]	@ zero_extendqisi2
+  71 0024 BCB9     		cbnz	r4, .L3
+  72              		.loc 1 66 2 is_stmt 0 discriminator 1 view .LVU16
+  73 0026 D868     		ldr	r0, [r3, #12]
+  74 0028 1D69     		ldr	r5, [r3, #16]
+  75 002a 1B68     		ldr	r3, [r3]
+  76              	.LVL2:
+  77              		.loc 1 66 2 discriminator 1 view .LVU17
+  78 002c 1E68     		ldr	r6, [r3]
+  79              	.LVL3:
+  80              	.LBB10:
+  81              	.LBI10:
+  15:Core/Src/servo.c **** 
+  82              		.loc 1 15 24 is_stmt 1 discriminator 1 view .LVU18
+  83              	.LBB11:
+  17:Core/Src/servo.c **** 		return x_min;
+  84              		.loc 1 17 2 discriminator 1 view .LVU19
+  17:Core/Src/servo.c **** 		return x_min;
+  85              		.loc 1 17 4 is_stmt 0 discriminator 1 view .LVU20
+  86 002e 8C45     		cmp	ip, r1
+  87 0030 0FDA     		bge	.L26
+  20:Core/Src/servo.c **** 		return x_max;
+  88              		.loc 1 20 2 is_stmt 1 view .LVU21
+  20:Core/Src/servo.c **** 		return x_max;
+  89              		.loc 1 20 4 is_stmt 0 view .LVU22
+  90 0032 8A42     		cmp	r2, r1
+  91 0034 09DD     		ble	.L5
+  23:Core/Src/servo.c **** 
+  92              		.loc 1 23 2 is_stmt 1 view .LVU23
+  23:Core/Src/servo.c **** 
+  93              		.loc 1 23 12 is_stmt 0 view .LVU24
+  94 0036 A1EB0C01 		sub	r1, r1, ip
+  95              	.LVL4:
+  23:Core/Src/servo.c **** 
+  96              		.loc 1 23 32 view .LVU25
+  97 003a 2D1A     		subs	r5, r5, r0
+ARM GAS  C:\Users\baske\AppData\Local\Temp\cc1v5OdT.s 			page 4
+
+
+  98              	.LVL5:
+  23:Core/Src/servo.c **** 
+  99              		.loc 1 23 21 view .LVU26
+ 100 003c 05FB01F1 		mul	r1, r5, r1
+  23:Core/Src/servo.c **** 
+ 101              		.loc 1 23 52 view .LVU27
+ 102 0040 A2EB0C02 		sub	r2, r2, ip
+ 103              	.LVL6:
+  23:Core/Src/servo.c **** 
+ 104              		.loc 1 23 43 view .LVU28
+ 105 0044 B1FBF2F1 		udiv	r1, r1, r2
+  23:Core/Src/servo.c **** 
+ 106              		.loc 1 23 61 view .LVU29
+ 107 0048 4218     		adds	r2, r0, r1
+ 108              	.L5:
+ 109              	.LVL7:
+  23:Core/Src/servo.c **** 
+ 110              		.loc 1 23 61 view .LVU30
+ 111              	.LBE11:
+ 112              	.LBE10:
+ 113              		.loc 1 66 2 view .LVU31
+ 114 004a 7263     		str	r2, [r6, #52]
+  67:Core/Src/servo.c **** 
+  68:Core/Src/servo.c **** 	return SERVO_OK;
+ 115              		.loc 1 68 9 view .LVU32
+ 116 004c 2046     		mov	r0, r4
+ 117              	.L2:
+  69:Core/Src/servo.c **** }
+ 118              		.loc 1 69 1 view .LVU33
+ 119 004e 70BC     		pop	{r4, r5, r6}
+ 120              		.cfi_remember_state
+ 121              		.cfi_restore 6
+ 122              		.cfi_restore 5
+ 123              		.cfi_restore 4
+ 124              		.cfi_def_cfa_offset 0
+ 125 0050 7047     		bx	lr
+ 126              	.LVL8:
+ 127              	.L26:
+ 128              		.cfi_restore_state
+ 129              	.LBB13:
+ 130              	.LBB12:
+  18:Core/Src/servo.c **** 
+ 131              		.loc 1 18 3 is_stmt 1 view .LVU34
+  18:Core/Src/servo.c **** 
+ 132              		.loc 1 18 10 is_stmt 0 view .LVU35
+ 133 0052 6246     		mov	r2, ip
+ 134              	.LVL9:
+  18:Core/Src/servo.c **** 
+ 135              		.loc 1 18 10 view .LVU36
+ 136 0054 F9E7     		b	.L5
+ 137              	.LVL10:
+ 138              	.L3:
+  18:Core/Src/servo.c **** 
+ 139              		.loc 1 18 10 view .LVU37
+ 140              	.LBE12:
+ 141              	.LBE13:
+  66:Core/Src/servo.c **** 
+ARM GAS  C:\Users\baske\AppData\Local\Temp\cc1v5OdT.s 			page 5
+
+
+ 142              		.loc 1 66 2 discriminator 2 view .LVU38
+ 143 0056 042C     		cmp	r4, #4
+ 144 0058 15D0     		beq	.L27
+  66:Core/Src/servo.c **** 
+ 145              		.loc 1 66 2 discriminator 4 view .LVU39
+ 146 005a 082C     		cmp	r4, #8
+ 147 005c 29D0     		beq	.L28
+  66:Core/Src/servo.c **** 
+ 148              		.loc 1 66 2 discriminator 7 view .LVU40
+ 149 005e DE68     		ldr	r6, [r3, #12]
+ 150 0060 1C69     		ldr	r4, [r3, #16]
+ 151 0062 1B68     		ldr	r3, [r3]
+ 152              	.LVL11:
+  66:Core/Src/servo.c **** 
+ 153              		.loc 1 66 2 discriminator 7 view .LVU41
+ 154 0064 1D68     		ldr	r5, [r3]
+ 155              	.LVL12:
+ 156              	.LBB14:
+ 157              	.LBI14:
+  15:Core/Src/servo.c **** 
+ 158              		.loc 1 15 24 is_stmt 1 discriminator 7 view .LVU42
+ 159              	.LBB15:
+  17:Core/Src/servo.c **** 		return x_min;
+ 160              		.loc 1 17 2 discriminator 7 view .LVU43
+  17:Core/Src/servo.c **** 		return x_min;
+ 161              		.loc 1 17 4 is_stmt 0 discriminator 7 view .LVU44
+ 162 0066 8C45     		cmp	ip, r1
+ 163 0068 39DA     		bge	.L29
+  20:Core/Src/servo.c **** 		return x_max;
+ 164              		.loc 1 20 2 is_stmt 1 view .LVU45
+  20:Core/Src/servo.c **** 		return x_max;
+ 165              		.loc 1 20 4 is_stmt 0 view .LVU46
+ 166 006a 8A42     		cmp	r2, r1
+ 167 006c 09DD     		ble	.L16
+  23:Core/Src/servo.c **** 
+ 168              		.loc 1 23 2 is_stmt 1 view .LVU47
+  23:Core/Src/servo.c **** 
+ 169              		.loc 1 23 12 is_stmt 0 view .LVU48
+ 170 006e A1EB0C03 		sub	r3, r1, ip
+  23:Core/Src/servo.c **** 
+ 171              		.loc 1 23 32 view .LVU49
+ 172 0072 A41B     		subs	r4, r4, r6
+ 173              	.LVL13:
+  23:Core/Src/servo.c **** 
+ 174              		.loc 1 23 21 view .LVU50
+ 175 0074 04FB03F3 		mul	r3, r4, r3
+  23:Core/Src/servo.c **** 
+ 176              		.loc 1 23 52 view .LVU51
+ 177 0078 A2EB0C02 		sub	r2, r2, ip
+ 178              	.LVL14:
+  23:Core/Src/servo.c **** 
+ 179              		.loc 1 23 43 view .LVU52
+ 180 007c B3FBF2F3 		udiv	r3, r3, r2
+  23:Core/Src/servo.c **** 
+ 181              		.loc 1 23 61 view .LVU53
+ 182 0080 F218     		adds	r2, r6, r3
+ 183              	.L16:
+ARM GAS  C:\Users\baske\AppData\Local\Temp\cc1v5OdT.s 			page 6
+
+
+ 184              	.LVL15:
+  23:Core/Src/servo.c **** 
+ 185              		.loc 1 23 61 view .LVU54
+ 186              	.LBE15:
+ 187              	.LBE14:
+  66:Core/Src/servo.c **** 
+ 188              		.loc 1 66 2 view .LVU55
+ 189 0082 2A64     		str	r2, [r5, #64]
+ 190 0084 E3E7     		b	.L2
+ 191              	.LVL16:
+ 192              	.L27:
+  66:Core/Src/servo.c **** 
+ 193              		.loc 1 66 2 discriminator 3 view .LVU56
+ 194 0086 DC68     		ldr	r4, [r3, #12]
+ 195 0088 1D69     		ldr	r5, [r3, #16]
+ 196 008a 1B68     		ldr	r3, [r3]
+ 197              	.LVL17:
+  66:Core/Src/servo.c **** 
+ 198              		.loc 1 66 2 discriminator 3 view .LVU57
+ 199 008c 1E68     		ldr	r6, [r3]
+ 200              	.LVL18:
+ 201              	.LBB17:
+ 202              	.LBI17:
+  15:Core/Src/servo.c **** 
+ 203              		.loc 1 15 24 is_stmt 1 discriminator 3 view .LVU58
+ 204              	.LBB18:
+  17:Core/Src/servo.c **** 		return x_min;
+ 205              		.loc 1 17 2 discriminator 3 view .LVU59
+  17:Core/Src/servo.c **** 		return x_min;
+ 206              		.loc 1 17 4 is_stmt 0 discriminator 3 view .LVU60
+ 207 008e 8C45     		cmp	ip, r1
+ 208 0090 0DDA     		bge	.L30
+  20:Core/Src/servo.c **** 		return x_max;
+ 209              		.loc 1 20 2 is_stmt 1 view .LVU61
+  20:Core/Src/servo.c **** 		return x_max;
+ 210              		.loc 1 20 4 is_stmt 0 view .LVU62
+ 211 0092 8A42     		cmp	r2, r1
+ 212 0094 09DD     		ble	.L9
+  23:Core/Src/servo.c **** 
+ 213              		.loc 1 23 2 is_stmt 1 view .LVU63
+  23:Core/Src/servo.c **** 
+ 214              		.loc 1 23 12 is_stmt 0 view .LVU64
+ 215 0096 A1EB0C03 		sub	r3, r1, ip
+  23:Core/Src/servo.c **** 
+ 216              		.loc 1 23 32 view .LVU65
+ 217 009a 2D1B     		subs	r5, r5, r4
+ 218              	.LVL19:
+  23:Core/Src/servo.c **** 
+ 219              		.loc 1 23 21 view .LVU66
+ 220 009c 05FB03F3 		mul	r3, r5, r3
+  23:Core/Src/servo.c **** 
+ 221              		.loc 1 23 52 view .LVU67
+ 222 00a0 A2EB0C02 		sub	r2, r2, ip
+ 223              	.LVL20:
+  23:Core/Src/servo.c **** 
+ 224              		.loc 1 23 43 view .LVU68
+ 225 00a4 B3FBF2F3 		udiv	r3, r3, r2
+ARM GAS  C:\Users\baske\AppData\Local\Temp\cc1v5OdT.s 			page 7
+
+
+  23:Core/Src/servo.c **** 
+ 226              		.loc 1 23 61 view .LVU69
+ 227 00a8 E218     		adds	r2, r4, r3
+ 228              	.L9:
+ 229              	.LVL21:
+  23:Core/Src/servo.c **** 
+ 230              		.loc 1 23 61 view .LVU70
+ 231              	.LBE18:
+ 232              	.LBE17:
+  66:Core/Src/servo.c **** 
+ 233              		.loc 1 66 2 view .LVU71
+ 234 00aa B263     		str	r2, [r6, #56]
+ 235 00ac CFE7     		b	.L2
+ 236              	.LVL22:
+ 237              	.L30:
+ 238              	.LBB20:
+ 239              	.LBB19:
+  18:Core/Src/servo.c **** 
+ 240              		.loc 1 18 3 is_stmt 1 view .LVU72
+  18:Core/Src/servo.c **** 
+ 241              		.loc 1 18 10 is_stmt 0 view .LVU73
+ 242 00ae 6246     		mov	r2, ip
+ 243              	.LVL23:
+  18:Core/Src/servo.c **** 
+ 244              		.loc 1 18 10 view .LVU74
+ 245 00b0 FBE7     		b	.L9
+ 246              	.LVL24:
+ 247              	.L28:
+  18:Core/Src/servo.c **** 
+ 248              		.loc 1 18 10 view .LVU75
+ 249              	.LBE19:
+ 250              	.LBE20:
+  66:Core/Src/servo.c **** 
+ 251              		.loc 1 66 2 discriminator 6 view .LVU76
+ 252 00b2 DC68     		ldr	r4, [r3, #12]
+ 253 00b4 1D69     		ldr	r5, [r3, #16]
+ 254 00b6 1B68     		ldr	r3, [r3]
+ 255              	.LVL25:
+  66:Core/Src/servo.c **** 
+ 256              		.loc 1 66 2 discriminator 6 view .LVU77
+ 257 00b8 1E68     		ldr	r6, [r3]
+ 258              	.LVL26:
+ 259              	.LBB21:
+ 260              	.LBI21:
+  15:Core/Src/servo.c **** 
+ 261              		.loc 1 15 24 is_stmt 1 discriminator 6 view .LVU78
+ 262              	.LBB22:
+  17:Core/Src/servo.c **** 		return x_min;
+ 263              		.loc 1 17 2 discriminator 6 view .LVU79
+  17:Core/Src/servo.c **** 		return x_min;
+ 264              		.loc 1 17 4 is_stmt 0 discriminator 6 view .LVU80
+ 265 00ba 8C45     		cmp	ip, r1
+ 266 00bc 0DDA     		bge	.L31
+  20:Core/Src/servo.c **** 		return x_max;
+ 267              		.loc 1 20 2 is_stmt 1 view .LVU81
+  20:Core/Src/servo.c **** 		return x_max;
+ 268              		.loc 1 20 4 is_stmt 0 view .LVU82
+ARM GAS  C:\Users\baske\AppData\Local\Temp\cc1v5OdT.s 			page 8
+
+
+ 269 00be 8A42     		cmp	r2, r1
+ 270 00c0 09DD     		ble	.L13
+  23:Core/Src/servo.c **** 
+ 271              		.loc 1 23 2 is_stmt 1 view .LVU83
+  23:Core/Src/servo.c **** 
+ 272              		.loc 1 23 12 is_stmt 0 view .LVU84
+ 273 00c2 A1EB0C03 		sub	r3, r1, ip
+  23:Core/Src/servo.c **** 
+ 274              		.loc 1 23 32 view .LVU85
+ 275 00c6 2D1B     		subs	r5, r5, r4
+ 276              	.LVL27:
+  23:Core/Src/servo.c **** 
+ 277              		.loc 1 23 21 view .LVU86
+ 278 00c8 05FB03F3 		mul	r3, r5, r3
+  23:Core/Src/servo.c **** 
+ 279              		.loc 1 23 52 view .LVU87
+ 280 00cc A2EB0C02 		sub	r2, r2, ip
+ 281              	.LVL28:
+  23:Core/Src/servo.c **** 
+ 282              		.loc 1 23 43 view .LVU88
+ 283 00d0 B3FBF2F3 		udiv	r3, r3, r2
+  23:Core/Src/servo.c **** 
+ 284              		.loc 1 23 61 view .LVU89
+ 285 00d4 E218     		adds	r2, r4, r3
+ 286              	.L13:
+ 287              	.LVL29:
+  23:Core/Src/servo.c **** 
+ 288              		.loc 1 23 61 view .LVU90
+ 289              	.LBE22:
+ 290              	.LBE21:
+  66:Core/Src/servo.c **** 
+ 291              		.loc 1 66 2 view .LVU91
+ 292 00d6 F263     		str	r2, [r6, #60]
+ 293 00d8 B9E7     		b	.L2
+ 294              	.LVL30:
+ 295              	.L31:
+ 296              	.LBB24:
+ 297              	.LBB23:
+  18:Core/Src/servo.c **** 
+ 298              		.loc 1 18 3 is_stmt 1 view .LVU92
+  18:Core/Src/servo.c **** 
+ 299              		.loc 1 18 10 is_stmt 0 view .LVU93
+ 300 00da 6246     		mov	r2, ip
+ 301              	.LVL31:
+  18:Core/Src/servo.c **** 
+ 302              		.loc 1 18 10 view .LVU94
+ 303 00dc FBE7     		b	.L13
+ 304              	.LVL32:
+ 305              	.L29:
+  18:Core/Src/servo.c **** 
+ 306              		.loc 1 18 10 view .LVU95
+ 307              	.LBE23:
+ 308              	.LBE24:
+ 309              	.LBB25:
+ 310              	.LBB16:
+  18:Core/Src/servo.c **** 
+ 311              		.loc 1 18 3 is_stmt 1 view .LVU96
+ARM GAS  C:\Users\baske\AppData\Local\Temp\cc1v5OdT.s 			page 9
+
+
+  18:Core/Src/servo.c **** 
+ 312              		.loc 1 18 10 is_stmt 0 view .LVU97
+ 313 00de 6246     		mov	r2, ip
+ 314              	.LVL33:
+  18:Core/Src/servo.c **** 
+ 315              		.loc 1 18 10 view .LVU98
+ 316 00e0 CFE7     		b	.L16
+ 317              	.LVL34:
+ 318              	.L18:
+ 319              		.cfi_def_cfa_offset 0
+ 320              		.cfi_restore 4
+ 321              		.cfi_restore 5
+ 322              		.cfi_restore 6
+  18:Core/Src/servo.c **** 
+ 323              		.loc 1 18 10 view .LVU99
+ 324              	.LBE16:
+ 325              	.LBE25:
+  55:Core/Src/servo.c **** 
+ 326              		.loc 1 55 10 view .LVU100
+ 327 00e2 0120     		movs	r0, #1
+ 328 00e4 7047     		bx	lr
+ 329              	.L19:
+  59:Core/Src/servo.c **** 	else if(angle < servo->config->minAngle)
+ 330              		.loc 1 59 10 view .LVU101
+ 331 00e6 0420     		movs	r0, #4
+ 332 00e8 7047     		bx	lr
+ 333              	.L20:
+  61:Core/Src/servo.c **** 	else if(angle > servo->config->maxAngle)
+ 334              		.loc 1 61 10 view .LVU102
+ 335 00ea 0220     		movs	r0, #2
+ 336 00ec 7047     		bx	lr
+ 337              	.L21:
+  63:Core/Src/servo.c **** 
+ 338              		.loc 1 63 10 view .LVU103
+ 339 00ee 0320     		movs	r0, #3
+ 340              		.loc 1 69 1 view .LVU104
+ 341 00f0 7047     		bx	lr
+ 342              	.L33:
+ 343 00f2 00BF     		.align	2
+ 344              	.L32:
+ 345 00f4 00000000 		.word	.LANCHOR0
+ 346              		.cfi_endproc
+ 347              	.LFE132:
+ 349              		.section	.text.SERVO_INIT,"ax",%progbits
+ 350              		.align	1
+ 351              		.global	SERVO_INIT
+ 352              		.syntax unified
+ 353              		.thumb
+ 354              		.thumb_func
+ 356              	SERVO_INIT:
+ 357              	.LVL35:
+ 358              	.LFB131:
+  27:Core/Src/servo.c **** 
+ 359              		.loc 1 27 64 is_stmt 1 view -0
+ 360              		.cfi_startproc
+ 361              		@ args = 0, pretend = 0, frame = 0
+ 362              		@ frame_needed = 0, uses_anonymous_args = 0
+ARM GAS  C:\Users\baske\AppData\Local\Temp\cc1v5OdT.s 			page 10
+
+
+  27:Core/Src/servo.c **** 
+ 363              		.loc 1 27 64 is_stmt 0 view .LVU106
+ 364 0000 10B5     		push	{r4, lr}
+ 365              		.cfi_def_cfa_offset 8
+ 366              		.cfi_offset 4, -8
+ 367              		.cfi_offset 14, -4
+ 368 0002 0446     		mov	r4, r0
+  29:Core/Src/servo.c **** 
+ 369              		.loc 1 29 2 is_stmt 1 view .LVU107
+  32:Core/Src/servo.c **** 
+ 370              		.loc 1 32 2 view .LVU108
+  32:Core/Src/servo.c **** 
+ 371              		.loc 1 32 12 is_stmt 0 view .LVU109
+ 372 0004 FFF7FEFF 		bl	HAL_RCC_GetSysClockFreq
+ 373              	.LVL36:
+  32:Core/Src/servo.c **** 
+ 374              		.loc 1 32 12 view .LVU110
+ 375 0008 2168     		ldr	r1, [r4]
+ 376 000a 4B68     		ldr	r3, [r1, #4]
+ 377 000c 0133     		adds	r3, r3, #1
+ 378 000e B0FBF3F3 		udiv	r3, r0, r3
+ 379 0012 0868     		ldr	r0, [r1]
+ 380 0014 C26A     		ldr	r2, [r0, #44]
+ 381 0016 0132     		adds	r2, r2, #1
+ 382 0018 B3FBF2F3 		udiv	r3, r3, r2
+  32:Core/Src/servo.c **** 
+ 383              		.loc 1 32 10 view .LVU111
+ 384 001c 9BB2     		uxth	r3, r3
+ 385              	.LVL37:
+  34:Core/Src/servo.c **** 		freqError = 1;
+ 386              		.loc 1 34 2 is_stmt 1 view .LVU112
+  34:Core/Src/servo.c **** 		freqError = 1;
+ 387              		.loc 1 34 4 is_stmt 0 view .LVU113
+ 388 001e 322B     		cmp	r3, #50
+ 389 0020 03D0     		beq	.L35
+  35:Core/Src/servo.c **** 		return SERVO_FREQ_ERROR;
+ 390              		.loc 1 35 3 is_stmt 1 view .LVU114
+  35:Core/Src/servo.c **** 		return SERVO_FREQ_ERROR;
+ 391              		.loc 1 35 13 is_stmt 0 view .LVU115
+ 392 0022 0120     		movs	r0, #1
+ 393 0024 114B     		ldr	r3, .L38
+ 394              	.LVL38:
+  35:Core/Src/servo.c **** 		return SERVO_FREQ_ERROR;
+ 395              		.loc 1 35 13 view .LVU116
+ 396 0026 1870     		strb	r0, [r3]
+  36:Core/Src/servo.c **** 	}
+ 397              		.loc 1 36 3 is_stmt 1 view .LVU117
+ 398              	.L36:
+  48:Core/Src/servo.c **** 
+ 399              		.loc 1 48 1 is_stmt 0 view .LVU118
+ 400 0028 10BD     		pop	{r4, pc}
+ 401              	.LVL39:
+ 402              	.L35:
+  40:Core/Src/servo.c **** 	Servo_Instance->maxCnt = Servo_Instance->config->maxDuty * __HAL_TIM_GET_AUTORELOAD(Servo_Instance
+ 403              		.loc 1 40 2 is_stmt 1 view .LVU119
+  40:Core/Src/servo.c **** 	Servo_Instance->maxCnt = Servo_Instance->config->maxDuty * __HAL_TIM_GET_AUTORELOAD(Servo_Instance
+ 404              		.loc 1 40 41 is_stmt 0 view .LVU120
+ARM GAS  C:\Users\baske\AppData\Local\Temp\cc1v5OdT.s 			page 11
+
+
+ 405 002a A368     		ldr	r3, [r4, #8]
+ 406              	.LVL40:
+  40:Core/Src/servo.c **** 	Servo_Instance->maxCnt = Servo_Instance->config->maxDuty * __HAL_TIM_GET_AUTORELOAD(Servo_Instance
+ 407              		.loc 1 40 49 view .LVU121
+ 408 002c 93ED007A 		vldr.32	s14, [r3]
+  40:Core/Src/servo.c **** 	Servo_Instance->maxCnt = Servo_Instance->config->maxDuty * __HAL_TIM_GET_AUTORELOAD(Servo_Instance
+ 409              		.loc 1 40 61 view .LVU122
+ 410 0030 D0ED0B7A 		vldr.32	s15, [r0, #44]	@ int
+  40:Core/Src/servo.c **** 	Servo_Instance->maxCnt = Servo_Instance->config->maxDuty * __HAL_TIM_GET_AUTORELOAD(Servo_Instance
+ 411              		.loc 1 40 59 view .LVU123
+ 412 0034 F8EE677A 		vcvt.f32.u32	s15, s15
+ 413 0038 67EE877A 		vmul.f32	s15, s15, s14
+  40:Core/Src/servo.c **** 	Servo_Instance->maxCnt = Servo_Instance->config->maxDuty * __HAL_TIM_GET_AUTORELOAD(Servo_Instance
+ 414              		.loc 1 40 25 view .LVU124
+ 415 003c FCEEE77A 		vcvt.u32.f32	s15, s15
+ 416 0040 C4ED037A 		vstr.32	s15, [r4, #12]	@ int
+  41:Core/Src/servo.c **** 
+ 417              		.loc 1 41 2 is_stmt 1 view .LVU125
+  41:Core/Src/servo.c **** 
+ 418              		.loc 1 41 49 is_stmt 0 view .LVU126
+ 419 0044 93ED017A 		vldr.32	s14, [r3, #4]
+  41:Core/Src/servo.c **** 
+ 420              		.loc 1 41 61 view .LVU127
+ 421 0048 0B68     		ldr	r3, [r1]
+ 422 004a D3ED0B7A 		vldr.32	s15, [r3, #44]	@ int
+  41:Core/Src/servo.c **** 
+ 423              		.loc 1 41 59 view .LVU128
+ 424 004e F8EE677A 		vcvt.f32.u32	s15, s15
+ 425 0052 67EE877A 		vmul.f32	s15, s15, s14
+  41:Core/Src/servo.c **** 
+ 426              		.loc 1 41 25 view .LVU129
+ 427 0056 FCEEE77A 		vcvt.u32.f32	s15, s15
+ 428 005a C4ED047A 		vstr.32	s15, [r4, #16]	@ int
+  44:Core/Src/servo.c **** 
+ 429              		.loc 1 44 2 is_stmt 1 view .LVU130
+ 430 005e 0021     		movs	r1, #0
+ 431 0060 2046     		mov	r0, r4
+ 432 0062 FFF7FEFF 		bl	DRIVE_SERVO
+ 433              	.LVL41:
+  46:Core/Src/servo.c **** 
+ 434              		.loc 1 46 2 view .LVU131
+  46:Core/Src/servo.c **** 
+ 435              		.loc 1 46 9 is_stmt 0 view .LVU132
+ 436 0066 0020     		movs	r0, #0
+ 437 0068 DEE7     		b	.L36
+ 438              	.L39:
+ 439 006a 00BF     		.align	2
+ 440              	.L38:
+ 441 006c 00000000 		.word	.LANCHOR0
+ 442              		.cfi_endproc
+ 443              	.LFE131:
+ 445              		.section	.bss.freqError,"aw",%nobits
+ 446              		.set	.LANCHOR0,. + 0
+ 449              	freqError:
+ 450 0000 00       		.space	1
+ 451              		.text
+ 452              	.Letext0:
+ARM GAS  C:\Users\baske\AppData\Local\Temp\cc1v5OdT.s 			page 12
+
+
+ 453              		.file 2 "c:\\users\\baske\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@xpa
+ 454              		.file 3 "c:\\users\\baske\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@xpa
+ 455              		.file 4 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f446xx.h"
+ 456              		.file 5 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h"
+ 457              		.file 6 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h"
+ 458              		.file 7 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h"
+ 459              		.file 8 "Core/Inc/servo.h"
+ 460              		.file 9 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h"
+ARM GAS  C:\Users\baske\AppData\Local\Temp\cc1v5OdT.s 			page 13
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 servo.c
+C:\Users\baske\AppData\Local\Temp\cc1v5OdT.s:20     .text.DRIVE_SERVO:0000000000000000 $t
+C:\Users\baske\AppData\Local\Temp\cc1v5OdT.s:26     .text.DRIVE_SERVO:0000000000000000 DRIVE_SERVO
+C:\Users\baske\AppData\Local\Temp\cc1v5OdT.s:345    .text.DRIVE_SERVO:00000000000000f4 $d
+C:\Users\baske\AppData\Local\Temp\cc1v5OdT.s:350    .text.SERVO_INIT:0000000000000000 $t
+C:\Users\baske\AppData\Local\Temp\cc1v5OdT.s:356    .text.SERVO_INIT:0000000000000000 SERVO_INIT
+C:\Users\baske\AppData\Local\Temp\cc1v5OdT.s:441    .text.SERVO_INIT:000000000000006c $d
+C:\Users\baske\AppData\Local\Temp\cc1v5OdT.s:449    .bss.freqError:0000000000000000 freqError
+C:\Users\baske\AppData\Local\Temp\cc1v5OdT.s:450    .bss.freqError:0000000000000000 $d
+
+UNDEFINED SYMBOLS
+HAL_RCC_GetSysClockFreq
