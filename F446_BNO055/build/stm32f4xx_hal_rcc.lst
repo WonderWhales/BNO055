@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 1
+ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 1
   28:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c ****       (+) Configure the clock source to be used to drive the System clock
   29:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c ****           (if the application needs higher frequency/performance)
   30:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c ****       (+) Configure the System clock frequency and Flash settings
-ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 2
+ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s 			page 2
 
 
   31:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c ****       (+) Configure the AHB and APB busses prescalers
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 1
   85:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c **** 
   86:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c **** /* Private macro -------------------------------------------------------------*/
   87:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c **** #define __MCO1_CLK_ENABLE()   __HAL_RCC_GPIOA_CLK_ENABLE()
-ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 3
+ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s 			page 3
 
 
   88:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c **** #define MCO1_GPIO_PORT        GPIOA
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 1
  142:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c ****              and if a HSE clock failure occurs(HSE used directly or through PLL as System
  143:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c ****              clock source), the System clocks automatically switched to HSI and an interrupt
  144:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c ****              is generated if enabled. The interrupt is linked to the Cortex-M4 NMI
-ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 4
+ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s 			page 4
 
 
  145:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c ****              (Non-Maskable Interrupt) exception vector.
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 1
  199:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c ****   */
  200:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c **** __weak HAL_StatusTypeDef HAL_RCC_DeInit(void)
  201:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c **** {
-ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 5
+ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s 			page 5
 
 
   29              		.loc 1 201 1 view -0
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 1
   61 0006 70B5     		push	{r4, r5, r6, lr}
   62              		.cfi_def_cfa_offset 16
   63              		.cfi_offset 4, -16
-ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 6
+ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s 			page 6
 
 
   64              		.cfi_offset 5, -12
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 1
  248:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c ****       __HAL_RCC_HSE_CONFIG(RCC_OscInitStruct->HSEState);
   94              		.loc 1 248 7 is_stmt 1 view .LVU18
   95              		.loc 1 248 7 view .LVU19
-ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 7
+ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s 			page 7
 
 
   96 002c 6368     		ldr	r3, [r4, #4]
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 1
  139              		.loc 1 259 29 view .LVU36
  140 0066 401B     		subs	r0, r0, r5
  141              		.loc 1 259 13 view .LVU37
-ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 8
+ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s 			page 8
 
 
  142 0068 6428     		cmp	r0, #100
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 1
  279:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c ****     }
  280:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c ****   }
  281:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c ****   /*----------------------------- HSI Configuration --------------------------*/
-ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 9
+ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s 			page 9
 
 
  282:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c ****   if(((RCC_OscInitStruct->OscillatorType) & RCC_OSCILLATORTYPE_HSI) == RCC_OSCILLATORTYPE_HSI)
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 1
  197 00ac 002B     		cmp	r3, #0
  198 00ae 68D0     		beq	.L19
  308:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c ****       {
-ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 10
+ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s 			page 10
 
 
  309:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c ****         /* Enable the Internal High Speed oscillator (HSI). */
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 1
  239              		.loc 1 248 7 discriminator 4 view .LVU72
  240 00e0 6C4B     		ldr	r3, .L94
  241 00e2 1A68     		ldr	r2, [r3]
-ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 11
+ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s 			page 11
 
 
  242 00e4 42F48022 		orr	r2, r2, #262144
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 1
  282 0114 5B68     		ldr	r3, [r3, #4]
  290:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c ****     {
  283              		.loc 1 290 60 view .LVU87
-ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 12
+ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s 			page 12
 
 
  284 0116 13F4800F 		tst	r3, #4194304
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 1
  345:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c ****   }
  346:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c ****   /*------------------------------ LSI Configuration -------------------------*/
  347:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c ****   if(((RCC_OscInitStruct->OscillatorType) & RCC_OSCILLATORTYPE_LSI) == RCC_OSCILLATORTYPE_LSI)
-ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 13
+ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s 			page 13
 
 
  308              		.loc 1 347 3 view .LVU94
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 1
  345              		.loc 1 364 11 view .LVU111
  346 0168 0228     		cmp	r0, #2
  347 016a F5D9     		bls	.L26
-ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 14
+ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s 			page 14
 
 
  365:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c ****         {
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 1
  388 019e 0228     		cmp	r0, #2
  389 01a0 F5D9     		bls	.L22
  340:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c ****           }
-ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 15
+ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s 			page 15
 
 
  390              		.loc 1 340 20 view .LVU125
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 1
  427              	.L24:
  384:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c ****         }
  385:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c ****       }
-ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 16
+ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s 			page 16
 
 
  386:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c ****     }
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 1
  466 01f6 0125     		movs	r5, #1
  467              	.LVL28:
  468              	.L31:
-ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 17
+ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s 			page 17
 
 
  402:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c ****     }
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 1
  500 0220 002B     		cmp	r3, #0
  501 0222 3DD0     		beq	.L38
  425:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c ****     {
-ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 18
+ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s 			page 18
 
 
  426:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c ****       /* Get Start Tick*/
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 1
  543              		.loc 1 410 19 is_stmt 0 view .LVU180
  544 0254 FFF7FEFF 		bl	HAL_GetTick
  545              	.LVL34:
-ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 19
+ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s 			page 19
 
 
  546 0258 0646     		mov	r6, r0
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 1
  590 0298 00004742 		.word	1111949312
  591 029c 00700040 		.word	1073770496
  592              	.L38:
-ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 20
+ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s 			page 20
 
 
  435:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c ****         }
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 1
  627              		.loc 1 454 7 view .LVU204
  628              	.LBE2:
  455:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c ****     {
-ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 21
+ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s 			page 21
 
 
  456:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c ****       __HAL_RCC_PWR_CLK_DISABLE();
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 1
  491:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c ****         /* Configure the main PLL clock source, multiplication and division factors. */
  492:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c ****         WRITE_REG(RCC->PLLCFGR, (RCC_OscInitStruct->PLL.PLLSource                                  
  493:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c ****                                  RCC_OscInitStruct->PLL.PLLM                                       
-ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 22
+ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s 			page 22
 
 
  494:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c ****                                  (RCC_OscInitStruct->PLL.PLLN << RCC_PLLCFGR_PLLN_Pos)             
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 1
  672 02f6 001B     		subs	r0, r0, r4
  673              		.loc 1 523 13 view .LVU224
  674 02f8 0228     		cmp	r0, #2
-ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 23
+ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s 			page 23
 
 
  675 02fa F5D9     		bls	.L50
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 1
  713              		.loc 1 483 51 view .LVU239
  714 031c 13F0007F 		tst	r3, #33554432
  715 0320 06D0     		beq	.L92
-ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 24
+ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s 			page 24
 
 
  485:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c ****           {
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 1
  758 035e 1B68     		ldr	r3, [r3]
  504:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c ****         {
  759              		.loc 1 504 51 view .LVU252
-ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 25
+ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s 			page 25
 
 
  760 0360 13F0007F 		tst	r3, #33554432
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 1
  560:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c ****       }
  561:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c ****     }
  562:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c ****   }
-ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 26
+ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s 			page 26
 
 
  563:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c ****   return HAL_OK;
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 1
  546:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c ****             (READ_BIT(pll_config, RCC_PLLCFGR_PLLQ) != (RCC_OscInitStruct->PLL.PLLQ << RCC_PLLCFGR_
  815              		.loc 1 546 14 view .LVU273
  816 03a6 03F44031 		and	r1, r3, #196608
-ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 27
+ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s 			page 27
 
 
  546:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c ****             (READ_BIT(pll_config, RCC_PLLCFGR_PLLQ) != (RCC_OscInitStruct->PLL.PLLQ << RCC_PLLCFGR_
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 1
  859              		.cfi_offset 4, -16
  860              		.cfi_offset 5, -12
  861              		.cfi_offset 6, -8
-ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 28
+ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s 			page 28
 
 
  862              		.cfi_offset 14, -4
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 1
  909 03fc 0120     		movs	r0, #1
  910 03fe EFE7     		b	.L3
  911              	.L97:
-ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 29
+ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s 			page 29
 
 
  912              		.align	2
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 1
  604:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c **** 
  605:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c ****   /* To correctly read data from FLASH memory, the number of wait states (LATENCY)
  606:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c ****     must be correctly programmed according to the frequency of the CPU clock
-ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 30
+ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s 			page 30
 
 
  607:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c ****     (HCLK) and the supply voltage of the device. */
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 1
  661:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c ****       if(__HAL_RCC_GET_FLAG(RCC_FLAG_PLLRDY) == RESET)
  662:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c ****       {
  663:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c ****         return HAL_ERROR;
-ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 31
+ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s 			page 31
 
 
  664:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c ****       }
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 1
  718:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c ****   /* Update the SystemCoreClock global variable */
  719:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c ****   SystemCoreClock = HAL_RCC_GetSysClockFreq() >> AHBPrescTable[(RCC->CFGR & RCC_CFGR_HPRE)>> RCC_CF
  720:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c **** 
-ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 32
+ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s 			page 32
 
 
  721:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c ****   /* Configure the source of time base considering new system clocks settings */
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 1
  775:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c **** void HAL_RCC_MCOConfig(uint32_t RCC_MCOx, uint32_t RCC_MCOSource, uint32_t RCC_MCODiv)
  776:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c **** {
  929              		.loc 1 776 1 is_stmt 1 view -0
-ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 33
+ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s 			page 33
 
 
  930              		.cfi_startproc
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 1
  790:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c ****     GPIO_InitStruct.Pin = MCO1_PIN;
  971              		.loc 1 790 5 view .LVU310
  972              		.loc 1 790 25 is_stmt 0 view .LVU311
-ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 34
+ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s 			page 34
 
 
  973 0022 4FF48072 		mov	r2, #256
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 1
  810:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c ****     /* MCO2 Clock Enable */
  811:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c ****     __MCO2_CLK_ENABLE();
  812:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c **** 
-ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 35
+ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s 			page 35
 
 
  813:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c ****     /* Configure the MCO2 pin in alternate function mode */
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 1
  811:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c **** 
  1037              		.loc 1 811 5 view .LVU333
  814:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c ****     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
-ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 36
+ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s 			page 36
 
 
  1038              		.loc 1 814 5 view .LVU334
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 1
  1078 0090 00380240 		.word	1073887232
  1079 0094 00000240 		.word	1073872896
  1080 0098 00080240 		.word	1073874944
-ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 37
+ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s 			page 37
 
 
  1081              		.cfi_endproc
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 1
  849:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c ****   */
  850:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c **** void HAL_RCC_DisableCSS(void)
  851:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c **** {
-ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 38
+ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s 			page 38
 
 
  1121              		.loc 1 851 1 is_stmt 1 view -0
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 1
  879:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c ****   * @note   Each time SYSCLK changes, this function must be called to update the
  880:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c ****   *         right SYSCLK value. Otherwise, any configuration based on this function will be incorre
  881:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c ****   *
-ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 39
+ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s 			page 39
 
 
  882:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c ****   *
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 1
  1178              	.LVL78:
  908:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c ****       if(__HAL_RCC_GET_PLL_OSCSOURCE() != RCC_PLLSOURCE_HSI)
  1179              		.loc 1 908 7 is_stmt 1 view .LVU368
-ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 40
+ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s 			page 40
 
 
  1180              		.loc 1 908 10 is_stmt 0 view .LVU369
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 1
  919:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c **** 
  920:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c ****       sysclockfreq = pllvco/pllp;
  1224              		.loc 1 920 7 is_stmt 1 view .LVU381
-ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 41
+ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s 			page 41
 
 
  1225              		.loc 1 920 20 is_stmt 0 view .LVU382
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 1
  922:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c ****     }
  923:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c ****     default:
  924:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c ****     {
-ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 42
+ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s 			page 42
 
 
  925:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c ****       sysclockfreq = HSI_VALUE;
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 1
  610:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c ****   {
  1313              		.loc 1 610 3 view .LVU401
  610:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c ****   {
-ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 43
+ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s 			page 43
 
 
  1314              		.loc 1 610 17 is_stmt 0 view .LVU402
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 1
  1354 0048 04D0     		beq	.L124
  635:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c ****     }
  1355              		.loc 1 635 7 is_stmt 1 view .LVU417
-ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 44
+ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s 			page 44
 
 
  1356 004a 414A     		ldr	r2, .L147+4
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 1
  670:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c ****       {
  1395              		.loc 1 670 9 view .LVU433
  1396 007a 12F0020F 		tst	r2, #2
-ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 45
+ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s 			page 45
 
 
  1397 007e 61D0     		beq	.L138
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 1
  1437              	.LVL91:
  1438              	.L145:
  651:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c ****       {
-ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 46
+ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s 			page 46
 
 
  1439              		.loc 1 651 7 is_stmt 1 view .LVU448
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 1
  698:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c ****     {
  1479              		.loc 1 698 8 is_stmt 0 view .LVU463
  1480 00e2 1B68     		ldr	r3, [r3]
-ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 47
+ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s 			page 47
 
 
  1481 00e4 03F00F03 		and	r3, r3, #15
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 1
  1521 011e 0C4B     		ldr	r3, .L147+4
  1522 0120 9B68     		ldr	r3, [r3, #8]
  719:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c **** 
-ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 48
+ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s 			page 48
 
 
  1523              		.loc 1 719 91 view .LVU478
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 1
  1566              		.loc 1 619 14 view .LVU489
  1567 0142 FAE7     		b	.L120
  1568              	.LVL101:
-ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 49
+ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s 			page 49
 
 
  1569              	.L138:
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 1
  1608 0004 7047     		bx	lr
  1609              	.L151:
  1610 0006 00BF     		.align	2
-ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 50
+ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s 			page 50
 
 
  1611              	.L150:
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 1
  1656              		.section	.text.HAL_RCC_GetPCLK2Freq,"ax",%progbits
  1657              		.align	1
  1658              		.global	HAL_RCC_GetPCLK2Freq
-ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 51
+ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s 			page 51
 
 
  1659              		.syntax unified
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 1
  1704              	.LVL105:
  1705              	.LFB140:
  969:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c **** 
-ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 52
+ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s 			page 52
 
 
  970:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c **** /**
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 1
  1732 0018 13F0010F 		tst	r3, #1
  1733 001c 3FD0     		beq	.L164
  998:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c ****   {
-ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 53
+ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s 			page 53
 
 
  999:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c ****     RCC_OscInitStruct->HSIState = RCC_HSI_ON;
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 1
  1763 003c 13F0010F 		tst	r3, #1
  1764 0040 3BD0     		beq	.L169
 1024:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c ****   {
-ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 54
+ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s 			page 54
 
 
 1025:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c ****     RCC_OscInitStruct->LSIState = RCC_LSI_ON;
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 1
  1800              		.loc 1 1043 33 view .LVU552
  1801 0068 C3F38813 		ubfx	r3, r3, #6, #9
  1802              		.loc 1 1043 31 view .LVU553
-ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 55
+ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s 			page 55
 
 
  1803 006c 4362     		str	r3, [r0, #36]
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 1
  1845              		.loc 1 1003 33 is_stmt 0 view .LVU573
  1846 009e 0023     		movs	r3, #0
  1847 00a0 C360     		str	r3, [r0, #12]
-ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 56
+ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s 			page 56
 
 
  1848 00a2 BEE7     		b	.L165
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 1
  1892              		.thumb_func
  1894              	HAL_RCC_GetClockConfig:
  1895              	.LVL106:
-ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 57
+ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s 			page 57
 
 
  1896              	.LFB141:
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 1
 1069:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c **** 
 1070:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c ****   /* Get the APB2 configuration ----------------------------------------------*/
 1071:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c ****   RCC_ClkInitStruct->APB2CLKDivider = (uint32_t)((RCC->CFGR & RCC_CFGR_PPRE2) >> 3U);
-ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 58
+ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s 			page 58
 
 
  1928              		.loc 1 1071 3 is_stmt 1 view .LVU600
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 1
 1093:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c **** }
 1094:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c **** 
 1095:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c **** /**
-ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 59
+ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s 			page 59
 
 
 1096:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c ****   * @brief  RCC Clock Security System interrupt callback
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 1
 1091:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c ****   }
  2004              		.loc 1 1091 5 view .LVU617
  2005 0012 024B     		ldr	r3, .L183
-ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 60
+ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s 			page 60
 
 
  2006 0014 8022     		movs	r2, #128
@@ -3554,8 +3554,8 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 1
  2015              	.LFE142:
  2017              		.text
  2018              	.Letext0:
- 2019              		.file 2 "c:\\users\\baske\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@xpa
- 2020              		.file 3 "c:\\users\\baske\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@xpa
+ 2019              		.file 2 "c:\\users\\jacki\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@xpa
+ 2020              		.file 3 "c:\\users\\jacki\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@xpa
  2021              		.file 4 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h"
  2022              		.file 5 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f446xx.h"
  2023              		.file 6 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h"
@@ -3564,53 +3564,53 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 1
  2026              		.file 9 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h"
  2027              		.file 10 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h"
  2028              		.file 11 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h"
-ARM GAS  C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s 			page 61
+ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s 			page 61
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 stm32f4xx_hal_rcc.c
-C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s:20     .text.HAL_RCC_DeInit:0000000000000000 $t
-C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s:26     .text.HAL_RCC_DeInit:0000000000000000 HAL_RCC_DeInit
-C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s:42     .text.HAL_RCC_OscConfig:0000000000000000 $t
-C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s:48     .text.HAL_RCC_OscConfig:0000000000000000 HAL_RCC_OscConfig
-C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s:589    .text.HAL_RCC_OscConfig:0000000000000294 $d
-C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s:595    .text.HAL_RCC_OscConfig:00000000000002a0 $t
-C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s:914    .text.HAL_RCC_OscConfig:0000000000000400 $d
-C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s:920    .text.HAL_RCC_MCOConfig:0000000000000000 $t
-C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s:926    .text.HAL_RCC_MCOConfig:0000000000000000 HAL_RCC_MCOConfig
-C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s:1078   .text.HAL_RCC_MCOConfig:0000000000000090 $d
-C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s:1085   .text.HAL_RCC_EnableCSS:0000000000000000 $t
-C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s:1091   .text.HAL_RCC_EnableCSS:0000000000000000 HAL_RCC_EnableCSS
-C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s:1108   .text.HAL_RCC_EnableCSS:0000000000000008 $d
-C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s:1113   .text.HAL_RCC_DisableCSS:0000000000000000 $t
-C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s:1119   .text.HAL_RCC_DisableCSS:0000000000000000 HAL_RCC_DisableCSS
-C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s:1136   .text.HAL_RCC_DisableCSS:0000000000000008 $d
-C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s:1142   .text.HAL_RCC_GetSysClockFreq:0000000000000000 $t
-C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s:1148   .text.HAL_RCC_GetSysClockFreq:0000000000000000 HAL_RCC_GetSysClockFreq
-C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s:1277   .text.HAL_RCC_GetSysClockFreq:00000000000000d0 $d
-C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s:1284   .text.HAL_RCC_ClockConfig:0000000000000000 $t
-C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s:1290   .text.HAL_RCC_ClockConfig:0000000000000000 HAL_RCC_ClockConfig
-C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s:1582   .text.HAL_RCC_ClockConfig:000000000000014c $d
-C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s:1591   .text.HAL_RCC_GetHCLKFreq:0000000000000000 $t
-C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s:1597   .text.HAL_RCC_GetHCLKFreq:0000000000000000 HAL_RCC_GetHCLKFreq
-C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s:1612   .text.HAL_RCC_GetHCLKFreq:0000000000000008 $d
-C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s:1617   .text.HAL_RCC_GetPCLK1Freq:0000000000000000 $t
-C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s:1623   .text.HAL_RCC_GetPCLK1Freq:0000000000000000 HAL_RCC_GetPCLK1Freq
-C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s:1651   .text.HAL_RCC_GetPCLK1Freq:0000000000000018 $d
-C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s:1657   .text.HAL_RCC_GetPCLK2Freq:0000000000000000 $t
-C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s:1663   .text.HAL_RCC_GetPCLK2Freq:0000000000000000 HAL_RCC_GetPCLK2Freq
-C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s:1691   .text.HAL_RCC_GetPCLK2Freq:0000000000000018 $d
-C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s:1697   .text.HAL_RCC_GetOscConfig:0000000000000000 $t
-C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s:1703   .text.HAL_RCC_GetOscConfig:0000000000000000 HAL_RCC_GetOscConfig
-C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s:1883   .text.HAL_RCC_GetOscConfig:00000000000000c8 $d
-C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s:1888   .text.HAL_RCC_GetClockConfig:0000000000000000 $t
-C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s:1894   .text.HAL_RCC_GetClockConfig:0000000000000000 HAL_RCC_GetClockConfig
-C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s:1949   .text.HAL_RCC_GetClockConfig:0000000000000034 $d
-C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s:1955   .text.HAL_RCC_CSSCallback:0000000000000000 $t
-C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s:1961   .text.HAL_RCC_CSSCallback:0000000000000000 HAL_RCC_CSSCallback
-C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s:1974   .text.HAL_RCC_NMI_IRQHandler:0000000000000000 $t
-C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s:1980   .text.HAL_RCC_NMI_IRQHandler:0000000000000000 HAL_RCC_NMI_IRQHandler
-C:\Users\baske\AppData\Local\Temp\cc4QKdvK.s:2013   .text.HAL_RCC_NMI_IRQHandler:000000000000001c $d
+C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s:20     .text.HAL_RCC_DeInit:0000000000000000 $t
+C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s:26     .text.HAL_RCC_DeInit:0000000000000000 HAL_RCC_DeInit
+C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s:42     .text.HAL_RCC_OscConfig:0000000000000000 $t
+C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s:48     .text.HAL_RCC_OscConfig:0000000000000000 HAL_RCC_OscConfig
+C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s:589    .text.HAL_RCC_OscConfig:0000000000000294 $d
+C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s:595    .text.HAL_RCC_OscConfig:00000000000002a0 $t
+C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s:914    .text.HAL_RCC_OscConfig:0000000000000400 $d
+C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s:920    .text.HAL_RCC_MCOConfig:0000000000000000 $t
+C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s:926    .text.HAL_RCC_MCOConfig:0000000000000000 HAL_RCC_MCOConfig
+C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s:1078   .text.HAL_RCC_MCOConfig:0000000000000090 $d
+C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s:1085   .text.HAL_RCC_EnableCSS:0000000000000000 $t
+C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s:1091   .text.HAL_RCC_EnableCSS:0000000000000000 HAL_RCC_EnableCSS
+C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s:1108   .text.HAL_RCC_EnableCSS:0000000000000008 $d
+C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s:1113   .text.HAL_RCC_DisableCSS:0000000000000000 $t
+C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s:1119   .text.HAL_RCC_DisableCSS:0000000000000000 HAL_RCC_DisableCSS
+C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s:1136   .text.HAL_RCC_DisableCSS:0000000000000008 $d
+C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s:1142   .text.HAL_RCC_GetSysClockFreq:0000000000000000 $t
+C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s:1148   .text.HAL_RCC_GetSysClockFreq:0000000000000000 HAL_RCC_GetSysClockFreq
+C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s:1277   .text.HAL_RCC_GetSysClockFreq:00000000000000d0 $d
+C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s:1284   .text.HAL_RCC_ClockConfig:0000000000000000 $t
+C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s:1290   .text.HAL_RCC_ClockConfig:0000000000000000 HAL_RCC_ClockConfig
+C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s:1582   .text.HAL_RCC_ClockConfig:000000000000014c $d
+C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s:1591   .text.HAL_RCC_GetHCLKFreq:0000000000000000 $t
+C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s:1597   .text.HAL_RCC_GetHCLKFreq:0000000000000000 HAL_RCC_GetHCLKFreq
+C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s:1612   .text.HAL_RCC_GetHCLKFreq:0000000000000008 $d
+C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s:1617   .text.HAL_RCC_GetPCLK1Freq:0000000000000000 $t
+C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s:1623   .text.HAL_RCC_GetPCLK1Freq:0000000000000000 HAL_RCC_GetPCLK1Freq
+C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s:1651   .text.HAL_RCC_GetPCLK1Freq:0000000000000018 $d
+C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s:1657   .text.HAL_RCC_GetPCLK2Freq:0000000000000000 $t
+C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s:1663   .text.HAL_RCC_GetPCLK2Freq:0000000000000000 HAL_RCC_GetPCLK2Freq
+C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s:1691   .text.HAL_RCC_GetPCLK2Freq:0000000000000018 $d
+C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s:1697   .text.HAL_RCC_GetOscConfig:0000000000000000 $t
+C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s:1703   .text.HAL_RCC_GetOscConfig:0000000000000000 HAL_RCC_GetOscConfig
+C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s:1883   .text.HAL_RCC_GetOscConfig:00000000000000c8 $d
+C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s:1888   .text.HAL_RCC_GetClockConfig:0000000000000000 $t
+C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s:1894   .text.HAL_RCC_GetClockConfig:0000000000000000 HAL_RCC_GetClockConfig
+C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s:1949   .text.HAL_RCC_GetClockConfig:0000000000000034 $d
+C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s:1955   .text.HAL_RCC_CSSCallback:0000000000000000 $t
+C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s:1961   .text.HAL_RCC_CSSCallback:0000000000000000 HAL_RCC_CSSCallback
+C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s:1974   .text.HAL_RCC_NMI_IRQHandler:0000000000000000 $t
+C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s:1980   .text.HAL_RCC_NMI_IRQHandler:0000000000000000 HAL_RCC_NMI_IRQHandler
+C:\Users\jacki\AppData\Local\Temp\ccXJPBxP.s:2013   .text.HAL_RCC_NMI_IRQHandler:000000000000001c $d
 
 UNDEFINED SYMBOLS
 HAL_GetTick

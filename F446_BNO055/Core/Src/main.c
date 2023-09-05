@@ -119,6 +119,9 @@ int main(void)
 	  while(1);
   }
 
+  /* BNO055 Start-Up Period */
+  HAL_Delay(10);
+
   /* BNO055 Setup */
   BNO055_I2C_Mount(&hi2c1);			//Mount I2C for BNO055 API to use
   BNO055_Init();					//Initialize BNO055 by checking connection and reseting module
