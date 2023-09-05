@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\cc0mjGa8.s 			page 1
+ARM GAS  C:\Users\jacki\AppData\Local\Temp\cciuFfVt.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\cc0mjGa8.s 			page 1
   28:Core/Src/main.c **** #include "BNO055.h"
   29:Core/Src/main.c **** #include "servo.h"
   30:Core/Src/main.c **** /* USER CODE END Includes */
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\cc0mjGa8.s 			page 2
+ARM GAS  C:\Users\jacki\AppData\Local\Temp\cciuFfVt.s 			page 2
 
 
   31:Core/Src/main.c **** 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\cc0mjGa8.s 			page 1
   85:Core/Src/main.c ****   /* USER CODE BEGIN Init */
   86:Core/Src/main.c **** 
   87:Core/Src/main.c ****   /* USER CODE END Init */
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\cc0mjGa8.s 			page 3
+ARM GAS  C:\Users\jacki\AppData\Local\Temp\cciuFfVt.s 			page 3
 
 
   88:Core/Src/main.c **** 
@@ -156,7 +156,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\cc0mjGa8.s 			page 1
  120:Core/Src/main.c ****   }
  121:Core/Src/main.c **** 
  122:Core/Src/main.c ****   /* BNO055 Start-Up Period */
- 123:Core/Src/main.c ****   HAL_Delay(10);
+ 123:Core/Src/main.c ****   HAL_Delay(700);
  124:Core/Src/main.c **** 
  125:Core/Src/main.c ****   /* BNO055 Setup */
  126:Core/Src/main.c ****   BNO055_I2C_Mount(&hi2c1);			//Mount I2C for BNO055 API to use
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\cc0mjGa8.s 			page 1
  142:Core/Src/main.c **** //	  DRIVE_SERVO(&servo, 45);
  143:Core/Src/main.c **** //	  HAL_Delay(1000);
  144:Core/Src/main.c **** 
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\cc0mjGa8.s 			page 4
+ARM GAS  C:\Users\jacki\AppData\Local\Temp\cciuFfVt.s 			page 4
 
 
  145:Core/Src/main.c **** 	  BNO055_Get_Euler_Vec(&Euler_Angle_Struct);		//Grab Euler Vector from BNO055
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\cc0mjGa8.s 			page 1
  199:Core/Src/main.c ****   RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
  200:Core/Src/main.c ****   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
  201:Core/Src/main.c ****   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV4;
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\cc0mjGa8.s 			page 5
+ARM GAS  C:\Users\jacki\AppData\Local\Temp\cciuFfVt.s 			page 5
 
 
  202:Core/Src/main.c ****   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV2;
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\cc0mjGa8.s 			page 1
   24:Drivers/CMSIS/Include/cmsis_gcc.h **** 
   25:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef __CMSIS_GCC_H
   26:Drivers/CMSIS/Include/cmsis_gcc.h **** #define __CMSIS_GCC_H
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\cc0mjGa8.s 			page 6
+ARM GAS  C:\Users\jacki\AppData\Local\Temp\cciuFfVt.s 			page 6
 
 
   27:Drivers/CMSIS/Include/cmsis_gcc.h **** 
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\cc0mjGa8.s 			page 1
   81:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wattributes"
   82:Drivers/CMSIS/Include/cmsis_gcc.h ****   __PACKED_STRUCT T_UINT16_WRITE { uint16_t v; };
   83:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic pop
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\cc0mjGa8.s 			page 7
+ARM GAS  C:\Users\jacki\AppData\Local\Temp\cciuFfVt.s 			page 7
 
 
   84:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __UNALIGNED_UINT16_WRITE(addr, val)    (void)((((struct T_UINT16_WRITE *)(void *)(addr))-
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\cc0mjGa8.s 			page 1
  138:Drivers/CMSIS/Include/cmsis_gcc.h ****            Can only be executed in Privileged modes.
  139:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
  140:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE void __disable_irq(void)
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\cc0mjGa8.s 			page 8
+ARM GAS  C:\Users\jacki\AppData\Local\Temp\cciuFfVt.s 			page 8
 
 
   39              		.loc 2 140 27 view .LVU2
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\cc0mjGa8.s 			page 1
   84              		.loc 1 163 22 is_stmt 0 view .LVU11
   85 000e 0023     		movs	r3, #0
   86 0010 0293     		str	r3, [sp, #8]
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\cc0mjGa8.s 			page 9
+ARM GAS  C:\Users\jacki\AppData\Local\Temp\cciuFfVt.s 			page 9
 
 
   87 0012 0393     		str	r3, [sp, #12]
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\cc0mjGa8.s 			page 1
  127 0046 0222     		movs	r2, #2
  128 0048 0792     		str	r2, [sp, #28]
  174:Core/Src/main.c ****   RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\cc0mjGa8.s 			page 10
+ARM GAS  C:\Users\jacki\AppData\Local\Temp\cciuFfVt.s 			page 10
 
 
  129              		.loc 1 174 3 is_stmt 1 view .LVU26
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\cc0mjGa8.s 			page 1
  164              	.LVL1:
  183:Core/Src/main.c ****   {
  165              		.loc 1 183 6 view .LVU46
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\cc0mjGa8.s 			page 11
+ARM GAS  C:\Users\jacki\AppData\Local\Temp\cciuFfVt.s 			page 11
 
 
  166 006a B0B9     		cbnz	r0, .L8
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\cc0mjGa8.s 			page 1
  203              		.cfi_remember_state
  204              		.cfi_def_cfa_offset 4
  205              		@ sp needed
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\cc0mjGa8.s 			page 12
+ARM GAS  C:\Users\jacki\AppData\Local\Temp\cciuFfVt.s 			page 12
 
 
  206 0096 5DF804FB 		ldr	pc, [sp], #4
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\cc0mjGa8.s 			page 1
  255              	.LVL9:
   98:Core/Src/main.c ****   MX_I2C1_Init();
  256              		.loc 1 98 3 view .LVU71
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\cc0mjGa8.s 			page 13
+ARM GAS  C:\Users\jacki\AppData\Local\Temp\cciuFfVt.s 			page 13
 
 
  257 0010 FFF7FEFF 		bl	MX_USART2_UART_Init
@@ -735,8 +735,8 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\cc0mjGa8.s 			page 1
  265              		.loc 1 104 3 view .LVU74
  104:Core/Src/main.c ****   servo_config.maxDuty = 0.125;
  266              		.loc 1 104 24 is_stmt 0 view .LVU75
- 267 001c 1C4B     		ldr	r3, .L18
- 268 001e 1D4A     		ldr	r2, .L18+4
+ 267 001c 1D4B     		ldr	r3, .L18
+ 268 001e 1E4A     		ldr	r2, .L18+4
  269 0020 1A60     		str	r2, [r3]	@ float
  105:Core/Src/main.c ****   servo_config.minAngle = -90;
  270              		.loc 1 105 3 is_stmt 1 view .LVU76
@@ -760,8 +760,8 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\cc0mjGa8.s 			page 1
  282              		.loc 1 109 3 is_stmt 1 view .LVU82
  109:Core/Src/main.c ****   servo.channel = TIM_CHANNEL_1;
  283              		.loc 1 109 14 is_stmt 0 view .LVU83
- 284 0030 194C     		ldr	r4, .L18+8
- 285 0032 1A48     		ldr	r0, .L18+12
+ 284 0030 1A4C     		ldr	r4, .L18+8
+ 285 0032 1B48     		ldr	r0, .L18+12
  286 0034 2060     		str	r0, [r4]
  110:Core/Src/main.c ****   servo.config = &servo_config;
  287              		.loc 1 110 3 is_stmt 1 view .LVU84
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\cc0mjGa8.s 			page 1
  294              		.loc 1 114 3 is_stmt 1 view .LVU88
  295 003c FFF7FEFF 		bl	HAL_TIM_PWM_Start
  296              	.LVL13:
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\cc0mjGa8.s 			page 14
+ARM GAS  C:\Users\jacki\AppData\Local\Temp\cciuFfVt.s 			page 14
 
 
  117:Core/Src/main.c **** 	  HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, GPIO_PIN_SET);
@@ -795,7 +795,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\cc0mjGa8.s 			page 1
  304              		.loc 1 118 4 is_stmt 1 view .LVU92
  305 0048 0122     		movs	r2, #1
  306 004a 2021     		movs	r1, #32
- 307 004c 1448     		ldr	r0, .L18+16
+ 307 004c 1548     		ldr	r0, .L18+16
  308 004e FFF7FEFF 		bl	HAL_GPIO_WritePin
  309              	.LVL15:
  310              	.L15:
@@ -807,66 +807,66 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\cc0mjGa8.s 			page 1
  314              	.L14:
  123:Core/Src/main.c **** 
  315              		.loc 1 123 3 view .LVU95
- 316 0054 0A20     		movs	r0, #10
- 317 0056 FFF7FEFF 		bl	HAL_Delay
+ 316 0054 4FF42F70 		mov	r0, #700
+ 317 0058 FFF7FEFF 		bl	HAL_Delay
  318              	.LVL16:
  126:Core/Src/main.c ****   BNO055_Init();					//Initialize BNO055 by checking connection and reseting module
  319              		.loc 1 126 3 view .LVU96
- 320 005a 1248     		ldr	r0, .L18+20
- 321 005c FFF7FEFF 		bl	BNO055_I2C_Mount
+ 320 005c 1248     		ldr	r0, .L18+20
+ 321 005e FFF7FEFF 		bl	BNO055_I2C_Mount
  322              	.LVL17:
  127:Core/Src/main.c ****   BNO055_Set_OP_Mode(NDOF);			//Set operation mode to 9-dof with absolute orientation enabled
  323              		.loc 1 127 3 view .LVU97
- 324 0060 FFF7FEFF 		bl	BNO055_Init
+ 324 0062 FFF7FEFF 		bl	BNO055_Init
  325              	.LVL18:
  128:Core/Src/main.c **** 
  326              		.loc 1 128 3 view .LVU98
- 327 0064 0C20     		movs	r0, #12
- 328 0066 FFF7FEFF 		bl	BNO055_Set_OP_Mode
+ 327 0066 0C20     		movs	r0, #12
+ 328 0068 FFF7FEFF 		bl	BNO055_Set_OP_Mode
  329              	.LVL19:
  330              	.L16:
  134:Core/Src/main.c ****   {
  331              		.loc 1 134 3 discriminator 1 view .LVU99
  145:Core/Src/main.c **** 	  DRIVE_SERVO(&servo, Euler_Angle_Struct.y);		//Drive Servo Based on Y-Axis angle
  332              		.loc 1 145 4 discriminator 1 view .LVU100
- 333 006a 0F4C     		ldr	r4, .L18+24
- 334 006c 2046     		mov	r0, r4
- 335 006e FFF7FEFF 		bl	BNO055_Get_Euler_Vec
+ 333 006c 0F4C     		ldr	r4, .L18+24
+ 334 006e 2046     		mov	r0, r4
+ 335 0070 FFF7FEFF 		bl	BNO055_Get_Euler_Vec
  336              	.LVL20:
  146:Core/Src/main.c **** 	  HAL_Delay(20);									//Smooth out servo rotation stutter
  337              		.loc 1 146 4 discriminator 1 view .LVU101
  146:Core/Src/main.c **** 	  HAL_Delay(20);									//Smooth out servo rotation stutter
  338              		.loc 1 146 42 is_stmt 0 discriminator 1 view .LVU102
- 339 0072 D4ED017A 		vldr.32	s15, [r4, #4]
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\cc0mjGa8.s 			page 15
+ 339 0074 D4ED017A 		vldr.32	s15, [r4, #4]
+ARM GAS  C:\Users\jacki\AppData\Local\Temp\cciuFfVt.s 			page 15
 
 
  146:Core/Src/main.c **** 	  HAL_Delay(20);									//Smooth out servo rotation stutter
  340              		.loc 1 146 4 discriminator 1 view .LVU103
- 341 0076 FDEEE77A 		vcvt.s32.f32	s15, s15
- 342 007a CDED017A 		vstr.32	s15, [sp, #4]	@ int
- 343 007e 9DF90410 		ldrsb	r1, [sp, #4]
- 344 0082 0548     		ldr	r0, .L18+8
- 345 0084 FFF7FEFF 		bl	DRIVE_SERVO
+ 341 0078 FDEEE77A 		vcvt.s32.f32	s15, s15
+ 342 007c CDED017A 		vstr.32	s15, [sp, #4]	@ int
+ 343 0080 9DF90410 		ldrsb	r1, [sp, #4]
+ 344 0084 0548     		ldr	r0, .L18+8
+ 345 0086 FFF7FEFF 		bl	DRIVE_SERVO
  346              	.LVL21:
  147:Core/Src/main.c **** 
  347              		.loc 1 147 4 is_stmt 1 discriminator 1 view .LVU104
- 348 0088 1420     		movs	r0, #20
- 349 008a FFF7FEFF 		bl	HAL_Delay
+ 348 008a 1420     		movs	r0, #20
+ 349 008c FFF7FEFF 		bl	HAL_Delay
  350              	.LVL22:
  134:Core/Src/main.c ****   {
  351              		.loc 1 134 9 discriminator 1 view .LVU105
- 352 008e ECE7     		b	.L16
+ 352 0090 ECE7     		b	.L16
  353              	.L19:
- 354              		.align	2
+ 354 0092 00BF     		.align	2
  355              	.L18:
- 356 0090 00000000 		.word	.LANCHOR0
- 357 0094 CDCCCC3C 		.word	1020054733
- 358 0098 00000000 		.word	.LANCHOR1
- 359 009c 00000000 		.word	htim1
- 360 00a0 00000240 		.word	1073872896
- 361 00a4 00000000 		.word	hi2c1
- 362 00a8 00000000 		.word	.LANCHOR2
+ 356 0094 00000000 		.word	.LANCHOR0
+ 357 0098 CDCCCC3C 		.word	1020054733
+ 358 009c 00000000 		.word	.LANCHOR1
+ 359 00a0 00000000 		.word	htim1
+ 360 00a4 00000240 		.word	1073872896
+ 361 00a8 00000000 		.word	hi2c1
+ 362 00ac 00000000 		.word	.LANCHOR2
  363              		.cfi_endproc
  364              	.LFE130:
  366              		.global	servo_config
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\cc0mjGa8.s 			page 1
  392              		.set	.LANCHOR0,. + 0
  395              	servo_config:
  396 0000 00000000 		.space	12
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\cc0mjGa8.s 			page 16
+ARM GAS  C:\Users\jacki\AppData\Local\Temp\cciuFfVt.s 			page 16
 
 
  396      00000000 
@@ -927,29 +927,29 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\cc0mjGa8.s 			page 1
  420              		.file 19 "Core/Inc/usart.h"
  421              		.file 20 "Core/Inc/gpio.h"
  422              		.file 21 "<built-in>"
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\cc0mjGa8.s 			page 17
+ARM GAS  C:\Users\jacki\AppData\Local\Temp\cciuFfVt.s 			page 17
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 main.c
-C:\Users\jacki\AppData\Local\Temp\cc0mjGa8.s:20     .text.Error_Handler:0000000000000000 $t
-C:\Users\jacki\AppData\Local\Temp\cc0mjGa8.s:26     .text.Error_Handler:0000000000000000 Error_Handler
-C:\Users\jacki\AppData\Local\Temp\cc0mjGa8.s:59     .text.SystemClock_Config:0000000000000000 $t
-C:\Users\jacki\AppData\Local\Temp\cc0mjGa8.s:65     .text.SystemClock_Config:0000000000000000 SystemClock_Config
-C:\Users\jacki\AppData\Local\Temp\cc0mjGa8.s:223    .text.SystemClock_Config:00000000000000a8 $d
-C:\Users\jacki\AppData\Local\Temp\cc0mjGa8.s:229    .text.main:0000000000000000 $t
-C:\Users\jacki\AppData\Local\Temp\cc0mjGa8.s:235    .text.main:0000000000000000 main
-C:\Users\jacki\AppData\Local\Temp\cc0mjGa8.s:356    .text.main:0000000000000090 $d
-C:\Users\jacki\AppData\Local\Temp\cc0mjGa8.s:395    .bss.servo_config:0000000000000000 servo_config
-C:\Users\jacki\AppData\Local\Temp\cc0mjGa8.s:388    .bss.servo:0000000000000000 servo
-C:\Users\jacki\AppData\Local\Temp\cc0mjGa8.s:400    .bss.servo_error:0000000000000000 servo_error
-C:\Users\jacki\AppData\Local\Temp\cc0mjGa8.s:376    .bss.Euler_Angle_Struct:0000000000000000 Euler_Angle_Struct
-C:\Users\jacki\AppData\Local\Temp\cc0mjGa8.s:381    .bss.error:0000000000000000 error
-C:\Users\jacki\AppData\Local\Temp\cc0mjGa8.s:372    .bss.Euler_Angle_Struct:0000000000000000 $d
-C:\Users\jacki\AppData\Local\Temp\cc0mjGa8.s:382    .bss.error:0000000000000000 $d
-C:\Users\jacki\AppData\Local\Temp\cc0mjGa8.s:384    .bss.servo:0000000000000000 $d
-C:\Users\jacki\AppData\Local\Temp\cc0mjGa8.s:391    .bss.servo_config:0000000000000000 $d
-C:\Users\jacki\AppData\Local\Temp\cc0mjGa8.s:401    .bss.servo_error:0000000000000000 $d
+C:\Users\jacki\AppData\Local\Temp\cciuFfVt.s:20     .text.Error_Handler:0000000000000000 $t
+C:\Users\jacki\AppData\Local\Temp\cciuFfVt.s:26     .text.Error_Handler:0000000000000000 Error_Handler
+C:\Users\jacki\AppData\Local\Temp\cciuFfVt.s:59     .text.SystemClock_Config:0000000000000000 $t
+C:\Users\jacki\AppData\Local\Temp\cciuFfVt.s:65     .text.SystemClock_Config:0000000000000000 SystemClock_Config
+C:\Users\jacki\AppData\Local\Temp\cciuFfVt.s:223    .text.SystemClock_Config:00000000000000a8 $d
+C:\Users\jacki\AppData\Local\Temp\cciuFfVt.s:229    .text.main:0000000000000000 $t
+C:\Users\jacki\AppData\Local\Temp\cciuFfVt.s:235    .text.main:0000000000000000 main
+C:\Users\jacki\AppData\Local\Temp\cciuFfVt.s:356    .text.main:0000000000000094 $d
+C:\Users\jacki\AppData\Local\Temp\cciuFfVt.s:395    .bss.servo_config:0000000000000000 servo_config
+C:\Users\jacki\AppData\Local\Temp\cciuFfVt.s:388    .bss.servo:0000000000000000 servo
+C:\Users\jacki\AppData\Local\Temp\cciuFfVt.s:400    .bss.servo_error:0000000000000000 servo_error
+C:\Users\jacki\AppData\Local\Temp\cciuFfVt.s:376    .bss.Euler_Angle_Struct:0000000000000000 Euler_Angle_Struct
+C:\Users\jacki\AppData\Local\Temp\cciuFfVt.s:381    .bss.error:0000000000000000 error
+C:\Users\jacki\AppData\Local\Temp\cciuFfVt.s:372    .bss.Euler_Angle_Struct:0000000000000000 $d
+C:\Users\jacki\AppData\Local\Temp\cciuFfVt.s:382    .bss.error:0000000000000000 $d
+C:\Users\jacki\AppData\Local\Temp\cciuFfVt.s:384    .bss.servo:0000000000000000 $d
+C:\Users\jacki\AppData\Local\Temp\cciuFfVt.s:391    .bss.servo_config:0000000000000000 $d
+C:\Users\jacki\AppData\Local\Temp\cciuFfVt.s:401    .bss.servo_error:0000000000000000 $d
 
 UNDEFINED SYMBOLS
 memset

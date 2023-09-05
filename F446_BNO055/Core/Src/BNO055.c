@@ -78,8 +78,9 @@ BNO055_ERROR BNO055_Init(void){
 	uint8_t ID_Check = 0;
 
 	/* Software Reset Module */
-//	error = BNO055_Write(BNO055_SYS_TRIGGER, BNO055_SYS_RESET);
-//	BNO055_ERROR_HANDLE(error);
+	error = BNO055_Write(BNO055_SYS_TRIGGER, BNO055_SYS_RESET);
+	BNO055_ERROR_HANDLE(error);
+	HAL_Delay(700);													//Necessary Delay when Soft Reset
 
 	/* Hardware Reset Module */
 	#ifdef BNO055_HARDWARE_RESET

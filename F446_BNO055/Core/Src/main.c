@@ -120,7 +120,7 @@ int main(void)
   }
 
   /* BNO055 Start-Up Period */
-  HAL_Delay(10);
+  HAL_Delay(700);
 
   /* BNO055 Setup */
   BNO055_I2C_Mount(&hi2c1);			//Mount I2C for BNO055 API to use
