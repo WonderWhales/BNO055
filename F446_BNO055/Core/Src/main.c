@@ -25,7 +25,8 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "BNO055.h"
+#include "servo.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -57,6 +58,12 @@ void SystemClock_Config(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+HAL_StatusTypeDef error;
+BNO055_Euler_Vec_t Euler_Angle_Struct;
+
+SERVO_ErrorTypeDef servo_error;
+SERVO_Instance_t servo;
+SERVO_Config_t servo_config;
 
 /* USER CODE END 0 */
 
@@ -88,10 +95,34 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
+  MX_USART2_UART_Init();
   MX_I2C1_Init();
   MX_TIM1_Init();
-  MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
+
+  /* Servo Motor Struct Instance */
+  servo_config.minDuty = 0.025;
+  servo_config.maxDuty = 0.125;
+  servo_config.minAngle = -90;
+  servo_config.maxAngle = 90;
+
+  servo.htim = &htim1;
+  servo.channel = TIM_CHANNEL_1;
+  servo.config = &servo_config;
+
+  /* Start Servo Motor PWM */
+  HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);
+
+  /* Initialize Servo Motor by zeroing */
+  if(SERVO_INIT(&servo) != SERVO_OK){
+	  HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, GPIO_PIN_SET);
+	  while(1);
+  }
+
+  /* BNO055 Setup */
+  BNO055_I2C_Mount(&hi2c1);			//Mount I2C for BNO055 API to use
+  BNO055_Init();					//Initialize BNO055 by checking connection and reseting module
+  BNO055_Set_OP_Mode(NDOF);			//Set operation mode to 9-dof with absolute orientation enabled
 
   /* USER CODE END 2 */
 
@@ -99,6 +130,19 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+//	  DRIVE_SERVO(&servo, 0);
+//	  HAL_Delay(1000);
+//	  DRIVE_SERVO(&servo, -45);
+//	  HAL_Delay(1000);
+//	  DRIVE_SERVO(&servo, 0);
+//	  HAL_Delay(1000);
+//	  DRIVE_SERVO(&servo, 45);
+//	  HAL_Delay(1000);
+
+	  BNO055_Get_Euler_Vec(&Euler_Angle_Struct);		//Grab Euler Vector from BNO055
+	  DRIVE_SERVO(&servo, Euler_Angle_Struct.y);		//Drive Servo Based on Y-Axis angle
+	  HAL_Delay(20);									//Smooth out servo rotation stutter
+
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\baske\AppData\Local\Temp\cchAX9kO.s 			page 1
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccOqxrnr.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\cchAX9kO.s 			page 1
   28:Core/Src/BNO055.c **** 	error = HAL_I2C_Master_Transmit(BNO055_I2C, BNO055_I2C_ADDR<<1, &reg, 1, BNO055_WRITE_TIMEOUT);
   29:Core/Src/BNO055.c **** 	error |= HAL_I2C_Master_Receive(BNO055_I2C, BNO055_I2C_ADDR<<1, buf, len, BNO055_READ_TIMEOUT);
   30:Core/Src/BNO055.c **** 
-ARM GAS  C:\Users\baske\AppData\Local\Temp\cchAX9kO.s 			page 2
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccOqxrnr.s 			page 2
 
 
   31:Core/Src/BNO055.c **** 	return error;
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\cchAX9kO.s 			page 1
   66              		.align	2
   67              	.L3:
   68 0024 00000000 		.word	.LANCHOR0
-ARM GAS  C:\Users\baske\AppData\Local\Temp\cchAX9kO.s 			page 3
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccOqxrnr.s 			page 3
 
 
   69              		.cfi_endproc
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\cchAX9kO.s 			page 1
   28:Core/Src/BNO055.c **** 	error |= HAL_I2C_Master_Receive(BNO055_I2C, BNO055_I2C_ADDR<<1, buf, len, BNO055_READ_TIMEOUT);
  117              		.loc 1 28 10 view .LVU19
  118 0026 0446     		mov	r4, r0
-ARM GAS  C:\Users\baske\AppData\Local\Temp\cchAX9kO.s 			page 4
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccOqxrnr.s 			page 4
 
 
  119              	.LVL9:
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\cchAX9kO.s 			page 1
  162              		.loc 1 53 2 view .LVU28
  163              		.loc 1 53 4 is_stmt 0 view .LVU29
  164 0000 00B9     		cbnz	r0, .L15
-ARM GAS  C:\Users\baske\AppData\Local\Temp\cchAX9kO.s 			page 5
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccOqxrnr.s 			page 5
 
 
  165 0002 7047     		bx	lr
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\cchAX9kO.s 			page 1
   64:Core/Src/BNO055.c **** }
  210              		.loc 1 64 1 view .LVU38
  211 0004 7047     		bx	lr
-ARM GAS  C:\Users\baske\AppData\Local\Temp\cchAX9kO.s 			page 6
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccOqxrnr.s 			page 6
 
 
  212              	.L20:
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\cchAX9kO.s 			page 1
   91:Core/Src/BNO055.c **** 	/* Read Chip ID Register to see if BNO055 is detected*/
   92:Core/Src/BNO055.c **** 	error = BNO055_Read(BNO055_CHIP_ID, &ID_Check, 1);
  242              		.loc 1 92 2 is_stmt 1 view .LVU43
-ARM GAS  C:\Users\baske\AppData\Local\Temp\cchAX9kO.s 			page 7
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccOqxrnr.s 			page 7
 
 
  243              		.loc 1 92 10 is_stmt 0 view .LVU44
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\cchAX9kO.s 			page 1
  275 0030 FFF7FEFF 		bl	BNO055_ERROR_HANDLE
  276              	.LVL20:
  100:Core/Src/BNO055.c **** 
-ARM GAS  C:\Users\baske\AppData\Local\Temp\cchAX9kO.s 			page 8
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccOqxrnr.s 			page 8
 
 
  277              		.loc 1 100 2 view .LVU54
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\cchAX9kO.s 			page 1
  321 0002 7047     		bx	lr
  322              		.cfi_endproc
  323              	.LFE135:
-ARM GAS  C:\Users\baske\AppData\Local\Temp\cchAX9kO.s 			page 9
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccOqxrnr.s 			page 9
 
 
  325              		.section	.text.BNO055_Set_OP_Mode,"ax",%progbits
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\cchAX9kO.s 			page 1
  372              	.LVL29:
  126:Core/Src/BNO055.c **** 			break;
  373              		.loc 1 126 4 is_stmt 1 view .LVU72
-ARM GAS  C:\Users\baske\AppData\Local\Temp\cchAX9kO.s 			page 10
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccOqxrnr.s 			page 10
 
 
  374              	.L41:
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\cchAX9kO.s 			page 1
  380 0026 FFF7FEFF 		bl	HAL_Delay
  381              	.LVL31:
  175:Core/Src/BNO055.c **** 	return BNO055_SUCCESS;
-ARM GAS  C:\Users\baske\AppData\Local\Temp\cchAX9kO.s 			page 11
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccOqxrnr.s 			page 11
 
 
  382              		.loc 1 175 2 view .LVU75
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\cchAX9kO.s 			page 1
  423              		.loc 1 142 4 is_stmt 1 view .LVU88
  424 0054 E4E7     		b	.L41
  425              	.LVL39:
-ARM GAS  C:\Users\baske\AppData\Local\Temp\cchAX9kO.s 			page 12
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccOqxrnr.s 			page 12
 
 
  426              	.L35:
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\cchAX9kO.s 			page 1
  467              		.loc 1 161 4 view .LVU101
  161:Core/Src/BNO055.c **** 			break;
  468              		.loc 1 161 12 is_stmt 0 view .LVU102
-ARM GAS  C:\Users\baske\AppData\Local\Temp\cchAX9kO.s 			page 13
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccOqxrnr.s 			page 13
 
 
  469 007e 0B21     		movs	r1, #11
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\cchAX9kO.s 			page 1
  516              		.cfi_offset 14, -4
  517 0002 82B0     		sub	sp, sp, #8
  518              		.cfi_def_cfa_offset 16
-ARM GAS  C:\Users\baske\AppData\Local\Temp\cchAX9kO.s 			page 14
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccOqxrnr.s 			page 14
 
 
  519 0004 0446     		mov	r4, r0
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\cchAX9kO.s 			page 1
  558              		.loc 1 193 2 is_stmt 1 view .LVU127
  559              		.loc 1 193 29 is_stmt 0 view .LVU128
  560 0042 9DF80320 		ldrb	r2, [sp, #3]	@ zero_extendqisi2
-ARM GAS  C:\Users\baske\AppData\Local\Temp\cchAX9kO.s 			page 15
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccOqxrnr.s 			page 15
 
 
  561              		.loc 1 193 46 view .LVU129
@@ -898,43 +898,43 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\cchAX9kO.s 			page 1
  614              		.file 4 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f446xx.h"
  615              		.file 5 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h"
  616              		.file 6 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h"
-ARM GAS  C:\Users\baske\AppData\Local\Temp\cchAX9kO.s 			page 16
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccOqxrnr.s 			page 16
 
 
  617              		.file 7 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h"
  618              		.file 8 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h"
  619              		.file 9 "Core/Inc/BNO055.h"
  620              		.file 10 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h"
-ARM GAS  C:\Users\baske\AppData\Local\Temp\cchAX9kO.s 			page 17
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccOqxrnr.s 			page 17
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 BNO055.c
-C:\Users\baske\AppData\Local\Temp\cchAX9kO.s:20     .text.BNO055_Write:0000000000000000 $t
-C:\Users\baske\AppData\Local\Temp\cchAX9kO.s:25     .text.BNO055_Write:0000000000000000 BNO055_Write
-C:\Users\baske\AppData\Local\Temp\cchAX9kO.s:68     .text.BNO055_Write:0000000000000024 $d
-C:\Users\baske\AppData\Local\Temp\cchAX9kO.s:73     .text.BNO055_Read:0000000000000000 $t
-C:\Users\baske\AppData\Local\Temp\cchAX9kO.s:78     .text.BNO055_Read:0000000000000000 BNO055_Read
-C:\Users\baske\AppData\Local\Temp\cchAX9kO.s:145    .text.BNO055_Read:0000000000000044 $d
-C:\Users\baske\AppData\Local\Temp\cchAX9kO.s:150    .text.BNO055_ERROR_HANDLE:0000000000000000 $t
-C:\Users\baske\AppData\Local\Temp\cchAX9kO.s:155    .text.BNO055_ERROR_HANDLE:0000000000000000 BNO055_ERROR_HANDLE
-C:\Users\baske\AppData\Local\Temp\cchAX9kO.s:187    .text.BNO055_ERROR_HANDLE:0000000000000014 $d
-C:\Users\baske\AppData\Local\Temp\cchAX9kO.s:192    .text.BNO055_I2C_Mount:0000000000000000 $t
-C:\Users\baske\AppData\Local\Temp\cchAX9kO.s:198    .text.BNO055_I2C_Mount:0000000000000000 BNO055_I2C_Mount
-C:\Users\baske\AppData\Local\Temp\cchAX9kO.s:215    .text.BNO055_I2C_Mount:0000000000000008 $d
-C:\Users\baske\AppData\Local\Temp\cchAX9kO.s:220    .text.BNO055_Init:0000000000000000 $t
-C:\Users\baske\AppData\Local\Temp\cchAX9kO.s:226    .text.BNO055_Init:0000000000000000 BNO055_Init
-C:\Users\baske\AppData\Local\Temp\cchAX9kO.s:302    .text.BNO055_Set_Unit:0000000000000000 $t
-C:\Users\baske\AppData\Local\Temp\cchAX9kO.s:308    .text.BNO055_Set_Unit:0000000000000000 BNO055_Set_Unit
-C:\Users\baske\AppData\Local\Temp\cchAX9kO.s:326    .text.BNO055_Set_OP_Mode:0000000000000000 $t
-C:\Users\baske\AppData\Local\Temp\cchAX9kO.s:332    .text.BNO055_Set_OP_Mode:0000000000000000 BNO055_Set_OP_Mode
-C:\Users\baske\AppData\Local\Temp\cchAX9kO.s:353    .text.BNO055_Set_OP_Mode:000000000000000c $d
-C:\Users\baske\AppData\Local\Temp\cchAX9kO.s:365    .text.BNO055_Set_OP_Mode:0000000000000018 $t
-C:\Users\baske\AppData\Local\Temp\cchAX9kO.s:499    .text.BNO055_Get_Euler_Vec:0000000000000000 $t
-C:\Users\baske\AppData\Local\Temp\cchAX9kO.s:505    .text.BNO055_Get_Euler_Vec:0000000000000000 BNO055_Get_Euler_Vec
-C:\Users\baske\AppData\Local\Temp\cchAX9kO.s:598    .text.BNO055_Get_Euler_Vec:0000000000000084 $d
-C:\Users\baske\AppData\Local\Temp\cchAX9kO.s:608    .bss.BNO055_I2C:0000000000000000 BNO055_I2C
-C:\Users\baske\AppData\Local\Temp\cchAX9kO.s:604    .bss.BNO055_I2C:0000000000000000 $d
+C:\Users\baske\AppData\Local\Temp\ccOqxrnr.s:20     .text.BNO055_Write:0000000000000000 $t
+C:\Users\baske\AppData\Local\Temp\ccOqxrnr.s:25     .text.BNO055_Write:0000000000000000 BNO055_Write
+C:\Users\baske\AppData\Local\Temp\ccOqxrnr.s:68     .text.BNO055_Write:0000000000000024 $d
+C:\Users\baske\AppData\Local\Temp\ccOqxrnr.s:73     .text.BNO055_Read:0000000000000000 $t
+C:\Users\baske\AppData\Local\Temp\ccOqxrnr.s:78     .text.BNO055_Read:0000000000000000 BNO055_Read
+C:\Users\baske\AppData\Local\Temp\ccOqxrnr.s:145    .text.BNO055_Read:0000000000000044 $d
+C:\Users\baske\AppData\Local\Temp\ccOqxrnr.s:150    .text.BNO055_ERROR_HANDLE:0000000000000000 $t
+C:\Users\baske\AppData\Local\Temp\ccOqxrnr.s:155    .text.BNO055_ERROR_HANDLE:0000000000000000 BNO055_ERROR_HANDLE
+C:\Users\baske\AppData\Local\Temp\ccOqxrnr.s:187    .text.BNO055_ERROR_HANDLE:0000000000000014 $d
+C:\Users\baske\AppData\Local\Temp\ccOqxrnr.s:192    .text.BNO055_I2C_Mount:0000000000000000 $t
+C:\Users\baske\AppData\Local\Temp\ccOqxrnr.s:198    .text.BNO055_I2C_Mount:0000000000000000 BNO055_I2C_Mount
+C:\Users\baske\AppData\Local\Temp\ccOqxrnr.s:215    .text.BNO055_I2C_Mount:0000000000000008 $d
+C:\Users\baske\AppData\Local\Temp\ccOqxrnr.s:220    .text.BNO055_Init:0000000000000000 $t
+C:\Users\baske\AppData\Local\Temp\ccOqxrnr.s:226    .text.BNO055_Init:0000000000000000 BNO055_Init
+C:\Users\baske\AppData\Local\Temp\ccOqxrnr.s:302    .text.BNO055_Set_Unit:0000000000000000 $t
+C:\Users\baske\AppData\Local\Temp\ccOqxrnr.s:308    .text.BNO055_Set_Unit:0000000000000000 BNO055_Set_Unit
+C:\Users\baske\AppData\Local\Temp\ccOqxrnr.s:326    .text.BNO055_Set_OP_Mode:0000000000000000 $t
+C:\Users\baske\AppData\Local\Temp\ccOqxrnr.s:332    .text.BNO055_Set_OP_Mode:0000000000000000 BNO055_Set_OP_Mode
+C:\Users\baske\AppData\Local\Temp\ccOqxrnr.s:353    .text.BNO055_Set_OP_Mode:000000000000000c $d
+C:\Users\baske\AppData\Local\Temp\ccOqxrnr.s:365    .text.BNO055_Set_OP_Mode:0000000000000018 $t
+C:\Users\baske\AppData\Local\Temp\ccOqxrnr.s:499    .text.BNO055_Get_Euler_Vec:0000000000000000 $t
+C:\Users\baske\AppData\Local\Temp\ccOqxrnr.s:505    .text.BNO055_Get_Euler_Vec:0000000000000000 BNO055_Get_Euler_Vec
+C:\Users\baske\AppData\Local\Temp\ccOqxrnr.s:598    .text.BNO055_Get_Euler_Vec:0000000000000084 $d
+C:\Users\baske\AppData\Local\Temp\ccOqxrnr.s:608    .bss.BNO055_I2C:0000000000000000 BNO055_I2C
+C:\Users\baske\AppData\Local\Temp\ccOqxrnr.s:604    .bss.BNO055_I2C:0000000000000000 $d
 
 UNDEFINED SYMBOLS
 HAL_I2C_Master_Transmit

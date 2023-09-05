@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\baske\AppData\Local\Temp\ccaulbwb.s 			page 1
+ARM GAS  C:\Users\baske\AppData\Local\Temp\cckxE4bv.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\ccaulbwb.s 			page 1
   27:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   Subject to the specific hardware characteristics of each I/O port listed in the datasheet, each
   28:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   port bit of the General Purpose IO (GPIO) Ports, can be individually configured by software
   29:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   in several modes:
-ARM GAS  C:\Users\baske\AppData\Local\Temp\ccaulbwb.s 			page 2
+ARM GAS  C:\Users\baske\AppData\Local\Temp\cckxE4bv.s 			page 2
 
 
   30:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   (+) Input mode 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\ccaulbwb.s 			page 1
   84:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****             
   85:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****     (#) To set/reset the level of a pin configured in output mode use 
   86:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         HAL_GPIO_WritePin()/HAL_GPIO_TogglePin().
-ARM GAS  C:\Users\baske\AppData\Local\Temp\ccaulbwb.s 			page 3
+ARM GAS  C:\Users\baske\AppData\Local\Temp\cckxE4bv.s 			page 3
 
 
   87:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****     
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\ccaulbwb.s 			page 1
  141:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   *  @brief    Initialization and Configuration functions
  142:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   *
  143:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** @verbatim    
-ARM GAS  C:\Users\baske\AppData\Local\Temp\ccaulbwb.s 			page 4
+ARM GAS  C:\Users\baske\AppData\Local\Temp\cckxE4bv.s 			page 4
 
 
  144:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****  ===============================================================================
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\ccaulbwb.s 			page 1
   49 0008 70B5     		push	{r4, r5, r6, lr}
   50              		.cfi_def_cfa_offset 16
   51              		.cfi_offset 4, -16
-ARM GAS  C:\Users\baske\AppData\Local\Temp\ccaulbwb.s 			page 5
+ARM GAS  C:\Users\baske\AppData\Local\Temp\cckxE4bv.s 			page 5
 
 
   52              		.cfi_offset 5, -12
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\ccaulbwb.s 			page 1
  199:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         /* Configure the IO Output Type */
  200:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         temp = GPIOx->OTYPER;
   85              		.loc 1 200 9 is_stmt 1 view .LVU25
-ARM GAS  C:\Users\baske\AppData\Local\Temp\ccaulbwb.s 			page 6
+ARM GAS  C:\Users\baske\AppData\Local\Temp\cckxE4bv.s 			page 6
 
 
   86              		.loc 1 200 14 is_stmt 0 view .LVU26
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\ccaulbwb.s 			page 1
  116 0040 50F82420 		ldr	r2, [r0, r4, lsl #2]
  117              	.LVL11:
  225:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         temp &= ~(0xFU << ((uint32_t)(position & 0x07U) * 4U)) ;
-ARM GAS  C:\Users\baske\AppData\Local\Temp\ccaulbwb.s 			page 7
+ARM GAS  C:\Users\baske\AppData\Local\Temp\cckxE4bv.s 			page 7
 
 
  118              		.loc 1 225 9 is_stmt 1 view .LVU40
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\ccaulbwb.s 			page 1
  152              		.loc 1 245 14 discriminator 28 view .LVU54
  153 006e 2A43     		orrs	r2, r2, r5
  154              	.LVL15:
-ARM GAS  C:\Users\baske\AppData\Local\Temp\ccaulbwb.s 			page 8
+ARM GAS  C:\Users\baske\AppData\Local\Temp\cckxE4bv.s 			page 8
 
 
  246:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         SYSCFG->EXTICR[position >> 2U] = temp;
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\ccaulbwb.s 			page 1
  195              		.loc 1 259 9 is_stmt 1 view .LVU73
  196              		.loc 1 259 11 is_stmt 0 view .LVU74
  197 009a 4E68     		ldr	r6, [r1, #4]
-ARM GAS  C:\Users\baske\AppData\Local\Temp\ccaulbwb.s 			page 9
+ARM GAS  C:\Users\baske\AppData\Local\Temp\cckxE4bv.s 			page 9
 
 
  198 009c 16F4001F 		tst	r6, #2097152
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\ccaulbwb.s 			page 1
  236              		.loc 1 275 14 is_stmt 0 view .LVU92
  237 00c2 2240     		ands	r2, r2, r4
  238              	.LVL27:
-ARM GAS  C:\Users\baske\AppData\Local\Temp\ccaulbwb.s 			page 10
+ARM GAS  C:\Users\baske\AppData\Local\Temp\cckxE4bv.s 			page 10
 
 
  276:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         if((GPIO_Init->Mode & EXTI_IT) != 0x00U)
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\ccaulbwb.s 			page 1
  188:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****           (GPIO_Init->Mode & GPIO_MODE) == MODE_AF)
  279              		.loc 1 188 7 is_stmt 1 view .LVU109
  188:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****           (GPIO_Init->Mode & GPIO_MODE) == MODE_AF)
-ARM GAS  C:\Users\baske\AppData\Local\Temp\ccaulbwb.s 			page 11
+ARM GAS  C:\Users\baske\AppData\Local\Temp\cckxE4bv.s 			page 11
 
 
  280              		.loc 1 188 21 is_stmt 0 view .LVU110
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\ccaulbwb.s 			page 1
  317 010e AA40     		lsls	r2, r2, r5
  214:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         GPIOx->PUPDR = temp;
  318              		.loc 1 214 14 view .LVU128
-ARM GAS  C:\Users\baske\AppData\Local\Temp\ccaulbwb.s 			page 12
+ARM GAS  C:\Users\baske\AppData\Local\Temp\cckxE4bv.s 			page 12
 
 
  319 0110 2243     		orrs	r2, r2, r4
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\ccaulbwb.s 			page 1
  356 0138 2243     		orrs	r2, r2, r4
  357              	.LVL41:
  234:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** 
-ARM GAS  C:\Users\baske\AppData\Local\Temp\ccaulbwb.s 			page 13
+ARM GAS  C:\Users\baske\AppData\Local\Temp\cckxE4bv.s 			page 13
 
 
  358              		.loc 1 234 7 is_stmt 1 view .LVU146
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\ccaulbwb.s 			page 1
  397 0166 03F0030E 		and	lr, r3, #3
  244:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****         temp |= ((uint32_t)(GPIO_GET_INDEX(GPIOx)) << (4U * (position & 0x03U)));
  398              		.loc 1 244 32 view .LVU162
-ARM GAS  C:\Users\baske\AppData\Local\Temp\ccaulbwb.s 			page 14
+ARM GAS  C:\Users\baske\AppData\Local\Temp\cckxE4bv.s 			page 14
 
 
  399 016a 4FEA8E0E 		lsl	lr, lr, #2
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\ccaulbwb.s 			page 1
  441              		.loc 1 245 29 view .LVU174
  442 01b8 57E7     		b	.L7
  443              	.LVL47:
-ARM GAS  C:\Users\baske\AppData\Local\Temp\ccaulbwb.s 			page 15
+ARM GAS  C:\Users\baske\AppData\Local\Temp\cckxE4bv.s 			page 15
 
 
  444              	.L15:
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\ccaulbwb.s 			page 1
  287:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   * @brief  De-initializes the GPIOx peripheral registers to their default reset values.
  288:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   * @param  GPIOx where x can be (A..K) to select the GPIO peripheral for STM32F429X device or
  289:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   *                      x can be (A..I) to select the GPIO peripheral for STM32F40XX and STM32F427
-ARM GAS  C:\Users\baske\AppData\Local\Temp\ccaulbwb.s 			page 16
+ARM GAS  C:\Users\baske\AppData\Local\Temp\cckxE4bv.s 			page 16
 
 
  290:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   * @param  GPIO_Pin specifies the port bit to be written.
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\ccaulbwb.s 			page 1
  316:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       tmp &= (0x0FU << (4U * (position & 0x03U)));
  317:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       if(tmp == ((uint32_t)(GPIO_GET_INDEX(GPIOx)) << (4U * (position & 0x03U))))
  520              		.loc 1 317 29 view .LVU188
-ARM GAS  C:\Users\baske\AppData\Local\Temp\ccaulbwb.s 			page 17
+ARM GAS  C:\Users\baske\AppData\Local\Temp\cckxE4bv.s 			page 17
 
 
  521 000c 0625     		movs	r5, #6
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\ccaulbwb.s 			page 1
  555 003e 0F25     		movs	r5, #15
  556 0040 B540     		lsls	r5, r5, r6
  557              		.loc 1 337 34 view .LVU202
-ARM GAS  C:\Users\baske\AppData\Local\Temp\ccaulbwb.s 			page 18
+ARM GAS  C:\Users\baske\AppData\Local\Temp\cckxE4bv.s 			page 18
 
 
  558 0042 24EA0504 		bic	r4, r4, r5
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\ccaulbwb.s 			page 1
  312:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****     {
  596              		.loc 1 312 7 is_stmt 0 view .LVU217
  597 0070 32EA0104 		bics	r4, r2, r1
-ARM GAS  C:\Users\baske\AppData\Local\Temp\ccaulbwb.s 			page 19
+ARM GAS  C:\Users\baske\AppData\Local\Temp\cckxE4bv.s 			page 19
 
 
  598 0074 F5D1     		bne	.L32
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\ccaulbwb.s 			page 1
  638 00b8 0FD0     		beq	.L40
  317:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****       {
  639              		.loc 1 317 29 discriminator 9 view .LVU232
-ARM GAS  C:\Users\baske\AppData\Local\Temp\ccaulbwb.s 			page 20
+ARM GAS  C:\Users\baske\AppData\Local\Temp\cckxE4bv.s 			page 20
 
 
  640 00ba 05F58065 		add	r5, r5, #1024
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\ccaulbwb.s 			page 1
  684              		.loc 1 325 9 is_stmt 1 view .LVU242
  325:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** 
  685              		.loc 1 325 20 is_stmt 0 view .LVU243
-ARM GAS  C:\Users\baske\AppData\Local\Temp\ccaulbwb.s 			page 21
+ARM GAS  C:\Users\baske\AppData\Local\Temp\cckxE4bv.s 			page 21
 
 
  686 00fc A568     		ldr	r5, [r4, #8]
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\ccaulbwb.s 			page 1
  351:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** /**
  352:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   * @}
  353:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   */
-ARM GAS  C:\Users\baske\AppData\Local\Temp\ccaulbwb.s 			page 22
+ARM GAS  C:\Users\baske\AppData\Local\Temp\cckxE4bv.s 			page 22
 
 
  354:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** 
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\ccaulbwb.s 			page 1
  388:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****     bitstatus = GPIO_PIN_RESET;
  754              		.loc 1 388 15 view .LVU258
  755 000a 0020     		movs	r0, #0
-ARM GAS  C:\Users\baske\AppData\Local\Temp\ccaulbwb.s 			page 23
+ARM GAS  C:\Users\baske\AppData\Local\Temp\cckxE4bv.s 			page 23
 
 
  756              	.LVL69:
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\ccaulbwb.s 			page 1
  418:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****     GPIOx->BSRR = GPIO_Pin;
  783              		.loc 1 418 5 is_stmt 1 view .LVU266
  784              		.loc 1 418 17 is_stmt 0 view .LVU267
-ARM GAS  C:\Users\baske\AppData\Local\Temp\ccaulbwb.s 			page 24
+ARM GAS  C:\Users\baske\AppData\Local\Temp\cckxE4bv.s 			page 24
 
 
  785 0002 8161     		str	r1, [r0, #24]
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\ccaulbwb.s 			page 1
  818 0000 4369     		ldr	r3, [r0, #20]
  819              	.LVL73:
  442:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** 
-ARM GAS  C:\Users\baske\AppData\Local\Temp\ccaulbwb.s 			page 25
+ARM GAS  C:\Users\baske\AppData\Local\Temp\cckxE4bv.s 			page 25
 
 
  443:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   /* Set selected pins that were at low level, and reset ones that were high */
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\ccaulbwb.s 			page 1
  462:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   /* Check the parameters */
  463:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   assert_param(IS_GPIO_PIN(GPIO_Pin));
  857              		.loc 1 463 3 is_stmt 1 view .LVU287
-ARM GAS  C:\Users\baske\AppData\Local\Temp\ccaulbwb.s 			page 26
+ARM GAS  C:\Users\baske\AppData\Local\Temp\cckxE4bv.s 			page 26
 
 
  464:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** 
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\ccaulbwb.s 			page 1
  890 0026 02B0     		add	sp, sp, #8
  891              		.cfi_remember_state
  892              		.cfi_def_cfa_offset 0
-ARM GAS  C:\Users\baske\AppData\Local\Temp\ccaulbwb.s 			page 27
+ARM GAS  C:\Users\baske\AppData\Local\Temp\cckxE4bv.s 			page 27
 
 
  893              		@ sp needed
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\ccaulbwb.s 			page 1
  511:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****   /* NOTE: This function Should not be modified, when the callback is needed,
  512:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****            the HAL_GPIO_EXTI_Callback could be implemented in the user file
  513:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c ****    */
-ARM GAS  C:\Users\baske\AppData\Local\Temp\ccaulbwb.s 			page 28
+ARM GAS  C:\Users\baske\AppData\Local\Temp\cckxE4bv.s 			page 28
 
 
  514:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c **** }
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\ccaulbwb.s 			page 1
  968 0016 00BF     		.align	2
  969              	.L68:
  970 0018 003C0140 		.word	1073822720
-ARM GAS  C:\Users\baske\AppData\Local\Temp\ccaulbwb.s 			page 29
+ARM GAS  C:\Users\baske\AppData\Local\Temp\cckxE4bv.s 			page 29
 
 
  971              		.cfi_endproc
@@ -1691,29 +1691,29 @@ ARM GAS  C:\Users\baske\AppData\Local\Temp\ccaulbwb.s 			page 1
  979              		.file 5 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h"
  980              		.file 6 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h"
  981              		.file 7 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h"
-ARM GAS  C:\Users\baske\AppData\Local\Temp\ccaulbwb.s 			page 30
+ARM GAS  C:\Users\baske\AppData\Local\Temp\cckxE4bv.s 			page 30
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 stm32f4xx_hal_gpio.c
-C:\Users\baske\AppData\Local\Temp\ccaulbwb.s:20     .text.HAL_GPIO_Init:0000000000000000 $t
-C:\Users\baske\AppData\Local\Temp\ccaulbwb.s:26     .text.HAL_GPIO_Init:0000000000000000 HAL_GPIO_Init
-C:\Users\baske\AppData\Local\Temp\ccaulbwb.s:476    .text.HAL_GPIO_Init:00000000000001d0 $d
-C:\Users\baske\AppData\Local\Temp\ccaulbwb.s:484    .text.HAL_GPIO_DeInit:0000000000000000 $t
-C:\Users\baske\AppData\Local\Temp\ccaulbwb.s:490    .text.HAL_GPIO_DeInit:0000000000000000 HAL_GPIO_DeInit
-C:\Users\baske\AppData\Local\Temp\ccaulbwb.s:718    .text.HAL_GPIO_DeInit:000000000000011c $d
-C:\Users\baske\AppData\Local\Temp\ccaulbwb.s:725    .text.HAL_GPIO_ReadPin:0000000000000000 $t
-C:\Users\baske\AppData\Local\Temp\ccaulbwb.s:731    .text.HAL_GPIO_ReadPin:0000000000000000 HAL_GPIO_ReadPin
-C:\Users\baske\AppData\Local\Temp\ccaulbwb.s:764    .text.HAL_GPIO_WritePin:0000000000000000 $t
-C:\Users\baske\AppData\Local\Temp\ccaulbwb.s:770    .text.HAL_GPIO_WritePin:0000000000000000 HAL_GPIO_WritePin
-C:\Users\baske\AppData\Local\Temp\ccaulbwb.s:800    .text.HAL_GPIO_TogglePin:0000000000000000 $t
-C:\Users\baske\AppData\Local\Temp\ccaulbwb.s:806    .text.HAL_GPIO_TogglePin:0000000000000000 HAL_GPIO_TogglePin
-C:\Users\baske\AppData\Local\Temp\ccaulbwb.s:836    .text.HAL_GPIO_LockPin:0000000000000000 $t
-C:\Users\baske\AppData\Local\Temp\ccaulbwb.s:842    .text.HAL_GPIO_LockPin:0000000000000000 HAL_GPIO_LockPin
-C:\Users\baske\AppData\Local\Temp\ccaulbwb.s:907    .text.HAL_GPIO_EXTI_Callback:0000000000000000 $t
-C:\Users\baske\AppData\Local\Temp\ccaulbwb.s:913    .text.HAL_GPIO_EXTI_Callback:0000000000000000 HAL_GPIO_EXTI_Callback
-C:\Users\baske\AppData\Local\Temp\ccaulbwb.s:928    .text.HAL_GPIO_EXTI_IRQHandler:0000000000000000 $t
-C:\Users\baske\AppData\Local\Temp\ccaulbwb.s:934    .text.HAL_GPIO_EXTI_IRQHandler:0000000000000000 HAL_GPIO_EXTI_IRQHandler
-C:\Users\baske\AppData\Local\Temp\ccaulbwb.s:970    .text.HAL_GPIO_EXTI_IRQHandler:0000000000000018 $d
+C:\Users\baske\AppData\Local\Temp\cckxE4bv.s:20     .text.HAL_GPIO_Init:0000000000000000 $t
+C:\Users\baske\AppData\Local\Temp\cckxE4bv.s:26     .text.HAL_GPIO_Init:0000000000000000 HAL_GPIO_Init
+C:\Users\baske\AppData\Local\Temp\cckxE4bv.s:476    .text.HAL_GPIO_Init:00000000000001d0 $d
+C:\Users\baske\AppData\Local\Temp\cckxE4bv.s:484    .text.HAL_GPIO_DeInit:0000000000000000 $t
+C:\Users\baske\AppData\Local\Temp\cckxE4bv.s:490    .text.HAL_GPIO_DeInit:0000000000000000 HAL_GPIO_DeInit
+C:\Users\baske\AppData\Local\Temp\cckxE4bv.s:718    .text.HAL_GPIO_DeInit:000000000000011c $d
+C:\Users\baske\AppData\Local\Temp\cckxE4bv.s:725    .text.HAL_GPIO_ReadPin:0000000000000000 $t
+C:\Users\baske\AppData\Local\Temp\cckxE4bv.s:731    .text.HAL_GPIO_ReadPin:0000000000000000 HAL_GPIO_ReadPin
+C:\Users\baske\AppData\Local\Temp\cckxE4bv.s:764    .text.HAL_GPIO_WritePin:0000000000000000 $t
+C:\Users\baske\AppData\Local\Temp\cckxE4bv.s:770    .text.HAL_GPIO_WritePin:0000000000000000 HAL_GPIO_WritePin
+C:\Users\baske\AppData\Local\Temp\cckxE4bv.s:800    .text.HAL_GPIO_TogglePin:0000000000000000 $t
+C:\Users\baske\AppData\Local\Temp\cckxE4bv.s:806    .text.HAL_GPIO_TogglePin:0000000000000000 HAL_GPIO_TogglePin
+C:\Users\baske\AppData\Local\Temp\cckxE4bv.s:836    .text.HAL_GPIO_LockPin:0000000000000000 $t
+C:\Users\baske\AppData\Local\Temp\cckxE4bv.s:842    .text.HAL_GPIO_LockPin:0000000000000000 HAL_GPIO_LockPin
+C:\Users\baske\AppData\Local\Temp\cckxE4bv.s:907    .text.HAL_GPIO_EXTI_Callback:0000000000000000 $t
+C:\Users\baske\AppData\Local\Temp\cckxE4bv.s:913    .text.HAL_GPIO_EXTI_Callback:0000000000000000 HAL_GPIO_EXTI_Callback
+C:\Users\baske\AppData\Local\Temp\cckxE4bv.s:928    .text.HAL_GPIO_EXTI_IRQHandler:0000000000000000 $t
+C:\Users\baske\AppData\Local\Temp\cckxE4bv.s:934    .text.HAL_GPIO_EXTI_IRQHandler:0000000000000000 HAL_GPIO_EXTI_IRQHandler
+C:\Users\baske\AppData\Local\Temp\cckxE4bv.s:970    .text.HAL_GPIO_EXTI_IRQHandler:0000000000000018 $d
 
 NO UNDEFINED SYMBOLS
