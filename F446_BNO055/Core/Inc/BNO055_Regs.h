@@ -17,6 +17,10 @@
 #define BNO055_PAGE_0			0x00U
 #define BNO055_PAGE_1			0x01U
 
+#define BNO055_X_AXIS_OFFSET	0U
+#define BNO055_Y_AXIS_OFFSET	2U
+#define BNO055_Z_AXIS_OFFSET	4U
+
 #define BNO055_EXPECTED_ID 		0xA0U
 #define BNO055_CHIP_ID 			0x00U        // value: 0xA0
 #define BNO055_ACC_ID 			0x01U        // value: 0xFB

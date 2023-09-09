@@ -124,7 +124,7 @@ int main(void)
 
   /* BNO055 Setup */
   BNO055_I2C_Mount(&hi2c1);			//Mount I2C for BNO055 API to use
-  BNO055_Init();					//Initialize BNO055 by checking connection and reseting module
+  BNO055_Init();					      //Initialize BNO055 by checking connection and reseting module
   BNO055_Set_OP_Mode(NDOF);			//Set operation mode to 9-dof with absolute orientation enabled
 
   /* USER CODE END 2 */

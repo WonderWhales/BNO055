@@ -32,24 +32,30 @@ typedef enum{
 } BNO055_OPERATION_MODE;
 
 typedef enum{
-	METER_PER_SEC_SQUARD,
-	MILLI_G
+	METER_PER_SEC_SQUARED = 0x00U,
+	MILLI_G				  = 0x01U
 } BNO055_ACCEL_GRAV_UNIT;
 
 typedef enum{
-	Dps,
-	Rps
+	Dps	= 0x00U << 1,
+	Rps = 0x01U << 1
 } BNO055_ANGULAR_RATE_UNIT;
 
 typedef enum{
-	DEGREES,
-	RADIANS
+	DEGREES = 0x00U << 2,
+	RADIANS = 0x01U << 2
 } BNO055_EULER_UNIT;
 
 typedef enum{
-	CELCIUS,
-	FAHRENHEIT
+	CELCIUS 	= 0x00U << 4,
+	FAHRENHEIT  = 0x01U << 4
 } BNO055_TEMP_UNIT;
+
+typedef enum{
+	BNO055_X_AXIS = 0x00U,
+	BNO055_Y_AXIS = 0x01U,
+	BNO055_Z_AXIS = 0x02U
+} BNO055_AXIS;
 
 typedef struct{
 	float x;
@@ -64,6 +70,12 @@ typedef struct{
 	float z;
 } BNO055_Quad_Vec_t;
 
+typedef struct{
+	BNO055_AXIS x;
+	BNO055_AXIS y;
+	BNO055_AXIS z;
+} BNO055_AXIS_CONFIG_t;
+
 //#define BNO055_HARDWARE_RESET
 
 void BNO055_I2C_Mount(I2C_HandleTypeDef* i2c);
@@ -75,6 +87,15 @@ void BNO055_I2C_Mount(I2C_HandleTypeDef* i2c);
 BNO055_ERROR BNO055_Init(void);
 BNO055_ERROR BNO055_Set_Unit(BNO055_ACCEL_GRAV_UNIT accUnit, BNO055_ANGULAR_RATE_UNIT angRateUnit, BNO055_EULER_UNIT eulerUnit, BNO055_TEMP_UNIT tempUnit);
 BNO055_ERROR BNO055_Set_OP_Mode(BNO055_OPERATION_MODE op);
+BNO055_ERROR BNO055_Set_Axis(const BNO055_AXIS_CONFIG_t* axis_struct);
+BNO055_ERROR BNO055_Calibrate(void);
+BNO055_ERROR BNO055_Get_Accel(void);
+BNO055_ERROR BNO055_Get_Gyro(void);
+BNO055_ERROR BNO055_Get_Mag(void);
+BNO055_ERROR BNO055_Get_Linear_Accel(void);
+BNO055_ERROR BNO055_Get_Gravity_Vec(void);
+BNO055_ERROR BNO055_Get_Temp(void);
 BNO055_ERROR BNO055_Get_Euler_Vec(BNO055_Euler_Vec_t* vec);
+BNO055_ERROR BNO055_Get_Quaternion(BNO055_Quad_Vec_t* vec);
 
 #endif /* INC_BNO055_H_ */

@@ -49,7 +49,7 @@ static HAL_StatusTypeDef BNO055_Write(uint8_t reg, uint8_t data){
 /*
  * Simple Error Check Function
  */
-static void BNO055_ERROR_HANDLE(HAL_StatusTypeDef error){
+static inline void BNO055_ERROR_HANDLE(HAL_StatusTypeDef error){
 	if(error != HAL_OK){
 		HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, GPIO_PIN_SET);
 		while(1);
@@ -77,6 +77,12 @@ BNO055_ERROR BNO055_Init(void){
 	HAL_StatusTypeDef error;
 	uint8_t ID_Check = 0;
 
+	/* Read Chip ID Register to see if BNO055 is detected*/
+	error = BNO055_Read(BNO055_CHIP_ID, &ID_Check, 1);
+	BNO055_ERROR_HANDLE(error);
+	if(ID_Check != BNO055_EXPECTED_ID)
+		return BNO055_NOT_DETECTED;
+
 	/* Software Reset Module */
 	error = BNO055_Write(BNO055_SYS_TRIGGER, BNO055_SYS_RESET);
 	BNO055_ERROR_HANDLE(error);
@@ -88,12 +94,6 @@ BNO055_ERROR BNO055_Init(void){
 		HAL_Delay(20);
 		HAL_GPIO_WritePin(Reset_Port, Reset_Pin, GPIO_PIN_SET);
 	#endif
-
-	/* Read Chip ID Register to see if BNO055 is detected*/
-	error = BNO055_Read(BNO055_CHIP_ID, &ID_Check, 1);
-	BNO055_ERROR_HANDLE(error);
-	if(ID_Check != BNO055_EXPECTED_ID)
-		return BNO055_NOT_DETECTED;
 
 	/* Set Register Page to 0 and Clear System Trigger*/
 	error = BNO055_Write(BNO055_PAGE_ID, BNO055_PAGE_0);
@@ -113,8 +113,19 @@ BNO055_ERROR BNO055_Init(void){
 
 BNO055_ERROR BNO055_Set_Unit(BNO055_ACCEL_GRAV_UNIT accUnit, BNO055_ANGULAR_RATE_UNIT angRateUnit, BNO055_EULER_UNIT eulerUnit, BNO055_TEMP_UNIT tempUnit){
 
-	return BNO055_SUCCESS;
+	HAL_StatusTypeDef error;
+	
+	/* Set Register Page to 0 and Clear System Trigger*/
+	error = BNO055_Write(BNO055_PAGE_ID, BNO055_PAGE_0);
+	BNO055_ERROR_HANDLE(error);
+	HAL_Delay(20);
+	
+	/* Set Unit */
+	uint8_t temp = accUnit | angRateUnit | eulerUnit | tempUnit;
+	error = BNO055_Write(BNO055_UNIT_SEL, temp);
+	BNO055_ERROR_HANDLE(error);
 
+	return BNO055_SUCCESS;
 }
 
 BNO055_ERROR BNO055_Set_OP_Mode(BNO055_OPERATION_MODE op){
@@ -176,6 +187,31 @@ BNO055_ERROR BNO055_Set_OP_Mode(BNO055_OPERATION_MODE op){
 	return BNO055_SUCCESS;
 }
 
+BNO055_ERROR BNO055_Set_Axis(const BNO055_AXIS_CONFIG_t* axesConfig){
+	
+	HAL_StatusTypeDef error; 
+
+	/* Make sure we are on Page 0 */
+	error = BNO055_Write(BNO055_PAGE_ID, BNO055_PAGE_0);
+	BNO055_ERROR_HANDLE(error);
+	HAL_Delay(20);
+
+	/* Configure Axis based on Axis Config Struct */
+	uint8_t temp = (axesConfig->x << BNO055_X_AXIS_OFFSET) |
+				   (axesConfig->y << BNO055_Y_AXIS_OFFSET) |
+				   (axesConfig->z << BNO055_Z_AXIS_OFFSET);
+
+	BNO055_Write(BNO055_AXIS_MAP_CONFIG, temp);
+	BNO055_ERROR_HANDLE(error);
+	HAL_Delay(10);
+
+	return BNO055_SUCCESS;
+}
+
+BNO055_ERROR BNO055_Calibrate(void){
+	
+}
+
 BNO055_ERROR BNO055_Get_Euler_Vec(BNO055_Euler_Vec_t* vec){
 
 	HAL_StatusTypeDef error;
@@ -185,7 +221,7 @@ BNO055_ERROR BNO055_Get_Euler_Vec(BNO055_Euler_Vec_t* vec){
 	error = BNO055_Write(BNO055_PAGE_ID, BNO055_PAGE_0);
 	BNO055_ERROR_HANDLE(error);
 
-	/* Grab Euler Vector Data */
+	/* Grab Euler Vector Data LSB and MSB */
 	error = BNO055_Read(BNO055_EUL_HEADING_LSB, tempBuf, sizeof(tempBuf));
 	BNO055_ERROR_HANDLE(error);
 
