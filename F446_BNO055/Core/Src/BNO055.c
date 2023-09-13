@@ -11,6 +11,15 @@
 
 I2C_HandleTypeDef* BNO055_I2C;
 
+typedef struct{
+
+	BNO055_OPERATION_MODE currentMode;
+	uint8_t currentPage;
+
+} BNO055_STATE;
+
+BNO055_STATE state;
+
 #ifdef BNO055_HARDWARE_RESET
 
 uint32_t Reset_Port = 0;
@@ -56,6 +65,10 @@ static inline void BNO055_ERROR_HANDLE(HAL_StatusTypeDef error){
 	}
 }
 
+static inline void BNO055_STATUS_CHECK(){
+	
+}
+
 /*
  * Allow User to Mount I2C Handle
  */
@@ -98,11 +111,13 @@ BNO055_ERROR BNO055_Init(void){
 	/* Set Register Page to 0 and Clear System Trigger*/
 	error = BNO055_Write(BNO055_PAGE_ID, BNO055_PAGE_0);
 	BNO055_ERROR_HANDLE(error);
+	state.currentPage = BNO055_PAGE_0;
 	HAL_Delay(20);
 
 	/* Set BNO055 Operation Mode to CONFIG MODE*/
 	error = BNO055_Write(BNO055_OPR_MODE, OPR_MODE_CONFIG);
 	BNO055_ERROR_HANDLE(error);
+	state.currentMode = CONFIG;
 
 	/* Necessary Delay to Set Operation Mode */
 	HAL_Delay(10);
@@ -115,11 +130,19 @@ BNO055_ERROR BNO055_Set_Unit(BNO055_ACCEL_GRAV_UNIT accUnit, BNO055_ANGULAR_RATE
 
 	HAL_StatusTypeDef error;
 	
-	/* Set Register Page to 0 and Clear System Trigger*/
-	error = BNO055_Write(BNO055_PAGE_ID, BNO055_PAGE_0);
-	BNO055_ERROR_HANDLE(error);
-	HAL_Delay(20);
+	/* Makes Sure BNO055 is in page 0 */
+	if(state.currentPage != BNO055_PAGE_0){
+		error = BNO055_Write(BNO055_PAGE_ID, BNO055_PAGE_0);
+		BNO055_ERROR_HANDLE(error);
+		HAL_Delay(20);
+	}
 	
+	/* Makes Sure BNO055 is in CONFIG operation mode */
+	if(state.currentMode != CONFIG){
+		error = BNO055_Write(BNO055_OPR_MODE, CONFIG);
+		HAL_Delay(20);
+	}
+
 	/* Set Unit */
 	uint8_t temp = accUnit | angRateUnit | eulerUnit | tempUnit;
 	error = BNO055_Write(BNO055_UNIT_SEL, temp);
@@ -131,6 +154,14 @@ BNO055_ERROR BNO055_Set_Unit(BNO055_ACCEL_GRAV_UNIT accUnit, BNO055_ANGULAR_RATE
 BNO055_ERROR BNO055_Set_OP_Mode(BNO055_OPERATION_MODE op){
 
 	HAL_StatusTypeDef error;
+
+	/* Make sure BNO055 is on Page 0 */
+	if(state.currentPage != BNO055_PAGE_0){
+		error = BNO055_Write(BNO055_PAGE_ID, BNO055_PAGE_0);
+		BNO055_ERROR_HANDLE(error);
+		state.currentPage = BNO055_PAGE_0;
+		HAL_Delay(20);
+	}
 
 	switch(op){
 		case ACC_ONLY:
@@ -183,6 +214,7 @@ BNO055_ERROR BNO055_Set_OP_Mode(BNO055_OPERATION_MODE op){
 	}
 
 	BNO055_ERROR_HANDLE(error);
+	state.currentMode = op;
 	HAL_Delay(10);
 	return BNO055_SUCCESS;
 }
@@ -192,9 +224,19 @@ BNO055_ERROR BNO055_Set_Axis(const BNO055_AXIS_CONFIG_t* axesConfig){
 	HAL_StatusTypeDef error; 
 
 	/* Make sure we are on Page 0 */
-	error = BNO055_Write(BNO055_PAGE_ID, BNO055_PAGE_0);
-	BNO055_ERROR_HANDLE(error);
-	HAL_Delay(20);
+	if(state.currentPage != BNO055_PAGE_0){
+		error = BNO055_Write(BNO055_PAGE_ID, BNO055_PAGE_0);
+		BNO055_ERROR_HANDLE(error);
+		state.currentPage = BNO055_PAGE_0;
+		HAL_Delay(20);
+	}
+
+	/* Make sure BNO055 operation mode is CONFIG */
+	if(state.currentMode != CONFIG){
+		error = BNO055_Write(BNO055_OPR_MODE, OPR_MODE_CONFIG);
+		BNO055_ERROR_HANDLE(error);
+		HAL_Delay(20);
+	}
 
 	/* Configure Axis based on Axis Config Struct */
 	uint8_t temp = (axesConfig->x << BNO055_X_AXIS_OFFSET) |
@@ -209,7 +251,52 @@ BNO055_ERROR BNO055_Set_Axis(const BNO055_AXIS_CONFIG_t* axesConfig){
 }
 
 BNO055_ERROR BNO055_Calibrate(void){
-	
+
+}
+
+BNO055_ERROR BNO055_Get_Accel(void){
+
+	HAL_StatusTypeDef error;
+
+	/* Make sure we are on Page 0 */
+	if(state.currentPage != BNO055_PAGE_0){
+		error = BNO055_Write(BNO055_PAGE_ID, BNO055_PAGE_0);
+		BNO055_ERROR_HANDLE(error);
+		state.currentPage = BNO055_PAGE_0;
+		HAL_Delay(20);
+	}
+
+	/* Make sure BNO055 operation mode is CONFIG */
+	if(state.currentMode != CONFIG){
+		error = BNO055_Write(BNO055_OPR_MODE, OPR_MODE_CONFIG);
+		BNO055_ERROR_HANDLE(error);
+		HAL_Delay(20);
+	}
+
+
+
+	return BNO055_SUCCESS;
+
+}
+
+BNO055_ERROR BNO055_Get_Gyro(void){
+
+}
+
+BNO055_ERROR BNO055_Get_Mag(void){
+
+}
+
+BNO055_ERROR BNO055_Get_Linear_Accel(void){
+
+}
+
+BNO055_ERROR BNO055_Get_Gravity_Vec(void){
+
+}
+
+BNO055_ERROR BNO055_Get_Temp(void){
+
 }
 
 BNO055_ERROR BNO055_Get_Euler_Vec(BNO055_Euler_Vec_t* vec){

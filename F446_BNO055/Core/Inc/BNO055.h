@@ -57,6 +57,10 @@ typedef enum{
 	BNO055_Z_AXIS = 0x02U
 } BNO055_AXIS;
 
+typedef enum{
+
+} BNO055_CURRENT_STATE;
+
 typedef struct{
 	float x;
 	float y;
