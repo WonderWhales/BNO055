@@ -59,7 +59,7 @@ void SystemClock_Config(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 HAL_StatusTypeDef error;
-BNO055_Euler_Vec_t Euler_Angle_Struct;
+BNO055_Axis_Vec_t Euler_Angle_Struct;
 
 SERVO_ErrorTypeDef servo_error;
 SERVO_Instance_t servo;

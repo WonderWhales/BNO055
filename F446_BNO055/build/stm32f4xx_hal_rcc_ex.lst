@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
   27:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   */
   28:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c **** 
   29:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c **** /** @defgroup RCCEx RCCEx
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 2
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 2
 
 
   30:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   * @brief RCCEx HAL module driver
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
   84:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   *
   85:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   * @retval HAL status
   86:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   */
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 3
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 3
 
 
   87:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c **** HAL_StatusTypeDef HAL_RCCEx_PeriphCLKConfig(RCC_PeriphCLKInitTypeDef  *PeriphClkInit)
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
  108:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     /* Configure I2S Clock source */
  109:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     __HAL_RCC_I2S_APB1_CONFIG(PeriphClkInit->I2sApb1ClockSelection);
   63              		.loc 1 109 5 view .LVU16
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 4
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 4
 
 
   64 000e 964A     		ldr	r2, .L73
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
  128:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     {
  129:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****       plli2sused = 1U;
   99              		.loc 1 129 18 view .LVU29
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 5
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 5
 
 
  100 0048 0126     		movs	r6, #1
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
  150:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****       pllsaiused = 1U;
  151:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     }
  152:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   }
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 6
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 6
 
 
  153:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   /*--------------------------------------------------------------------------*/
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
  178:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   if(((PeriphClkInit->PeriphClockSelection) & RCC_PERIPHCLK_RTC) == (RCC_PERIPHCLK_RTC))
  162              		.loc 1 178 3 is_stmt 1 view .LVU52
  163              		.loc 1 178 21 is_stmt 0 view .LVU53
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 7
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 7
 
 
  164 0098 2368     		ldr	r3, [r4]
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
  227:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     __HAL_RCC_RTC_CONFIG(PeriphClkInit->RTCClockSelection);
  170              		.loc 1 227 5 is_stmt 1 discriminator 5 view .LVU55
  228:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   }
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 8
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 8
 
 
  229:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   /*--------------------------------------------------------------------------*/
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
  202 00d2 08D0     		beq	.L19
  252:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   {
  253:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     /* Check the parameters */
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 9
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 9
 
 
  254:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     assert_param(IS_RCC_CECCLKSOURCE(PeriphClkInit->CecClockSelection));
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
  277:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c **** 
  278:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   /*----------------------------- SDIO Configuration -------------------------*/
  279:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   if(((PeriphClkInit->PeriphClockSelection) & RCC_PERIPHCLK_SDIO) == RCC_PERIPHCLK_SDIO)
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 10
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 10
 
 
  234              		.loc 1 279 3 is_stmt 1 view .LVU78
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
  269              	.L22:
  299:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     {
  300:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****       plli2sused = 1U;
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 11
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 11
 
 
  301:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     }
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
  344:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     /*------- In Case of PLLI2S is selected as source clock for SAI ----------*/
  345:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     if(((((PeriphClkInit->PeriphClockSelection) & RCC_PERIPHCLK_SAI1) == RCC_PERIPHCLK_SAI1) && (Pe
  346:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****        ((((PeriphClkInit->PeriphClockSelection) & RCC_PERIPHCLK_SAI2) == RCC_PERIPHCLK_SAI2) && (Pe
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 12
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 12
 
 
  347:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     {
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
  401:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****       {
  402:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****         /* return in case of Timeout detected */
  403:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****         return HAL_TIMEOUT;
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 13
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 13
 
 
  404:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****       }
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
  454:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     {
  455:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****       /* check for Parameters */
  456:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****       assert_param(IS_RCC_PLLSAIP_VALUE(PeriphClkInit->PLLSAI.PLLSAIP));
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 14
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 14
 
 
  457:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****       /* Read PLLSAIQ value from PLLI2SCFGR register (this value is not need for SAI configuration)
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
  311 0166 0125     		movs	r5, #1
  312 0168 83E7     		b	.L4
  313              	.LVL16:
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 15
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 15
 
 
  314              	.L61:
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
  192:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     {
  354              		.loc 1 192 5 is_stmt 1 view .LVU117
  355              	.L9:
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 16
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 16
 
 
  192:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     {
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
  204:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****       /* RTC Clock selection can be changed only if the Backup Domain is reset */
  394              		.loc 1 204 7 is_stmt 1 view .LVU134
  204:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****       /* RTC Clock selection can be changed only if the Backup Domain is reset */
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 17
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 17
 
 
  395              		.loc 1 204 21 is_stmt 0 view .LVU135
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
  436 01fc 226C     		ldr	r2, [r4, #64]
  437 01fe C2F30B02 		ubfx	r2, r2, #0, #12
  438 0202 1343     		orrs	r3, r3, r2
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 18
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 18
 
 
  439 0204 0B67     		str	r3, [r1, #112]
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
  480 023c 8B60     		str	r3, [r1, #8]
  481 023e DBE7     		b	.L16
  482              	.LVL31:
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 19
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 19
 
 
  483              	.L63:
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
  523              		.align	2
  524              	.L73:
  525 0268 00380240 		.word	1073887232
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 20
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 20
 
 
  526 026c 00104742 		.word	1111953408
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
  564              	.LVL39:
  341:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     }
  565              		.loc 1 341 7 is_stmt 0 view .LVU192
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 21
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 21
 
 
  566 029c 43EA8613 		orr	r3, r3, r6, lsl #6
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
  606              	.LVL42:
  355:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****       /* Configure the PLLI2S division factors */
  607              		.loc 1 355 7 is_stmt 1 view .LVU207
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 22
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 22
 
 
  355:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****       /* Configure the PLLI2S division factors */
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
  649              		.loc 1 381 7 view .LVU220
  650 0320 13F4006F 		tst	r3, #2048
  651 0324 11D0     		beq	.L34
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 23
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 23
 
 
  384:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****       assert_param(IS_RCC_PLLI2SR_VALUE(PeriphClkInit->PLLI2S.PLLI2SR));
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
  400:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****       {
  693              		.loc 1 400 25 view .LVU234
  694 0366 801B     		subs	r0, r0, r6
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 24
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 24
 
 
  400:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****       {
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
  737 03a6 1A67     		str	r2, [r3, #112]
  416:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     /* Wait till PLLSAI is disabled */
  738              		.loc 1 416 5 view .LVU247
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 25
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 25
 
 
  416:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     /* Wait till PLLSAI is disabled */
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
  776              		.loc 1 432 94 discriminator 1 view .LVU264
  777 03d0 22B1     		cbz	r2, .L40
  778              	.L39:
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 26
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 26
 
 
  432:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****        ((((PeriphClkInit->PeriphClockSelection) & RCC_PERIPHCLK_SAI2) == RCC_PERIPHCLK_SAI2) && (Pe
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
  819              		.loc 1 453 112 discriminator 1 view .LVU278
  820 0416 636D     		ldr	r3, [r4, #84]
  453:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     {
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 27
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 27
 
 
  821              		.loc 1 453 95 discriminator 1 view .LVU279
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
  458:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****       /* Configure the PLLSAI division factors */
  861              		.loc 1 458 22 is_stmt 0 view .LVU294
  862 0442 0A48     		ldr	r0, .L75
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 28
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 28
 
 
  863 0444 D0F88810 		ldr	r1, [r0, #136]
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
  492:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c **** 
  493:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   /* Set all possible values for the extended clock type parameter------------*/
  494:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   PeriphClkInit->PeriphClockSelection = RCC_PERIPHCLK_I2S_APB1 | RCC_PERIPHCLK_I2S_APB2 |\
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 29
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 29
 
 
  906              		.loc 1 494 3 view .LVU299
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
  948              		.loc 1 506 33 view .LVU322
  949 003c 4261     		str	r2, [r0, #20]
  507:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   /* Get the PLLSAI Clock configuration --------------------------------------*/
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 30
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 30
 
 
  508:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   PeriphClkInit->PLLSAI.PLLSAIM = (uint32_t)((RCC->PLLSAICFGR & RCC_PLLSAICFGR_PLLSAIM) >> RCC_PLLS
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
  516:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   /* Get the SAI1 clock configuration ----------------------------------------*/
  517:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   PeriphClkInit->Sai1ClockSelection = __HAL_RCC_GET_SAI1_SOURCE();
  996              		.loc 1 517 3 is_stmt 1 view .LVU349
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 31
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 31
 
 
  997              		.loc 1 517 39 is_stmt 0 view .LVU350
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
  1035              		.loc 1 533 3 is_stmt 1 view .LVU369
  1036              		.loc 1 533 38 is_stmt 0 view .LVU370
  1037 00b6 D3F89420 		ldr	r2, [r3, #148]
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 32
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 32
 
 
  1038 00ba 02F08062 		and	r2, r2, #67108864
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
  1075 00f8 7047     		bx	lr
  1076              	.L78:
  551:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   }
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 33
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 33
 
 
  552:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   else
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
  577:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   uint32_t saiclocksource = 0U;
  1108              		.loc 1 577 3 view .LVU396
  578:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   uint32_t srcclk = 0U;
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 34
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 34
 
 
  1109              		.loc 1 578 3 view .LVU397
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
  596:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****             /* In Case the PLL Source is HSI (Internal Clock) */
  597:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****             vcoinput = (HSI_VALUE / (uint32_t)(RCC->PLLSAICFGR & RCC_PLLSAICFGR_PLLSAIM));
  598:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****           }
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 35
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 35
 
 
  599:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****           else
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
  653:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****             vcoinput = ((HSE_VALUE / (uint32_t)(RCC->PLLCFGR & RCC_PLLCFGR_PLLM)));
  654:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****           }
  655:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c **** 
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 36
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 36
 
 
  656:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****           /* PLL_VCO Output = PLL_VCO Input * PLLN */
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
  597:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****           }
  1178              		.loc 1 597 51 is_stmt 0 view .LVU418
  1179 0064 9D4B     		ldr	r3, .L127
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 37
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 37
 
 
  1180 0066 D3F88830 		ldr	r3, [r3, #136]
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
  1217              		.loc 1 612 11 is_stmt 1 view .LVU435
  1218 009c 7047     		bx	lr
  1219              	.LVL81:
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 38
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 38
 
 
  1220              	.L124:
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
  1260 00ce 03F03F03 		and	r3, r3, #63
  622:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****           }
  1261              		.loc 1 622 22 view .LVU450
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 39
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 39
 
 
  1262 00d2 8349     		ldr	r1, .L127+4
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
  627:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****           }
  1300              		.loc 1 627 52 is_stmt 0 view .LVU467
  1301 0102 764B     		ldr	r3, .L127
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 40
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 40
 
 
  1302 0104 D3F88430 		ldr	r3, [r3, #132]
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
  659:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****           break;
  1341              		.loc 1 659 40 is_stmt 0 view .LVU483
  1342 0134 4868     		ldr	r0, [r1, #4]
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 41
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 41
 
 
  659:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****           break;
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
  1369              		.loc 1 691 16 is_stmt 0 view .LVU494
  1370 0154 614B     		ldr	r3, .L127
  1371 0156 D3F88C30 		ldr	r3, [r3, #140]
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 42
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 42
 
 
  1372              		.loc 1 691 14 view .LVU495
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
  731:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****             vcoinput = (uint32_t)(HSE_VALUE / (uint32_t)(RCC->PLLCFGR & RCC_PLLCFGR_PLLM));
  732:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****           }
  733:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****           else
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 43
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 43
 
 
  734:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****           {
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
  1410 0190 5B68     		ldr	r3, [r3, #4]
  706:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****           {
  1411              		.loc 1 706 13 view .LVU506
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 44
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 44
 
 
  1412 0192 13F4800F 		tst	r3, #4194304
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
  714:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****           }
  1451              		.loc 1 714 47 view .LVU522
  1452 01ca 02F03F02 		and	r2, r2, #63
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 45
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 45
 
 
  714:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****           }
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
  1491              		.loc 1 742 51 is_stmt 0 view .LVU538
  1492 01fa 5368     		ldr	r3, [r2, #4]
  1493              	.LVL115:
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 46
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 46
 
 
  742:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****           break;
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
  1530 022e 63D1     		bne	.L120
  1531 0230 2D48     		ldr	r0, .L127+12
  1532 0232 7047     		bx	lr
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 47
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 47
 
 
  1533              	.L108:
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
  823:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****         }
  824:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****         /* Check if I2S clock selection is HSI or HSE depending from PLL source Clock */
  825:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****       case RCC_I2SAPB2CLKSOURCE_PLLSRC:
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 48
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 48
 
 
  826:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****         {
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
  1568 025c 02F03F02 		and	r2, r2, #63
  788:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****           }
  1569              		.loc 1 788 22 view .LVU564
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 49
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 49
 
 
  1570 0260 204B     		ldr	r3, .L127+8
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
  807:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****           {
  1610              		.loc 1 807 11 is_stmt 1 view .LVU579
  807:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****           {
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 50
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 50
 
 
  1611              		.loc 1 807 18 is_stmt 0 view .LVU580
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
  1650              	.LVL136:
  1651              	.L113:
  815:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****           }
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 51
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 51
 
 
  1652              		.loc 1 815 13 view .LVU596
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
  1697              	.L120:
  1698              		.loc 1 840 21 view .LVU606
  1699 02f8 0020     		movs	r0, #0
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 52
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 52
 
 
  1700 02fa 7047     		bx	lr
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
  869:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   uint32_t tmpreg1 = 0U;
  870:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   uint32_t pllsaip = 0U;
  871:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   uint32_t pllsaiq = 0U;
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 53
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 53
 
 
  872:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   uint32_t pllsair = 0U;
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
  926:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****       only for I2S configuration */
  927:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     if(((PeriphClkInit->PeriphClockSelection) & RCC_PERIPHCLK_I2S) == (RCC_PERIPHCLK_I2S))
  928:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     {
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 54
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 54
 
 
  929:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****       /* check for Parameters */
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
  983:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c **** 
  984:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   /*----------------------- SAI/LTDC Configuration (PLLSAI) ------------------*/
  985:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   /*----------------------- Common configuration SAI/LTDC --------------------*/
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 55
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 55
 
 
  986:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   /* In Case of SAI, LTDC or CLK48 Clock Configuration through PLLSAI, PLLSAIN division
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
 1040:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****       /* PLLSAI_VCO Input  = PLL_SOURCE/PLLM */
 1041:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****       /* PLLSAI_VCO Output = PLLSAI_VCO Input * PLLSAIN */
 1042:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****       /* LTDC_CLK(first level) = PLLSAI_VCO Output/PLLSAIR */
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 56
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 56
 
 
 1043:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****       __HAL_RCC_PLLSAI_CONFIG(PeriphClkInit->PLLSAI.PLLSAIN, pllsaip, pllsaiq, PeriphClkInit->PLLSA
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
 1097:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     while((PWR->CR & PWR_CR_DBP) == RESET)
 1098:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     {
 1099:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****       if((HAL_GetTick() - tickstart ) > RCC_DBP_TIMEOUT_VALUE)
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 57
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 57
 
 
 1100:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****       {
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
 1154:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c **** 
 1155:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   /* Set all possible values for the extended clock type parameter------------*/
 1156:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   PeriphClkInit->PeriphClockSelection = RCC_PERIPHCLK_I2S        | RCC_PERIPHCLK_SAI_PLLSAI |\
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 58
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 58
 
 
 1157:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****                                         RCC_PERIPHCLK_SAI_PLLI2S | RCC_PERIPHCLK_LTDC       |\
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
 1211:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   {
 1212:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   case RCC_PERIPHCLK_I2S:
 1213:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     {
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 59
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 59
 
 
 1214:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****       /* Get the current I2S source */
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
 1268:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   *
 1269:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   * @note   Care must be taken when HAL_RCCEx_PeriphCLKConfig() is used to select
 1270:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   *         the RTC clock source; in this case the Backup domain will be reset in
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 60
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 60
 
 
 1271:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   *         order to modify the RTC Clock source, as consequence RTC registers (including
@@ -3598,7 +3598,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
 1325:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     assert_param(IS_RCC_SAIACLKSOURCE(PeriphClkInit->SaiAClockSelection));
 1326:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c **** 
 1327:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     /* Configure SAI1 Clock source */
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 61
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 61
 
 
 1328:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     __HAL_RCC_SAI_BLOCKACLKSOURCE_CONFIG(PeriphClkInit->SaiAClockSelection);
@@ -3658,7 +3658,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
 1382:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     PWR->CR |= PWR_CR_DBP;
 1383:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c **** 
 1384:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     /* Get tick */
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 62
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 62
 
 
 1385:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     tickstart = HAL_GetTick();
@@ -3718,7 +3718,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
 1439:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c **** 
 1440:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     /* Configure the FMPI2C1 clock source */
 1441:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     __HAL_RCC_FMPI2C1_CONFIG(PeriphClkInit->Fmpi2c1ClockSelection);
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 63
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 63
 
 
 1442:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   }
@@ -3778,7 +3778,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
 1496:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     /*-------------------- Set the PLL I2S clock -----------------------------*/
 1497:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     __HAL_RCC_PLL_I2S_CONFIG(PeriphClkInit->PLLI2SSelection);
 1498:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c **** 
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 64
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 64
 
 
 1499:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     /*------- In Case of PLLI2S is selected as source clock for I2S ----------*/
@@ -3838,7 +3838,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
 1553:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     /* Get tick */
 1554:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     tickstart = HAL_GetTick();
 1555:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     /* Wait till PLLI2S is ready */
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 65
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 65
 
 
 1556:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     while(__HAL_RCC_GET_FLAG(RCC_FLAG_PLLI2SRDY)  == RESET)
@@ -3898,7 +3898,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
 1610:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   /*--------------------------------------------------------------------------*/
 1611:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c **** 
 1612:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   /*---------------------------- LPTIM1 Configuration ------------------------*/
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 66
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 66
 
 
 1613:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   if(((PeriphClkInit->PeriphClockSelection) & RCC_PERIPHCLK_LPTIM1) == RCC_PERIPHCLK_LPTIM1)
@@ -3958,7 +3958,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
 1667:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c **** 
 1668:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   /* Get the I2S APB1 clock configuration ------------------------------------*/
 1669:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   PeriphClkInit->I2sApb1ClockSelection = __HAL_RCC_GET_I2S_APB1_SOURCE();
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 67
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 67
 
 
 1670:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c **** 
@@ -4018,7 +4018,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
 1724:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   * @param  PeriphClk Peripheral clock identifier
 1725:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   *         This parameter can be one of the following values:
 1726:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   *            @arg RCC_PERIPHCLK_I2S_APB1: I2S APB1 peripheral clock
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 68
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 68
 
 
 1727:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   *            @arg RCC_PERIPHCLK_I2S_APB2: I2S APB2 peripheral clock
@@ -4078,7 +4078,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
 1781:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****           break;
 1782:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****         }
 1783:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****       /* Check if I2S clock selection is PLL VCO Output divided by PLLR used as I2S clock */
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 69
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 69
 
 
 1784:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****       case RCC_I2SAPB1CLKSOURCE_PLLR:
@@ -4138,7 +4138,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
 1838:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****           break;
 1839:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****         }
 1840:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****         /* Check if I2S clock selection is PLLI2S VCO output clock divided by PLLI2SR used as I2S c
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 70
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 70
 
 
 1841:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****       case RCC_I2SAPB2CLKSOURCE_PLLI2S:
@@ -4198,7 +4198,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
 1895:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****           {
 1896:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****             frequency = HSE_VALUE;
 1897:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****           }
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 71
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 71
 
 
 1898:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****           else
@@ -4258,7 +4258,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
 1952:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     tickstart = HAL_GetTick();
 1953:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c **** 
 1954:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     while((PWR->CR & PWR_CR_DBP) == RESET)
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 72
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 72
 
 
 1955:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     {
@@ -4318,7 +4318,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
 2009:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   /*--------------------------------------------------------------------------*/
 2010:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c **** 
 2011:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   /*---------------------------- LPTIM1 Configuration ------------------------*/
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 73
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 73
 
 
 2012:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   if(((PeriphClkInit->PeriphClockSelection) & RCC_PERIPHCLK_LPTIM1) == RCC_PERIPHCLK_LPTIM1)
@@ -4378,7 +4378,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
 2066:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c **** }
 2067:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c **** /**
 2068:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   * @brief  Return the peripheral clock frequency for a given peripheral(SAI..)
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 74
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 74
 
 
 2069:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   * @note   Return 0 if peripheral clock identifier not managed by this API
@@ -4438,7 +4438,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
 2123:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****         {
 2124:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****           if((RCC->PLLCFGR & RCC_PLLCFGR_PLLSRC) == RCC_PLLSOURCE_HSE)
 2125:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****           {
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 75
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 75
 
 
 2126:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****             frequency = HSE_VALUE;
@@ -4498,7 +4498,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
 2180:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     assert_param(IS_RCC_PLLI2SN_VALUE(PeriphClkInit->PLLI2S.PLLI2SN));
 2181:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c **** 
 2182:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     /* Disable the PLLI2S */
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 76
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 76
 
 
 2183:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     __HAL_RCC_PLLI2S_DISABLE();
@@ -4558,7 +4558,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
 2237:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****       __HAL_RCC_PLLI2S_SAICLK_CONFIG(PeriphClkInit->PLLI2S.PLLI2SN, PeriphClkInit->PLLI2S.PLLI2SQ, 
 2238:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     }
 2239:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c **** 
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 77
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 77
 
 
 2240:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     /* Enable the PLLI2S */
@@ -4618,7 +4618,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
 2294:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****       /* SAI_CLK_x = SAI_CLK(first level)/PLLSAIDIVQ */
 2295:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****       __HAL_RCC_PLLSAI_PLLSAICLKDIVQ_CONFIG(PeriphClkInit->PLLSAIDivQ);
 2296:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     }
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 78
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 78
 
 
 2297:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c **** 
@@ -4678,7 +4678,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
 2351:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     /* Reset the Backup domain only if the RTC Clock source selection is modified from reset value 
 2352:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     tmpreg1 = (RCC->BDCR & RCC_BDCR_RTCSEL);
 2353:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     if((tmpreg1 != 0x00000000U) && ((tmpreg1) != (PeriphClkInit->RTCClockSelection & RCC_BDCR_RTCSE
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 79
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 79
 
 
 2354:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     {
@@ -4738,7 +4738,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
 2408:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   PeriphClkInit->PLLI2S.PLLI2SQ = (uint32_t)((RCC->PLLI2SCFGR & RCC_PLLI2SCFGR_PLLI2SQ) >> RCC_PLLI
 2409:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   /* Get the PLLSAI Clock configuration -----------------------------------------------*/
 2410:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   PeriphClkInit->PLLSAI.PLLSAIN = (uint32_t)((RCC->PLLSAICFGR & RCC_PLLSAICFGR_PLLSAIN) >> RCC_PLLS
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 80
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 80
 
 
 2411:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   PeriphClkInit->PLLSAI.PLLSAIR = (uint32_t)((RCC->PLLSAICFGR & RCC_PLLSAICFGR_PLLSAIR) >> RCC_PLLS
@@ -4798,7 +4798,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
 2465:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****         {
 2466:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****           /* Configure the PLLI2S division factor */
 2467:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****           /* PLLI2S_VCO Input  = PLL_SOURCE/PLLM */
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 81
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 81
 
 
 2468:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****           if((RCC->PLLCFGR & RCC_PLLCFGR_PLLSRC) == RCC_PLLSOURCE_HSE)
@@ -4858,7 +4858,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
 2522:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   if((((PeriphClkInit->PeriphClockSelection) & RCC_PERIPHCLK_I2S) == RCC_PERIPHCLK_I2S) ||
 2523:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****      (((PeriphClkInit->PeriphClockSelection) & RCC_PERIPHCLK_PLLI2S) == RCC_PERIPHCLK_PLLI2S))
 2524:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   {
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 82
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 82
 
 
 2525:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     /* check for Parameters */
@@ -4918,7 +4918,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
 2579:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     __HAL_RCC_PWR_CLK_ENABLE();
 2580:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c **** 
 2581:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     /* Enable write access to Backup domain */
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 83
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 83
 
 
 2582:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     PWR->CR |= PWR_CR_DBP;
@@ -4978,7 +4978,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
 2636:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   * RCC configuration registers.
 2637:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   * @param  PeriphClkInit pointer to an RCC_PeriphCLKInitTypeDef structure that
 2638:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   * will be configured.
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 84
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 84
 
 
 2639:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   * @retval None
@@ -5038,7 +5038,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
 2693:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****       srcclk = __HAL_RCC_GET_I2S_SOURCE();
 2694:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****       switch (srcclk)
 2695:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****       {
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 85
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 85
 
 
 2696:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****       /* Check if I2S clock selection is External clock mapped on the I2S_CKIN pin used as I2S cloc
@@ -5098,7 +5098,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
 2750:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c **** }
 2751:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c **** #endif /* STM32F405xx || STM32F415xx || STM32F407xx || STM32F417xx || STM32F401xC || STM32F401xE  |
 2752:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c **** 
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 86
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 86
 
 
 2753:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c **** #if defined(STM32F410Tx) || defined(STM32F410Cx) || defined(STM32F410Rx) || defined(STM32F411xE) ||
@@ -5158,7 +5158,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
  1754 001c 00380240 		.word	1073887232
  1755              		.cfi_endproc
  1756              	.LFE133:
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 87
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 87
 
 
  1758              		.section	.text.HAL_RCCEx_EnablePLLI2S,"ax",%progbits
@@ -5218,7 +5218,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
  1782              		.loc 1 2809 3 view .LVU621
 2810:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c **** #if defined(RCC_PLLI2SCFGR_PLLI2SM)
 2811:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   assert_param(IS_RCC_PLLI2SM_VALUE(PLLI2SInit->PLLI2SM));
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 88
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 88
 
 
  1783              		.loc 1 2811 3 view .LVU622
@@ -5278,7 +5278,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
 2831:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     }
 2832:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   }
 2833:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c **** 
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 89
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 89
 
 
 2834:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   /* Configure the PLLI2S division factors */
@@ -5338,7 +5338,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
  1824 002a 6A68     		ldr	r2, [r5, #4]
  1825 002c 43EA8213 		orr	r3, r3, r2, lsl #6
  1826 0030 AA68     		ldr	r2, [r5, #8]
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 90
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 90
 
 
  1827 0032 5208     		lsrs	r2, r2, #1
@@ -5398,7 +5398,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
  1868              		.loc 1 2879 9 view .LVU652
  1869 0070 0020     		movs	r0, #0
  1870 0072 D8E7     		b	.L139
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 91
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 91
 
 
  1871              	.L149:
@@ -5458,7 +5458,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
  1912 0010 1B68     		ldr	r3, [r3]
  1913              		.loc 1 2895 45 view .LVU661
  1914 0012 13F0006F 		tst	r3, #134217728
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 92
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 92
 
 
  1915 0016 06D0     		beq	.L156
@@ -5518,7 +5518,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
 2913:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   *         contains the configuration information for the PLLSAI
 2914:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   * @retval HAL status
 2915:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   */
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 93
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 93
 
 
 2916:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c **** HAL_StatusTypeDef HAL_RCCEx_EnablePLLSAI(RCC_PLLSAIInitTypeDef  *PLLSAIInit)
@@ -5578,7 +5578,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
  1985              		.loc 1 2938 9 is_stmt 0 view .LVU683
  1986 0010 184B     		ldr	r3, .L170+4
  1987 0012 1B68     		ldr	r3, [r3]
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 94
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 94
 
 
  1988              		.loc 1 2938 37 view .LVU684
@@ -5638,7 +5638,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
 2978:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****       /* return in case of Timeout detected */
 2979:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****       return HAL_TIMEOUT;
 2980:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     }
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 95
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 95
 
 
 2981:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   }
@@ -5698,7 +5698,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
  2042              		.loc 1 2976 23 view .LVU701
  2043 0060 001B     		subs	r0, r0, r4
 2976:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     {
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 96
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 96
 
 
  2044              		.loc 1 2976 7 view .LVU702
@@ -5758,7 +5758,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
  2084              		.loc 1 2998 3 view .LVU708
  2085              		.loc 1 2998 15 is_stmt 0 view .LVU709
  2086 0008 FFF7FEFF 		bl	HAL_GetTick
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 97
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 97
 
 
  2087              	.LVL167:
@@ -5818,7 +5818,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
  2131              		.syntax unified
  2132              		.thumb
  2133              		.thumb_func
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 98
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 98
 
 
  2135              	HAL_RCC_GetSysClockFreq:
@@ -5878,7 +5878,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
  2145              		.loc 1 3053 3 view .LVU723
  2146              	.LVL171:
 3054:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   uint32_t pllvco = 0U;
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 99
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 99
 
 
  2147              		.loc 1 3054 3 view .LVU724
@@ -5938,7 +5938,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
 3090:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****       break;
 3091:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     }
 3092:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     case RCC_CFGR_SWS_PLLR:  /* PLL/PLLR used as system clock  source */
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 100
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 100
 
 
 3093:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     {
@@ -5998,7 +5998,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
  2186              		.loc 1 3077 9 view .LVU740
  2187 0028 13F4800F 		tst	r3, #4194304
  2188 002c 2CD0     		beq	.L185
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 101
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 101
 
 
 3080:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****       }
@@ -6058,7 +6058,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
  2231              	.LVL177:
 3090:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     }
  2232              		.loc 1 3090 7 is_stmt 1 view .LVU753
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 102
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 102
 
 
  2233 0086 C7E7     		b	.L181
@@ -6118,7 +6118,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
  2276 00da 5B68     		ldr	r3, [r3, #4]
 3097:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****       {
  2277              		.loc 1 3097 9 view .LVU765
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 103
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 103
 
 
  2278 00dc 13F4800F 		tst	r3, #4194304
@@ -6178,7 +6178,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
  2321              	.LVL185:
  2322              	.L187:
 3105:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****       }
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 104
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 104
 
 
  2323              		.loc 1 3105 9 view .LVU777
@@ -6238,7 +6238,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
 3124:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   */
 3125:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c **** 
 3126:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c **** /**
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 105
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 105
 
 
 3127:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   * @}
@@ -6298,7 +6298,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
  2396              		.loc 1 3154 10 is_stmt 0 view .LVU790
  2397 0012 544B     		ldr	r3, .L221
  2398 0014 1B68     		ldr	r3, [r3]
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 106
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 106
 
 
  2399              		.loc 1 3154 43 view .LVU791
@@ -6358,7 +6358,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
 3194:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c **** 
 3195:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   /* Get Start Tick */
 3196:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   tickstart = HAL_GetTick();
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 107
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 107
 
 
 3197:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c **** 
@@ -6418,7 +6418,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
 3251:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   RCC->PLLCFGR = RCC_PLLCFGR_PLLM_4 | RCC_PLLCFGR_PLLN_6 | RCC_PLLCFGR_PLLN_7 | RCC_PLLCFGR_PLLQ_2;
 3252:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c **** #endif /* STM32F412Cx || STM32F412Rx || STM32F412Vx || STM32F412Zx || STM32F413xx || STM32F423xx ||
 3253:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c **** 
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 108
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 108
 
 
 3254:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   /* Reset PLLI2SCFGR register to default value */
@@ -6478,7 +6478,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
 3308:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   }
 3309:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   else
 3310:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   {
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 109
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 109
 
 
 3311:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     return HAL_OK;
@@ -6538,7 +6538,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
  2452              		.loc 1 3176 14 view .LVU810
  2453 0056 0320     		movs	r0, #3
  2454 0058 E6E7     		b	.L196
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 110
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 110
 
 
  2455              	.L216:
@@ -6598,7 +6598,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
  2495              	.LVL201:
 3199:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c **** 
  2496              		.loc 1 3199 3 is_stmt 1 view .LVU825
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 111
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 111
 
 
  2497 0088 364A     		ldr	r2, .L221
@@ -6658,7 +6658,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
 3218:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   {
  2538              		.loc 1 3218 46 view .LVU839
 3218:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   {
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 112
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 112
 
 
  2539              		.loc 1 3218 10 is_stmt 0 view .LVU840
@@ -6718,7 +6718,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
  2579              		.loc 1 3237 5 is_stmt 1 view .LVU854
 3237:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     {
  2580              		.loc 1 3237 10 is_stmt 0 view .LVU855
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 113
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 113
 
 
  2581 00ec FFF7FEFF 		bl	HAL_GetTick
@@ -6778,7 +6778,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
  2621 012c DA68     		ldr	r2, [r3, #12]
  2622 012e 42F40012 		orr	r2, r2, #2097152
  2623 0132 DA60     		str	r2, [r3, #12]
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 114
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 114
 
 
 3292:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c **** #endif /* RCC_CIR_PLLSAIRDYC */
@@ -6838,7 +6838,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
  2671              	HAL_RCC_OscConfig:
  2672              	.LVL213:
  2673              	.LFB140:
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 115
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 115
 
 
 3314:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c **** 
@@ -6898,7 +6898,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
  2694              		.loc 1 3346 3 view .LVU885
  2695              		.loc 1 3346 25 is_stmt 0 view .LVU886
  2696 000c 0368     		ldr	r3, [r0]
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 116
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 116
 
 
  2697              		.loc 1 3346 5 view .LVU887
@@ -6958,7 +6958,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
  2727 0038 6368     		ldr	r3, [r4, #4]
  2728 003a B3F5803F 		cmp	r3, #65536
  2729 003e 5BD0     		beq	.L305
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 117
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 117
 
 
  2730              		.loc 1 3368 7 discriminator 2 view .LVU898
@@ -7018,7 +7018,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
  2773 0074 6428     		cmp	r0, #100
  2774 0076 F5D9     		bls	.L233
 3380:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****           {
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 118
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 118
 
 
 3381:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****             return HAL_TIMEOUT;
@@ -7078,7 +7078,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
 3402:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   if(((RCC_OscInitStruct->OscillatorType) & RCC_OSCILLATORTYPE_HSI) == RCC_OSCILLATORTYPE_HSI)
  2801              		.loc 1 3402 3 is_stmt 1 view .LVU924
  2802              		.loc 1 3402 25 is_stmt 0 view .LVU925
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 119
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 119
 
 
  2803 0098 2368     		ldr	r3, [r4]
@@ -7138,7 +7138,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
 3426:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****         /* Adjusts the Internal High Speed oscillator (HSI) calibration value.*/
 3427:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****         __HAL_RCC_HSI_CALIBRATIONVALUE_ADJUST(RCC_OscInitStruct->HSICalibrationValue);
 3428:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****       }
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 120
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 120
 
 
 3429:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     }
@@ -7198,7 +7198,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
  2868 00ea 94E1     		b	.L224
  2869              	.LVL222:
  2870              	.L304:
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 121
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 121
 
 
 3354:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c **** #else
@@ -7258,7 +7258,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
 3393:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****           {
  2913              		.loc 1 3393 11 is_stmt 1 view .LVU963
 3393:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****           {
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 122
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 122
 
 
  2914              		.loc 1 3393 15 is_stmt 0 view .LVU964
@@ -7318,7 +7318,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
 3449:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c **** 
 3450:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****         /* Adjusts the Internal High Speed oscillator (HSI) calibration value.*/
 3451:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****         __HAL_RCC_HSI_CALIBRATIONVALUE_ADJUST(RCC_OscInitStruct->HSICalibrationValue);
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 123
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 123
 
 
 3452:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****       }
@@ -7378,7 +7378,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
  2975              	.LVL227:
  2976 017c 0546     		mov	r5, r0
  2977              	.LVL228:
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 124
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 124
 
 
 3486:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c **** 
@@ -7438,7 +7438,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
  3021 01b4 324B     		ldr	r3, .L319+4
  3022 01b6 0022     		movs	r2, #0
  3023 01b8 1A60     		str	r2, [r3]
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 125
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 125
 
 
 3459:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c **** 
@@ -7498,7 +7498,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
  3057              		.loc 1 3502 7 view .LVU1011
  3058              		.loc 1 3502 19 is_stmt 0 view .LVU1012
  3059 01e0 FFF7FEFF 		bl	HAL_GetTick
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 126
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 126
 
 
  3060              	.LVL237:
@@ -7558,7 +7558,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
 3521:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c **** 
 3522:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     /* Update LSE configuration in Backup Domain control register    */
 3523:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     /* Requires to enable write access to Backup Domain of necessary */
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 127
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 127
 
 
 3524:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     if(__HAL_RCC_PWR_IS_CLK_DISABLED())
@@ -7618,7 +7618,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
 3539:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****       {
 3540:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****         if((HAL_GetTick() - tickstart) > RCC_DBP_TIMEOUT_VALUE)
 3541:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****         {
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 128
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 128
 
 
 3542:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****           return HAL_TIMEOUT;
@@ -7678,7 +7678,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
  3174 0264 45D1     		bne	.L264
 3557:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****       {
 3558:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****         if((HAL_GetTick() - tickstart ) > RCC_LSE_TIMEOUT_VALUE)
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 129
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 129
 
 
  3175              		.loc 1 3558 9 is_stmt 1 view .LVU1056
@@ -7738,7 +7738,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
 3540:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****         {
  3220              		.loc 1 3540 13 is_stmt 0 view .LVU1068
  3221 02a2 FFF7FEFF 		bl	HAL_GetTick
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 130
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 130
 
 
  3222              	.LVL251:
@@ -7798,7 +7798,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
  3260              		.loc 1 3570 13 is_stmt 0 view .LVU1079
  3261 02d6 594B     		ldr	r3, .L321+4
  3262 02d8 1B6F     		ldr	r3, [r3, #112]
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 131
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 131
 
 
  3263              		.loc 1 3570 49 view .LVU1080
@@ -7858,7 +7858,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
  3296 02fc 4F4A     		ldr	r2, .L321+4
  3297 02fe 9268     		ldr	r2, [r2, #8]
  3298 0300 02F00C02 		and	r2, r2, #12
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 132
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 132
 
 
  3299              		.loc 1 3591 7 view .LVU1095
@@ -7918,7 +7918,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
 3639:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****       }
 3640:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****       else
 3641:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****       {
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 133
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 133
 
 
 3642:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****         /* Disable the main PLL. */
@@ -7978,7 +7978,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
  3347              	.L315:
 3582:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****     }
  3348              		.loc 1 3582 7 is_stmt 0 view .LVU1111
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 134
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 134
 
 
  3349              	.LBE5:
@@ -8038,7 +8038,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
  3385 035c 0320     		movs	r0, #3
  3386 035e 5AE0     		b	.L224
  3387              	.L317:
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 135
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 135
 
 
 3619:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****                                  RCC_OscInitStruct->PLL.PLLM                                       
@@ -8098,7 +8098,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
  3430 03a2 0228     		cmp	r0, #2
  3431 03a4 F5D9     		bls	.L271
 3636:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****           }
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 136
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 136
 
 
  3432              		.loc 1 3636 20 view .LVU1142
@@ -8158,7 +8158,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
  3446              		.loc 1 3661 9 is_stmt 0 view .LVU1146
  3447 03b2 012B     		cmp	r3, #1
  3448 03b4 31D0     		beq	.L292
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 137
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 137
 
 
 3668:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c **** #if defined (RCC_PLLCFGR_PLLR)
@@ -8218,7 +8218,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
 3675:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****             (READ_BIT(pll_config, RCC_PLLCFGR_PLLR) != (RCC_OscInitStruct->PLL.PLLR << RCC_PLLCFGR_
  3487              		.loc 1 3675 14 view .LVU1163
  3488 03ec 03F07062 		and	r2, r3, #251658240
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 138
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 138
 
 
 3675:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****             (READ_BIT(pll_config, RCC_PLLCFGR_PLLR) != (RCC_OscInitStruct->PLL.PLLR << RCC_PLLCFGR_
@@ -8278,7 +8278,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
  3533              	.L288:
 3691:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c **** }
  3534              		.loc 1 3691 10 view .LVU1175
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 139
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 139
 
 
  3535 0414 0020     		movs	r0, #0
@@ -8338,7 +8338,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
  3588              	HAL_RCC_GetOscConfig:
  3589              	.LVL279:
  3590              	.LFB141:
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 140
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 140
 
 
 3693:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c **** 
@@ -8398,7 +8398,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
  3614 0014 2E4B     		ldr	r3, .L336
  3615 0016 1B68     		ldr	r3, [r3]
  3616              		.loc 1 3723 5 view .LVU1190
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 141
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 141
 
 
  3617 0018 13F0010F 		tst	r3, #1
@@ -8458,7 +8458,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
  3645 0038 254B     		ldr	r3, .L336
  3646 003a 5B6F     		ldr	r3, [r3, #116]
  3647              		.loc 1 3749 5 view .LVU1204
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 142
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 142
 
 
  3648 003c 13F0010F 		tst	r3, #1
@@ -8518,7 +8518,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
  3682              		.loc 1 3769 3 is_stmt 1 view .LVU1220
  3683              		.loc 1 3769 48 is_stmt 0 view .LVU1221
  3684 0066 5368     		ldr	r3, [r2, #4]
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 143
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 143
 
 
  3685              		.loc 1 3769 33 view .LVU1222
@@ -8578,7 +8578,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
 3719:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   }
  3730              		.loc 1 3719 5 is_stmt 1 view .LVU1244
 3719:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c ****   }
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 144
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 144
 
 
  3731              		.loc 1 3719 33 is_stmt 0 view .LVU1245
@@ -8638,7 +8638,7 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
  3772              	.L337:
  3773 00ce 00BF     		.align	2
  3774              	.L336:
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 145
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 145
 
 
  3775 00d0 00380240 		.word	1073887232
@@ -8646,8 +8646,8 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
  3777              	.LFE141:
  3779              		.text
  3780              	.Letext0:
- 3781              		.file 2 "c:\\users\\jacki\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@xpa
- 3782              		.file 3 "c:\\users\\jacki\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@xpa
+ 3781              		.file 2 "c:\\users\\baske\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@xpa
+ 3782              		.file 3 "c:\\users\\baske\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@xpa
  3783              		.file 4 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f446xx.h"
  3784              		.file 5 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h"
  3785              		.file 6 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h"
@@ -8655,55 +8655,55 @@ ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 1
  3787              		.file 8 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h"
  3788              		.file 9 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h"
  3789              		.file 10 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h"
-ARM GAS  C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s 			page 146
+ARM GAS  C:\Users\baske\AppData\Local\Temp\ccdauFdB.s 			page 146
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 stm32f4xx_hal_rcc_ex.c
-C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s:20     .text.HAL_RCCEx_PeriphCLKConfig:0000000000000000 $t
-C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s:26     .text.HAL_RCCEx_PeriphCLKConfig:0000000000000000 HAL_RCCEx_PeriphCLKConfig
-C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s:525    .text.HAL_RCCEx_PeriphCLKConfig:0000000000000268 $d
-C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s:534    .text.HAL_RCCEx_PeriphCLKConfig:0000000000000278 $t
-C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s:885    .text.HAL_RCCEx_PeriphCLKConfig:000000000000046c $d
-C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s:891    .text.HAL_RCCEx_GetPeriphCLKConfig:0000000000000000 $t
-C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s:897    .text.HAL_RCCEx_GetPeriphCLKConfig:0000000000000000 HAL_RCCEx_GetPeriphCLKConfig
-C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s:1086   .text.HAL_RCCEx_GetPeriphCLKConfig:0000000000000104 $d
-C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s:1091   .text.HAL_RCCEx_GetPeriphCLKFreq:0000000000000000 $t
-C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s:1097   .text.HAL_RCCEx_GetPeriphCLKFreq:0000000000000000 HAL_RCCEx_GetPeriphCLKFreq
-C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s:1119   .text.HAL_RCCEx_GetPeriphCLKFreq:000000000000000c $d
-C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s:1127   .text.HAL_RCCEx_GetPeriphCLKFreq:000000000000001c $t
-C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s:1677   .text.HAL_RCCEx_GetPeriphCLKFreq:00000000000002dc $d
-C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s:1684   .text.HAL_RCCEx_GetPeriphCLKFreq:00000000000002ec $t
-C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s:1712   .text.HAL_RCCEx_GetPeriphCLKFreq:0000000000000300 $d
-C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s:1718   .text.HAL_RCCEx_SelectLSEMode:0000000000000000 $t
-C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s:1724   .text.HAL_RCCEx_SelectLSEMode:0000000000000000 HAL_RCCEx_SelectLSEMode
-C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s:1754   .text.HAL_RCCEx_SelectLSEMode:000000000000001c $d
-C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s:1759   .text.HAL_RCCEx_EnablePLLI2S:0000000000000000 $t
-C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s:1765   .text.HAL_RCCEx_EnablePLLI2S:0000000000000000 HAL_RCCEx_EnablePLLI2S
-C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s:1874   .text.HAL_RCCEx_EnablePLLI2S:0000000000000074 $d
-C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s:1880   .text.HAL_RCCEx_DisablePLLI2S:0000000000000000 $t
-C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s:1886   .text.HAL_RCCEx_DisablePLLI2S:0000000000000000 HAL_RCCEx_DisablePLLI2S
-C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s:1939   .text.HAL_RCCEx_DisablePLLI2S:000000000000002c $d
-C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s:1945   .text.HAL_RCCEx_EnablePLLSAI:0000000000000000 $t
-C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s:1951   .text.HAL_RCCEx_EnablePLLSAI:0000000000000000 HAL_RCCEx_EnablePLLSAI
-C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s:2057   .text.HAL_RCCEx_EnablePLLSAI:0000000000000070 $d
-C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s:2063   .text.HAL_RCCEx_DisablePLLSAI:0000000000000000 $t
-C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s:2069   .text.HAL_RCCEx_DisablePLLSAI:0000000000000000 HAL_RCCEx_DisablePLLSAI
-C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s:2122   .text.HAL_RCCEx_DisablePLLSAI:000000000000002c $d
-C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s:2129   .text.HAL_RCC_GetSysClockFreq:0000000000000000 $t
-C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s:2135   .text.HAL_RCC_GetSysClockFreq:0000000000000000 HAL_RCC_GetSysClockFreq
-C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s:2355   .text.HAL_RCC_GetSysClockFreq:0000000000000184 $d
-C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s:2362   .text.HAL_RCC_DeInit:0000000000000000 $t
-C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s:2368   .text.HAL_RCC_DeInit:0000000000000000 HAL_RCC_DeInit
-C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s:2656   .text.HAL_RCC_DeInit:0000000000000164 $d
-C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s:2665   .text.HAL_RCC_OscConfig:0000000000000000 $t
-C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s:2671   .text.HAL_RCC_OscConfig:0000000000000000 HAL_RCC_OscConfig
-C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s:3196   .text.HAL_RCC_OscConfig:000000000000027c $d
-C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s:3202   .text.HAL_RCC_OscConfig:0000000000000288 $t
-C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s:3575   .text.HAL_RCC_OscConfig:0000000000000438 $d
-C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s:3582   .text.HAL_RCC_GetOscConfig:0000000000000000 $t
-C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s:3588   .text.HAL_RCC_GetOscConfig:0000000000000000 HAL_RCC_GetOscConfig
-C:\Users\jacki\AppData\Local\Temp\ccnPAqpY.s:3775   .text.HAL_RCC_GetOscConfig:00000000000000d0 $d
+C:\Users\baske\AppData\Local\Temp\ccdauFdB.s:20     .text.HAL_RCCEx_PeriphCLKConfig:0000000000000000 $t
+C:\Users\baske\AppData\Local\Temp\ccdauFdB.s:26     .text.HAL_RCCEx_PeriphCLKConfig:0000000000000000 HAL_RCCEx_PeriphCLKConfig
+C:\Users\baske\AppData\Local\Temp\ccdauFdB.s:525    .text.HAL_RCCEx_PeriphCLKConfig:0000000000000268 $d
+C:\Users\baske\AppData\Local\Temp\ccdauFdB.s:534    .text.HAL_RCCEx_PeriphCLKConfig:0000000000000278 $t
+C:\Users\baske\AppData\Local\Temp\ccdauFdB.s:885    .text.HAL_RCCEx_PeriphCLKConfig:000000000000046c $d
+C:\Users\baske\AppData\Local\Temp\ccdauFdB.s:891    .text.HAL_RCCEx_GetPeriphCLKConfig:0000000000000000 $t
+C:\Users\baske\AppData\Local\Temp\ccdauFdB.s:897    .text.HAL_RCCEx_GetPeriphCLKConfig:0000000000000000 HAL_RCCEx_GetPeriphCLKConfig
+C:\Users\baske\AppData\Local\Temp\ccdauFdB.s:1086   .text.HAL_RCCEx_GetPeriphCLKConfig:0000000000000104 $d
+C:\Users\baske\AppData\Local\Temp\ccdauFdB.s:1091   .text.HAL_RCCEx_GetPeriphCLKFreq:0000000000000000 $t
+C:\Users\baske\AppData\Local\Temp\ccdauFdB.s:1097   .text.HAL_RCCEx_GetPeriphCLKFreq:0000000000000000 HAL_RCCEx_GetPeriphCLKFreq
+C:\Users\baske\AppData\Local\Temp\ccdauFdB.s:1119   .text.HAL_RCCEx_GetPeriphCLKFreq:000000000000000c $d
+C:\Users\baske\AppData\Local\Temp\ccdauFdB.s:1127   .text.HAL_RCCEx_GetPeriphCLKFreq:000000000000001c $t
+C:\Users\baske\AppData\Local\Temp\ccdauFdB.s:1677   .text.HAL_RCCEx_GetPeriphCLKFreq:00000000000002dc $d
+C:\Users\baske\AppData\Local\Temp\ccdauFdB.s:1684   .text.HAL_RCCEx_GetPeriphCLKFreq:00000000000002ec $t
+C:\Users\baske\AppData\Local\Temp\ccdauFdB.s:1712   .text.HAL_RCCEx_GetPeriphCLKFreq:0000000000000300 $d
+C:\Users\baske\AppData\Local\Temp\ccdauFdB.s:1718   .text.HAL_RCCEx_SelectLSEMode:0000000000000000 $t
+C:\Users\baske\AppData\Local\Temp\ccdauFdB.s:1724   .text.HAL_RCCEx_SelectLSEMode:0000000000000000 HAL_RCCEx_SelectLSEMode
+C:\Users\baske\AppData\Local\Temp\ccdauFdB.s:1754   .text.HAL_RCCEx_SelectLSEMode:000000000000001c $d
+C:\Users\baske\AppData\Local\Temp\ccdauFdB.s:1759   .text.HAL_RCCEx_EnablePLLI2S:0000000000000000 $t
+C:\Users\baske\AppData\Local\Temp\ccdauFdB.s:1765   .text.HAL_RCCEx_EnablePLLI2S:0000000000000000 HAL_RCCEx_EnablePLLI2S
+C:\Users\baske\AppData\Local\Temp\ccdauFdB.s:1874   .text.HAL_RCCEx_EnablePLLI2S:0000000000000074 $d
+C:\Users\baske\AppData\Local\Temp\ccdauFdB.s:1880   .text.HAL_RCCEx_DisablePLLI2S:0000000000000000 $t
+C:\Users\baske\AppData\Local\Temp\ccdauFdB.s:1886   .text.HAL_RCCEx_DisablePLLI2S:0000000000000000 HAL_RCCEx_DisablePLLI2S
+C:\Users\baske\AppData\Local\Temp\ccdauFdB.s:1939   .text.HAL_RCCEx_DisablePLLI2S:000000000000002c $d
+C:\Users\baske\AppData\Local\Temp\ccdauFdB.s:1945   .text.HAL_RCCEx_EnablePLLSAI:0000000000000000 $t
+C:\Users\baske\AppData\Local\Temp\ccdauFdB.s:1951   .text.HAL_RCCEx_EnablePLLSAI:0000000000000000 HAL_RCCEx_EnablePLLSAI
+C:\Users\baske\AppData\Local\Temp\ccdauFdB.s:2057   .text.HAL_RCCEx_EnablePLLSAI:0000000000000070 $d
+C:\Users\baske\AppData\Local\Temp\ccdauFdB.s:2063   .text.HAL_RCCEx_DisablePLLSAI:0000000000000000 $t
+C:\Users\baske\AppData\Local\Temp\ccdauFdB.s:2069   .text.HAL_RCCEx_DisablePLLSAI:0000000000000000 HAL_RCCEx_DisablePLLSAI
+C:\Users\baske\AppData\Local\Temp\ccdauFdB.s:2122   .text.HAL_RCCEx_DisablePLLSAI:000000000000002c $d
+C:\Users\baske\AppData\Local\Temp\ccdauFdB.s:2129   .text.HAL_RCC_GetSysClockFreq:0000000000000000 $t
+C:\Users\baske\AppData\Local\Temp\ccdauFdB.s:2135   .text.HAL_RCC_GetSysClockFreq:0000000000000000 HAL_RCC_GetSysClockFreq
+C:\Users\baske\AppData\Local\Temp\ccdauFdB.s:2355   .text.HAL_RCC_GetSysClockFreq:0000000000000184 $d
+C:\Users\baske\AppData\Local\Temp\ccdauFdB.s:2362   .text.HAL_RCC_DeInit:0000000000000000 $t
+C:\Users\baske\AppData\Local\Temp\ccdauFdB.s:2368   .text.HAL_RCC_DeInit:0000000000000000 HAL_RCC_DeInit
+C:\Users\baske\AppData\Local\Temp\ccdauFdB.s:2656   .text.HAL_RCC_DeInit:0000000000000164 $d
+C:\Users\baske\AppData\Local\Temp\ccdauFdB.s:2665   .text.HAL_RCC_OscConfig:0000000000000000 $t
+C:\Users\baske\AppData\Local\Temp\ccdauFdB.s:2671   .text.HAL_RCC_OscConfig:0000000000000000 HAL_RCC_OscConfig
+C:\Users\baske\AppData\Local\Temp\ccdauFdB.s:3196   .text.HAL_RCC_OscConfig:000000000000027c $d
+C:\Users\baske\AppData\Local\Temp\ccdauFdB.s:3202   .text.HAL_RCC_OscConfig:0000000000000288 $t
+C:\Users\baske\AppData\Local\Temp\ccdauFdB.s:3575   .text.HAL_RCC_OscConfig:0000000000000438 $d
+C:\Users\baske\AppData\Local\Temp\ccdauFdB.s:3582   .text.HAL_RCC_GetOscConfig:0000000000000000 $t
+C:\Users\baske\AppData\Local\Temp\ccdauFdB.s:3588   .text.HAL_RCC_GetOscConfig:0000000000000000 HAL_RCC_GetOscConfig
+C:\Users\baske\AppData\Local\Temp\ccdauFdB.s:3775   .text.HAL_RCC_GetOscConfig:00000000000000d0 $d
 
 UNDEFINED SYMBOLS
 HAL_GetTick

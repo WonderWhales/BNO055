@@ -57,15 +57,11 @@ typedef enum{
 	BNO055_Z_AXIS = 0x02U
 } BNO055_AXIS;
 
-typedef enum{
-
-} BNO055_CURRENT_STATE;
-
 typedef struct{
 	float x;
 	float y;
 	float z;
-} BNO055_Euler_Vec_t;
+} BNO055_Axis_Vec_t;
 
 typedef struct{
 	float w;
@@ -93,13 +89,13 @@ BNO055_ERROR BNO055_Set_Unit(BNO055_ACCEL_GRAV_UNIT accUnit, BNO055_ANGULAR_RATE
 BNO055_ERROR BNO055_Set_OP_Mode(BNO055_OPERATION_MODE op);
 BNO055_ERROR BNO055_Set_Axis(const BNO055_AXIS_CONFIG_t* axis_struct);
 BNO055_ERROR BNO055_Calibrate(void);
-BNO055_ERROR BNO055_Get_Accel(void);
-BNO055_ERROR BNO055_Get_Gyro(void);
-BNO055_ERROR BNO055_Get_Mag(void);
-BNO055_ERROR BNO055_Get_Linear_Accel(void);
-BNO055_ERROR BNO055_Get_Gravity_Vec(void);
-BNO055_ERROR BNO055_Get_Temp(void);
-BNO055_ERROR BNO055_Get_Euler_Vec(BNO055_Euler_Vec_t* vec);
+BNO055_ERROR BNO055_Get_Accel(BNO055_Axis_Vec_t* vec);
+BNO055_ERROR BNO055_Get_Gyro(BNO055_Axis_Vec_t* vec);
+BNO055_ERROR BNO055_Get_Mag(BNO055_Axis_Vec_t* vec);
+BNO055_ERROR BNO055_Get_Linear_Accel(BNO055_Axis_Vec_t* vec);
+BNO055_ERROR BNO055_Get_Gravity_Vec(BNO055_Axis_Vec_t* vec);
+BNO055_ERROR BNO055_Get_Temp(uint8_t temp);
+BNO055_ERROR BNO055_Get_Euler_Vec(BNO055_Axis_Vec_t* vec);
 BNO055_ERROR BNO055_Get_Quaternion(BNO055_Quad_Vec_t* vec);
 
 #endif /* INC_BNO055_H_ */
